@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_errmsg"
+        android:gravity="center"
+        android:layout_gravity="top"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/white"
+        android:text="我是一条错误信息"
+        android:background="#ffcc66"
+        android:layout_height="30dp"
+        android:layout_width="match_parent"/>
+
+    <TextView
+        android:id="@+id/title_bar"
+        android:gravity="center"
+        android:background="#cccccc"
+        android:text="登录"
+        android:layout_height="80dp"
+        android:layout_width="match_parent"/>
+
+    <Button
+        android:onClick="errshow02"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="动画" />
+
+</RelativeLayout>

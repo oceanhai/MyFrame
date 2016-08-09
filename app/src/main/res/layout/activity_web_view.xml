@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+
+        <Button
+            android:onClick="button01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="网络HTML" />
+        <Button
+            android:onClick="button05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="浏览器打开" />
+        <Button
+            android:onClick="about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="about" />
+    </LinearLayout>
+
+    <Button
+        android:onClick="button02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ASSET_HTML" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+        <Button
+            android:onClick="button03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当当用户登录" />
+        <Button
+            android:onClick="button04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="豆瓜用户登录" />
+
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/webview_01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

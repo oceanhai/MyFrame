@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/personal_top_title_bg" >
+    
+    <!-- 标题栏左边view -->
+    <ImageView
+		android:id="@+id/btn_action_bar_left"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/title_bg_left"
+		android:scaleType="center"
+		android:padding="15dip"
+		android:layout_alignParentLeft="true"
+		android:layout_centerVertical="true"/>
+    
+    <!-- 标题栏右边view,可以是textview也可以是button,需要代码中自己控制 -->
+	<RelativeLayout 
+	    android:id="@+id/right_layout"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
+		<TextView 
+		    android:id="@+id/right_tv"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="提交"
+		    android:textSize="18dip"
+		    android:singleLine="true"
+		    android:padding="15dip"
+		    android:visibility="gone"/>
+		<Button 
+		    android:id="@+id/right_btn"
+		    android:layout_width="70dip"
+		    android:layout_height="35dip"
+		    android:layout_marginRight="15dip"
+		    android:textColor="@color/white"
+            android:textSize="16dp"
+            android:text="激活"
+  	        android:visibility="gone"/>
+	</RelativeLayout>
+    
+    <!-- 标题栏的标题view -->
+	<TextView
+        android:id="@+id/book_center_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:text="标题"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="19dip"
+        android:ellipsize="middle"
+        android:singleLine="true"
+        android:layout_margin="5dip"
+        android:layout_gravity="center_vertical"    
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp">
+
+    <FrameLayout
+        android:id="@+id/title_bar_layout_left"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <ImageButton
+            android:id="@+id/title_bar_back_button"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:src="@drawable/title_back"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/title_bar_layout_center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/title_bar_layout_left"
+        android:layout_centerVertical="true"
+        android:paddingTop="7.5dp"
+        android:paddingBottom="7.5dp"
+        android:layout_toLeftOf="@+id/title_bar_layout_right">
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/title_bar_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:singleLine="true"
+        android:maxEms="8"
+        android:ellipsize="end"
+        android:textSize="18sp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/titlebar_textview"/>
+
+    <FrameLayout
+        android:id="@+id/title_bar_layout_right"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/titlebar_line"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

@@ -1,0 +1,238 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0000ff">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:text="带浮动条的ScrollView" />
+
+    <com.myframe.www.view.ObservableScrollView
+        android:id="@+id/scroll_layout"
+        android:layout_below="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadingEdge="none"
+        android:fillViewport="true"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:id="@+id/book_info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:paddingBottom="15dip">
+
+            <com.myframe.www.view.ListViewForScrollView
+                android:id="@+id/listview_01"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </com.myframe.www.view.ListViewForScrollView>
+
+            <LinearLayout
+                android:id="@+id/buy_read_layout"
+                android:layout_below="@+id/listview_01"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/book_store_deatil_buy_button_bg"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="15dip" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginTop="10dip"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip" >
+
+                    <TextView
+                        android:id="@+id/book_store_ebook_discount"
+                        android:layout_width="40dip"
+                        android:layout_height="18dip"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="20dip"
+                        android:background="@drawable/book_store_discount_bg"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/book_store_ebook_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="15dip"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/book_store_ebook_paper_book_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="15dip"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip" >
+
+                    <TextView
+                        android:id="@+id/buy_button"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dip"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/book_store_buy_selector"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:singleLine="true"
+                        android:text="@string/string_buy_book"
+                        android:textColor="#ffffffff"
+                        android:textSize="18dp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/tip_button"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dip"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/book_store_read_selector"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:singleLine="true"
+                        android:text="@string/string_test_read"
+                        android:textColor="@color/new_green"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </LinearLayout>
+            <com.myframe.www.view.ListViewForScrollView
+                android:id="@+id/listview_02"
+                android:layout_below="@+id/buy_read_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </com.myframe.www.view.ListViewForScrollView>
+        </RelativeLayout>
+
+
+    </com.myframe.www.view.ObservableScrollView>
+
+    <FrameLayout
+        android:id="@+id/viewOutScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="25dip"
+        android:visibility="invisible" >
+
+        <LinearLayout
+            android:id="@+id/buy_read_layout_out"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/book_store_deatil_buy_button_bg"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="15dip" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:layout_marginTop="10dip"
+                android:orientation="horizontal"
+                android:paddingLeft="15dip"
+                android:paddingRight="15dip" >
+
+                <TextView
+                    android:id="@+id/book_store_ebook_discount_out"
+                    android:layout_width="40dip"
+                    android:layout_height="18dip"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="20dip"
+                    android:background="@drawable/book_store_discount_bg"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/book_store_ebook_price_out"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="15dip"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/book_store_ebook_paper_book_price_out"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dip"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="15dip"
+                android:paddingRight="15dip" >
+
+                <TextView
+                    android:id="@+id/buy_button_out"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/book_store_buy_selector"
+                    android:gravity="center"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:text="@string/string_buy_book"
+                    android:textColor="#ffffffff"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/tip_button_out"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/book_store_read_selector"
+                    android:gravity="center"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:text="@string/string_test_read"
+                    android:textColor="@color/new_green"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

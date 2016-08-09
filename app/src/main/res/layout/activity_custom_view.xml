@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.myframe.www.customview.RippleButton
+        android:id="@+id/rippleButton"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="#23BB71"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:text="SEND"/>
+
+    <com.myframe.www.customview.ProgressImage1
+        android:id="@+id/progressImage1"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/gray_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.myframe.www.customview.ProgressImage2
+        android:id="@+id/progressImage2"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/gray_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.myframe.www.customview.GradualTextView
+        android:layout_marginTop="20dp"
+        android:text="好可惜 终于失去你 对不起 我已静静离"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

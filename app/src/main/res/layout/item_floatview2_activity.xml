@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="30dp"
+    android:orientation="vertical" >
+    
+    <TextView 
+        android:id="@+id/tv_title"
+        android:gravity="center"
+        android:text="呵呵"
+        android:layout_height="29dp"
+        android:layout_width="match_parent"/>
+	<View 
+	    android:background="#cccccc"
+	    android:layout_height="1dp"
+	    android:layout_width="match_parent"/>
+</LinearLayout>

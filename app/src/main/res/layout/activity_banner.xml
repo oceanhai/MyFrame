@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#cccccc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.myframe.www.widget.titlebar1.TitleBar
+        xmlns:titlebar="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        titlebar:titleText="轮播图"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/public_textview_bottom_line"
+        android:text="轮播图1" />
+
+    <com.myframe.www.widget.banner.banner1.BannerView
+        android:id="@+id/banner_layout"
+        android:layout_height="115dp"
+        android:layout_width="match_parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/public_textview_bottom_line"
+        android:text="轮播图2" />
+
+    <com.myframe.www.widget.banner.banner2.AutoScrollViewPager
+        android:id="@+id/banner_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"/>
+
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

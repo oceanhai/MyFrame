@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.myframe.www.widget.banner.banner1.AutoBannerViewPager
+        android:id="@+id/binner_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.myframe.www.widget.banner.banner1.CircleIndicator
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/binner_indicator"
+        android:layout_alignBottom="@+id/binner_pager"
+        app:ci_drawable="@drawable/widget_banner1_circle_indicator_red_radius"
+        app:ci_drawable_unselected="@drawable/widget_banner1_circle_indicator_white_radius"
+        android:layout_height="30dp"
+        android:layout_width="match_parent"/>
+
+</RelativeLayout>

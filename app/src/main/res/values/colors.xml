@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- titlebar-->
+    <color name="titlebar_line">#cccccc</color>
+    <color name="titlebar_textview">#333333</color>
+    <color name="titlebar_bg">#f8f8f8</color>
+
+    <!-- flatview1-->
+    <color name="white">#ffffff</color>
+    <color name="new_green">#2eb6aa</color>
+    <color name="book_store_bt_buy_off">#FF5A55</color>
+
+    <!-- NavigationMenu2Activity -->
+    <color name="segment_radio_text_press">#ffffff</color>
+    <color name="segment_radio_text_normal">#3ea50c</color>
+
+    <!-- StickyHeaderListView start-->
+        <!--<color name="colorPrimary">#f27242</color>-->
+        <!--<color name="colorPrimaryDark">#f27242</color>-->
+        <!--<color name="colorAccent">#f27242</color>-->
+
+        <!-- common -->
+        <color name="black">#000000</color>
+        <color name="transparent">#00000000</color>
+        <color name="half_transparent">#8f000000</color>
+        <color name="orange">#f27242</color>
+
+        <!-- background -->
+        <color name="bg">#FFF5F5F5</color>
+        <color name="bg_pressed">#FFF2F2F2</color>
+
+        <!-- material design black font color -->
+        <color name="font_black_0">#212121</color>
+        <color name="font_black_1">#424242</color>
+        <color name="font_black_2">#616161</color>
+        <color name="font_black_3">#757575</color>
+        <color name="font_black_4">#9e9e9e</color>
+        <color name="font_black_5">#bdbdbd</color>
+        <color name="font_black_6">#e0e0e0</color>
+
+        <!-- divider -->
+        <color name="divider_1">#e2e2e2</color>
+        <color name="divider_2">#e6e6e6</color>
+    <!-- StickyHeaderListView end-->
+
+    <!-- 引导蒙层 -->
+    <color name="shadow">#cc222222</color>
+
+    <!-- 5.0系统转场动画的实现 -->
+    <color name="primary_dark">#0097A7</color>
+    <color name="primary">#00BCD4</color>
+    <color name="accent">#FFEB3B</color>
+
+</resources>

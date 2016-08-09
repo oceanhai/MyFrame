@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.myframe.www.widget.titlebar2.TitleViewWithBack
+        android:id="@+id/titleview_with_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/ll_item_container"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView android:id="@+id/fast_Interrogation"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="快速转诊"/>
+        <TextView android:id="@+id/book_Interrogation"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="预约转诊"/>
+        <TextView android:id="@+id/tv3"
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="第三个fragment"/>
+    </LinearLayout>
+
+    <com.myframe.www.widget.navigationmenu1.ScrollerTabView
+        android:id="@+id/details_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="1.5dp"
+        android:background="@color/white"
+        android:visibility="visible"/>
+    <!-- 分割线 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#e0e0e0"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/details_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </android.support.v4.view.ViewPager>
+</LinearLayout>

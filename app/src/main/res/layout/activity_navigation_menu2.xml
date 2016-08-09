@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.onSearch.SearchResult">
+
+    <com.myframe.www.widget.navigationmenu2.SegmentedRadioGroup
+        android:id="@+id/search_result_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="12dp"
+        android:background="#f5faf6"
+        android:paddingBottom="12dp">
+
+        <RadioButton
+            android:id="@+id/search_result_medicine_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="商品"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/search_result_query_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="问题"
+            android:button="@null"/>
+
+        <RadioButton
+            android:id="@+id/search_result_disease_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="疾病"
+            android:button="@null"/>
+    </com.myframe.www.widget.navigationmenu2.SegmentedRadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d1d1d1"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/search_result_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v4.view.ViewPager>
+
+
+</LinearLayout>

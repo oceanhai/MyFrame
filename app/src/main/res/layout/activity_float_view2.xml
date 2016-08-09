@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.myframe.www.view.ListViewFloatItemForScrollView
+        android:id="@+id/scroll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadingEdge="none"
+        android:fillViewport="true"
+        android:scrollbars="vertical">
+
+        <com.myframe.www.view.ListViewForScrollView
+            android:id="@+id/viewInListView"
+            android:layout_below="@+id/buy_read_layout"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.myframe.www.view.ListViewForScrollView>
+    </com.myframe.www.view.ListViewFloatItemForScrollView>
+
+    <LinearLayout
+        android:id="@+id/viewOutScroll"
+        android:visibility="invisible"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="vertical" >
+        <TextView
+            android:id="@+id/tv_title"
+            android:gravity="center"
+            android:text="我是条目2"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"/>
+    </LinearLayout>
+
+</RelativeLayout>

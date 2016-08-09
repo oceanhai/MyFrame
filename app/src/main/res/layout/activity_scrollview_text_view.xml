@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:id="@+id/scrollView01"
+        android:layout_width="fill_parent"
+        android:layout_height="200px"
+        android:scrollbarStyle="outsideOverlay"
+        android:background="@null">
+
+        <TextView
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView01"
+            android:text="我们都知道EditText与TextView是Android的文本输入框和文本显示框，但是基于手机屏幕的大小因素，如果在需要输入较多文字或者显示较多内容的时候，手机屏幕是远远不够的，因此让文本框具有滚动条的功能是手机上必备的，下面ATAAW.COM来介绍下如何加上滚动条。我们都知道EditText与TextView是Android的文本输入框和文本显示框，但是基于手机屏幕的大小因素，如果在需要输入较多文字或者显示较多内容的时候，手机屏幕是远远不够的，因此让文本框具有滚动条的功能是手机上必备的，下面ATAAW.COM来介绍下如何加上滚动条。"
+            />
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollView02"
+        android:layout_below="@+id/scrollView01"
+        android:layout_width="fill_parent"
+        android:layout_height="200px"
+        android:scrollbarStyle="outsideOverlay"
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:background="@android:drawable/edit_text">
+
+        <EditText
+            android:id="@+id/editText01"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            />
+    </ScrollView>
+</RelativeLayout>
