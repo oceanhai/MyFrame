@@ -85,7 +85,7 @@ public class GuideViewActivity extends AppCompatActivity {
                 .setOnclickListener(new GuideView.OnClickCallback() {
                     @Override
                     public void onClickedGuideView() {
-                        guideView.showOnce();
+//                        guideView.showOnce();
                         guideView.hide();
 
                         guideView2.show();
@@ -105,7 +105,7 @@ public class GuideViewActivity extends AppCompatActivity {
                 .setOnclickListener(new GuideView.OnClickCallback() {
                     @Override
                     public void onClickedGuideView() {
-                        guideView2.showOnce();
+//                        guideView2.showOnce();
                         guideView2.hide();
 
                         guideView3.show();
@@ -126,9 +126,9 @@ public class GuideViewActivity extends AppCompatActivity {
                 .setOnclickListener(new GuideView.OnClickCallback() {
                     @Override
                     public void onClickedGuideView() {
-                        guideView3.showOnce();
+//                        guideView3.showOnce();
                         guideView3.hide();
-//                        guideView.show();
+                        guideView.show();
                     }
                 })
                 .build();
