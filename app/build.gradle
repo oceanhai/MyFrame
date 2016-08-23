@@ -21,6 +21,45 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    productFlavors{
+
+        frame2 {
+            applicationId "com.myframe2.www"
+            buildConfigField "String", "PROJECT_SIGN", "\"frame2\""
+            manifestPlaceholders = [GETUI_PUSH_APPID       : "uOWDekD48A7m1eNUTI4K21",
+                                    GETUI_PUSH_APPKEY: "yX0diICHIX7fZAUJn9pyX5",
+                                    GETUI_PUSH_APPSECRET: "iNR5NKbGWy63CPy9tZq5r8",
+                                    GETUI_DOWNLOADPROVIDER_AUTHORITIES: "downloads.com.myframe2.www",
+                                    //PayloadReceiver 和 PushReceiver(xywy中对应的是 GeTuiPushReceiver)
+                                    GETUI_PAYLOADRECEIVER_ACTION: "com.igexin.sdk.action.uOWDekD48A7m1eNUTI4K21",
+                                    GETUI_PERMISSION: "getui.permission.GetuiService.com.myframe2.www",
+                                    //百度定位
+                                    BAIDU_API_KEY       : "4CXkfP0PSgXDnIvyql4udCeP",
+                                    TENCENT_APPID       : "tencent1103859281",
+                                    //测试线
+                                    BUILD_TYPE    : "test",
+                                    EASEMOB_APPKEY: "xywyapp2015-test#xywyapptest1"]
+        }
+
+        frame1 {
+            applicationId "com.myframe.www"
+            buildConfigField "String", "PROJECT_SIGN", "\"frame1\""
+            manifestPlaceholders = [GETUI_PUSH_APPID       : "uOWDekD48A7m1eNUTI4K21",
+                                    GETUI_PUSH_APPKEY: "yX0diICHIX7fZAUJn9pyX5",
+                                    GETUI_PUSH_APPSECRET: "iNR5NKbGWy63CPy9tZq5r8",
+                                    GETUI_DOWNLOADPROVIDER_AUTHORITIES: "downloads.com.myframe.www",
+                                    //PayloadReceiver 和 PushReceiver(xywy中对应的是 GeTuiPushReceiver)
+                                    GETUI_PAYLOADRECEIVER_ACTION: "com.igexin.sdk.action.uOWDekD48A7m1eNUTI4K21",
+                                    GETUI_PERMISSION: "getui.permission.GetuiService.com.myframe.www",
+                                    //百度定位
+                                    BAIDU_API_KEY       : "4CXkfP0PSgXDnIvyql4udCeP",
+                                    TENCENT_APPID       : "tencent1103859281",
+                                    //测试线
+                                    BUILD_TYPE    : "test",
+                                    EASEMOB_APPKEY: "xywyapp2015-test#xywyapptest1"]
+        }
+    }
 }
 
 dependencies {
@@ -28,7 +67,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
     //ButterKnife
     //个推
-    compile files('libs/GetuiSDK2.7.0.0.jar')
+    compile files('libs/GetuiSDK2.8.1.0.jar')
     compile files('libs/GetuiExt-2.0.3.jar')
     compile project(':datarequest')
     compile 'com.android.support:appcompat-v7:22.2.1'

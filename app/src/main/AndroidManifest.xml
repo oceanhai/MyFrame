@@ -30,7 +30,7 @@
     <uses-permission android:name="getui.permission.GetuiService.com.myframe.www" />
 
     <permission
-        android:name="getui.permission.GetuiService.com.myframe.www"
+        android:name="${GETUI_PERMISSION}"
         android:protectionLevel="normal" >
     </permission>
 
@@ -47,13 +47,13 @@
         <!-- 配置的第三方参数属性 -->
         <meta-data
             android:name="PUSH_APPID"
-            android:value="uOWDekD48A7m1eNUTI4K21" /> <!-- 替换为第三方应用的APPID -->
+            android:value="${GETUI_PUSH_APPID}" /> <!-- 替换为第三方应用的APPID -->
         <meta-data
             android:name="PUSH_APPKEY"
-            android:value="yX0diICHIX7fZAUJn9pyX5" /> <!-- 替换为第三方应用的APPKEY -->
+            android:value="${GETUI_PUSH_APPKEY}" /> <!-- 替换为第三方应用的APPKEY -->
         <meta-data
             android:name="PUSH_APPSECRET"
-            android:value="iNR5NKbGWy63CPy9tZq5r8" /> <!-- 替换为第三方应用的APPSECRET -->
+            android:value="${GETUI_PUSH_APPSECRET}" /> <!-- 替换为第三方应用的APPSECRET -->
 
 
         <!-- 配置第三方Receiver -->
@@ -61,7 +61,7 @@
             android:name=".getui.PushReceiver"
             android:exported="false" >
             <intent-filter>
-                <action android:name="com.igexin.sdk.action.uOWDekD48A7m1eNUTI4K21" />
+                <action android:name="${GETUI_PAYLOADRECEIVER_ACTION}" />
             </intent-filter>
         </receiver>
 
@@ -123,7 +123,7 @@
 
         <provider
             android:name="com.igexin.download.DownloadProvider"
-            android:authorities="downloads.com.myframe.www"
+            android:authorities="${GETUI_DOWNLOADPROVIDER_AUTHORITIES}"
             android:exported="true"
             android:process=":pushservice" /> <!-- 替换为第三方应用的包名 -->
 
@@ -141,7 +141,7 @@
             android:exported="false" >
             <intent-filter>
                 <action android:name="com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4" />
-                <action android:name="com.igexin.sdk.action.uOWDekD48A7m1eNUTI4K21" /> <!-- 替换为第三方应用的APPID -->
+                <action android:name="${GETUI_PAYLOADRECEIVER_ACTION}" /> <!-- 替换为第三方应用的APPID -->
             </intent-filter>
         </receiver>
 
