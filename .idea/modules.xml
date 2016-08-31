@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/MyFrame.iml" filepath="$PROJECT_DIR$/MyFrame.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/datarequest/datarequest.iml" filepath="$PROJECT_DIR$/datarequest/datarequest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javatest/javatest.iml" filepath="$PROJECT_DIR$/javatest/javatest.iml" />
     </modules>
   </component>
 </project>

@@ -1,1 +1,1 @@
-include ':app', ':datarequest'
+include ':app', ':datarequest', ':javatest'

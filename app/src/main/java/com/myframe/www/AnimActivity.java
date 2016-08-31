@@ -56,9 +56,20 @@ public class AnimActivity extends BaseActivity implements View.OnClickListener {
         translationy1.setOnClickListener(this);
         translationy2.setOnClickListener(this);
 
+        /**
+         * 帧动画
+         */
         frameIv.setImageResource(R.drawable.frame_animation);
         AnimationDrawable animationDrawable = (AnimationDrawable) frameIv.getDrawable();
         animationDrawable.start();
+
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        print(true);
     }
 
     @Override
@@ -66,6 +77,7 @@ public class AnimActivity extends BaseActivity implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.translationx_1:
                 ObjectAnimator.ofFloat(iv, "translationX", 0, 100).setDuration(200).start();
+                print(false);
                 break;
             case R.id.translationx_2:
                 ObjectAnimator.ofFloat(iv, "translationX", 100, 0).setDuration(200).start();
@@ -79,6 +91,16 @@ public class AnimActivity extends BaseActivity implements View.OnClickListener {
             case R.id.translationy_2:
                 ObjectAnimator.ofFloat(iv, "translationY", 100, 0).setDuration(200).start();
                 break;
+        }
+    }
+
+    private void print(boolean init){
+        if(init){
+            System.out.println("AnimActivity-init:left=" + iv.getLeft() + "&right=" + iv.getRight() + "&top=" + iv.getTop() + "&bottom=" + iv.getBottom());
+            System.out.println("AnimActivity-init:x="+iv.getX()+"&y="+iv.getY()+"&TranslationX="+iv.getTranslationX()+"&TranslationY="+iv.getTranslationY());
+        }else{
+            System.out.println("AnimActivity-end:left=" + iv.getLeft() + "&right=" + iv.getRight() + "&top=" + iv.getTop() + "&bottom=" + iv.getBottom());
+            System.out.println("AnimActivity-end:x="+iv.getX()+"&y="+iv.getY()+"&TranslationX="+iv.getTranslationX()+"&TranslationY="+iv.getTranslationY());
         }
     }
 }
