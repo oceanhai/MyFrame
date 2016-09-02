@@ -2,8 +2,8 @@ package com.myframe.www.app;
 
 import android.app.Application;
 
-import com.igexin.sdk.PushManager;
 import com.xywy.component.datarequest.imageWrapper.ImageLoaderUtils;
+import com.xywy.component.datarequest.network.RequestManager;
 
 /**
  * Created by wuhai on 2016/3/2.
@@ -18,6 +18,11 @@ public class MyApplication extends Application{
     }
 
     private void init() {
+
+        /**
+         * volley 初始化
+         */
+        RequestManager.init(this);
 
         /**
          * 图片加载

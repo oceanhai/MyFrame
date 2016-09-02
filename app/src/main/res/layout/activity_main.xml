@@ -137,7 +137,7 @@
                 android:id="@+id/btn31"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="btn32"
+            <Button android:text="InputWidget"
                 android:id="@+id/btn32"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

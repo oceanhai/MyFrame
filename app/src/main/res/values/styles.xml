@@ -48,4 +48,25 @@
         <item name="pressedTranslationZ">12dp</item>
         <item name="rippleColor">@android:color/white</item>
     </style>
+
+
+    <!-- InputWidget -->
+    <style name="edit_text">
+        <item name="android:textSize">17dp</item>
+        <item name="android:textColor">@color/famous_black</item>
+        <item name="android:textColorHint">@color/c_bbbbbb</item>
+    </style>
+    <!--<style name="InputWidgetEditText" parent="android:Widget.EditText">-->
+        <!--<item name="android:layout_marginLeft">10dp</item>-->
+        <!--<item name="android:layout_marginRight">5dp</item>-->
+        <!--<item name="android:textSize">16sp</item>-->
+        <!--<item name="android:textColor">@color/public_main_text_black</item>-->
+        <!--<item name="android:textColorHint">@color/login_textview_grey01</item>-->
+        <!--<item name="android:background">@null</item>-->
+        <!--<item name="android:maxLines">1</item>-->
+        <!--<item name="android:singleLine">true</item>-->
+        <!--<item name="android:ellipsize">end</item>-->
+        <!--<item name="android:digits">1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_</item>-->
+    <!--</style>-->
+
 </resources>

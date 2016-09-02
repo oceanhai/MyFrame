@@ -37,4 +37,24 @@
         </attr>
         <attr name="strokeCapRound" format="boolean"></attr>
     </declare-styleable>
+
+    <!-- InputWidget -->
+    <declare-styleable name="InputWidget">
+        <attr name="inputbackground" format="reference|color"/>
+        <attr name="clearbuttonenable" format="boolean"/>
+        <attr name="imageviewleft" format="reference"/>
+        <attr name="imageviewright" format="reference"/>
+        <attr name="passwordtype" format="boolean"/>
+        <attr name="identifyingcodeenable" format="boolean"/>
+        <attr name="imageviewrightopen" format="reference"/>
+        <attr name="imageviewrightclose" format="reference"/>
+        <attr name="edithintstr" format="string"/>
+        <attr name="righttextstr" format="string"/>
+        <attr name="editlength" format="integer"/>
+        <attr name="imeOptions">
+            <enum name="actionNext" value="0" />
+            <enum name="actionDone" value="1" />
+        </attr>
+        <attr name="digits" format="string"/>
+    </declare-styleable>
 </resources>

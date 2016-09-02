@@ -280,6 +280,8 @@
         </activity>
         <activity android:name=".GuideViewActivity" >
         </activity>
+        <activity android:name=".InputWidgetActivity" >
+        </activity>
     </application>
 
 </manifest>

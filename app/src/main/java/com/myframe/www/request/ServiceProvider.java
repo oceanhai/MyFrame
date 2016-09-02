@@ -4,10 +4,6 @@ package com.myframe.www.request;
 import com.xywy.component.datarequest.network.RequestManager;
 import com.xywy.component.datarequest.neworkWrapper.BaseData;
 import com.xywy.component.datarequest.neworkWrapper.IDataResponse;
-import com.xywy.component.datarequest.tool.MD5;
-
-import java.io.File;
-import java.util.Map;
 
 /**
  * Created by wuhai on 2016/1/4.
@@ -47,5 +43,27 @@ public class ServiceProvider {
      */
     public static void cancel(Object flag) {
         RequestManager.cancelAll(flag);
+    }
+
+    /**
+     * 784 . 手机验证码相关功能接口 v 1.2
+     *
+     * @param phone 手机号
+     */
+    public static void getCode(String phone, IDataResponse iHttpResponse, Object flag) {
+        ApiParams getApiParams = new ApiParams().with(Constants.version_value2)
+                .with(Constants.api_key,
+                        Constants.api_code_value);
+        ApiParams postApiParams = new ApiParams().with(Constants.project_key,
+                Constants.project_value)
+                .with(Constants.act_key,
+                        Constants.act_value)
+                .with(Constants.phone_key, phone)
+                .with(Constants.code_key, "");
+        getApiParams.with(Constants.SIGN,
+                DataRequestTool.getSig(getApiParams, postApiParams,
+                        RequestKey.basekey));
+        DataRequestTool.post(REQUEST_URL_CLUB, Namespace.CODE, getApiParams, postApiParams, iHttpResponse, BaseData
+                .class, flag, false);
     }
 }

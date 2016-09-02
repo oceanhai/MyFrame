@@ -264,6 +264,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.btn31://5.0系统转场动画的实现
 //                DetailActivity.startActivity(this);
                 break;
+            case R.id.btn32://InputWidget
+                InputWidgetActivity.startActivity(this);
+                break;
+
         }
     }
 }

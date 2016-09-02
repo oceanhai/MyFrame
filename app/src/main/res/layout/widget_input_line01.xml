@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+	<View 
+	    android:background="@color/login_line_grey01"
+	    android:layout_marginRight="16dp"
+		android:layout_marginLeft="16dp"
+	    android:layout_height="1dp"
+	    android:layout_width="match_parent"/>
+</merge>

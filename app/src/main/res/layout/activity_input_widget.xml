@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.myframe.www.widget.inputwidget.InputWidget
+        xmlns:inputwidget="http://schemas.android.com/apk/res/com.myframe.www"
+        android:id="@+id/inputwidget1"
+        android:layout_height="54dp"
+        android:layout_width="match_parent"
+        inputwidget:imageviewright="@drawable/login_icon_user_black"
+        inputwidget:edithintstr="请输入手机号/用户名/邮箱"
+        inputwidget:imeOptions="actionNext"/>
+
+    <include layout="@layout/widget_input_line01"/>
+
+    <com.myframe.www.widget.inputwidget.InputWidget
+        xmlns:inputwidget="http://schemas.android.com/apk/res/com.myframe.www"
+        android:id="@+id/inputwidget2"
+        android:layout_height="54dp"
+        android:layout_width="match_parent"
+        inputwidget:clearbuttonenable="true"
+        inputwidget:imageviewleft="@drawable/login_icon_user_black"
+        inputwidget:edithintstr="请输入密码"
+        inputwidget:imeOptions="actionDone"
+        inputwidget:passwordtype="true"
+        inputwidget:imageviewrightopen="@drawable/login_icon_eyeopen"
+        inputwidget:imageviewrightclose="@drawable/login_icon_eyeclose"/>
+
+    <include layout="@layout/widget_input_line01"/>
+
+    <com.myframe.www.widget.inputwidget.InputWidget
+        xmlns:inputwidget="http://schemas.android.com/apk/res/com.myframe.www"
+        android:id="@+id/inputwidget3"
+        android:layout_height="54dp"
+        android:layout_width="match_parent"
+        inputwidget:imageviewleft="@drawable/login_icon_user_black"
+        inputwidget:edithintstr="请输入动态密码"
+        inputwidget:identifyingcodeenable="true"
+        inputwidget:righttextstr="获取动态密码"
+        inputwidget:digits="1234567890"
+        inputwidget:editlength="6"
+        inputwidget:imeOptions="actionNext"/>
+
+    <include layout="@layout/widget_input_line01"/>
+
+    <com.myframe.www.widget.inputwidget.InputWidget
+        xmlns:inputwidget="http://schemas.android.com/apk/res/com.myframe.www"
+        android:id="@+id/inputwidget4"
+        android:layout_height="54dp"
+        android:layout_width="match_parent"
+        inputwidget:inputbackground="#ff0000"
+        inputwidget:imageviewleft="@drawable/login_icon_user_black"
+        inputwidget:imageviewright="@drawable/login_icon_user_black"
+        inputwidget:passwordtype="true"
+        inputwidget:edithintstr="请输入密码"
+        inputwidget:imeOptions="actionDone"
+        inputwidget:imageviewrightopen="@drawable/login_icon_eyeopen"
+        inputwidget:imageviewrightclose="@drawable/login_icon_eyeclose"/>
+
+    <com.myframe.www.widget.inputwidget.InputWidget
+        xmlns:inputwidget="http://schemas.android.com/apk/res/com.myframe.www"
+        android:id="@+id/inputwidget5"
+        android:layout_height="54dp"
+        android:layout_width="match_parent"
+        inputwidget:inputbackground="@drawable/titlebar2_title_background"
+        inputwidget:imageviewleft="@drawable/login_icon_user_black"
+        inputwidget:edithintstr="请输入密码"
+        inputwidget:imeOptions="actionDone"
+        inputwidget:imageviewrightopen="@drawable/login_icon_eyeopen"
+        inputwidget:imageviewrightclose="@drawable/login_icon_eyeclose"/>
+
+        <Button
+            android:id="@+id/btn01"
+            android:text="按钮"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+</LinearLayout>
