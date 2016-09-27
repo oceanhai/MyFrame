@@ -8,9 +8,8 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
-import android.provider.Settings;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.telephony.TelephonyManager;
 import android.view.View;
 import android.webkit.WebChromeClient;
@@ -19,7 +18,6 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import com.myframe.www.base.BaseActivity;
-import com.myframe.www.widget.calendar.CalendarActivity;
 
 import java.net.URLEncoder;
 
@@ -53,7 +51,8 @@ public class WebViewActivity extends BaseActivity {
 
     public void button01(View view) {
         webSetting();
-        webView.loadUrl("http://3gtest.yao.xywy.com/?fromurl=xywy_app");
+//        webView.loadUrl("http://3gtest.yao.xywy.com/?fromurl=xywy_app");
+        webView.loadUrl("http://3g.club.xywy.com/static/20090527/2695389.htm");
 //		webView.loadUrl("http://3gtest.yao.xywy.com/store/607-info.htm");
 //		webView.loadUrl("http://a.m.tmall.com/i42440062755.htm");
 
