@@ -1,82 +1,31 @@
 package com.example;
 
 public class MyClass {
-    private static Foo[] mArray = new Foo[10000001];
-//    Foo[] mArray ;
-
 
     public static void main(String arg[]){
-        System.out.println(System.currentTimeMillis());
-        System.out.println(100);
-        System.out.println(100l);
-        initData();
+//        CommonUtils.printInt(76234);
 
-        long startTime;
-        long endTime;
+//        String str;
+//        TestUtils.test01(str);
+//        System.out.println("test01:" + TestUtils.test01(null));
 
-        startTime = System.currentTimeMillis();
-        zero();
-        endTime = System.currentTimeMillis();
-        long useTime1 = endTime - startTime;
-//        BigDecimal a = new BigDecimal(startTime);
-//        BigDecimal b = new BigDecimal(endTime);
-//        long useTime2 = a.subtract(b).longValue();
-        System.out.println(useTime1);
-//        System.out.println(useTime2);
+//        List<String> list1 = new ArrayList<String>();
+//        List<String> list2 = new ArrayList<String>();
+//        list2.add("tiaomu 1");
+//        TestUtils.test02(list1);
+//        TestUtils.test02(list2);
 
-        startTime = System.currentTimeMillis();
-        one();
-        endTime = System.currentTimeMillis();
-        long useTime2 = endTime - startTime;
-        System.out.println(useTime2);
-
-        startTime = System.currentTimeMillis();
-        two();
-        endTime = System.currentTimeMillis();
-        long useTime3 = endTime - startTime;
-        System.out.println(String.valueOf(useTime3));
+        //序列化测试
+//        Entry12 entry12 = new Entry12("lufei","maiin");
+//        SerializeTools.cacheObj("F:\\entry12.txt", entry12);
+        Entry12.EntryInternal entryB = new Entry12.EntryInternal("lufei","maiin");
+        SerializeTools.cacheObj("F:\\entryB.txt", new Entry12(entryB));
+//        Entry12 newEntry = SerializeTools.getObj("F:\\entry12.txt",Entry12.class);
+//        String name = newEntry.getPair().getName();
+//        String mail = newEntry.getPair().getEmail();
+//        System.out.println("name=" + name +",mail=" + mail);
+//        System.out.println("newEntry="+newEntry.toString());
 
     }
 
-    private static void initData() {
-        for(int x=0; x<=10000000; x++){
-            Foo foo = new Foo(x);
-            mArray[x] = foo;
-        }
-    }
-
-    public static void zero() {
-        int sum = 0;
-
-        for (int i = 0; i < mArray.length; ++i) {
-            sum += mArray[i].mSplat;
-        }
-    }
-
-    /**
-     * 稍微快点
-     */
-    public static void one() {
-        int sum = 0;
-        Foo[] localArray = mArray;
-        int len = localArray.length;
-
-        for (int i = 0; i < len; ++i) {
-            sum += localArray[i].mSplat;
-        }
-    }
-
-    public static void two() {
-        int sum = 0;
-        for (Foo a : mArray) {
-            sum += a.mSplat;
-        }
-    }
-
-    static class Foo {
-        int mSplat;
-        public Foo(int splat){
-            this.mSplat = splat;
-        }
-    }
 }
