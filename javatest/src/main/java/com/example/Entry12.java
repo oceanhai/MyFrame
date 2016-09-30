@@ -48,7 +48,18 @@ public class Entry12 implements Serializable{
      */
     private static final long serialVersionUID = 12L;
     static class EntryInternal implements Serializable{
-        private String name, email;
+        private static final long serialVersionUID = 13L;
+        private String name;
+        private String email;
+        private String age;
+
+        public String getAge() {
+            return age;
+        }
+
+        public void setAge(String age) {
+            this.age = age;
+        }
 
         public EntryInternal() {
         }
