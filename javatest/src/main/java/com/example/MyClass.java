@@ -41,7 +41,15 @@ public class MyClass {
 
 //        method01();
 //        method02();
-        method03();
+//        method03();
+        method04();
+    }
+
+    public static void method04(){
+        Outer outer = new Outer();
+//        Outer.Inner inner  = outer.new Inner();//public Inner(){} 时候可以
+        outer.method();
+
     }
 
     public static void method03(){
