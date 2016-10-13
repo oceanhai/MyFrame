@@ -88,8 +88,27 @@ dependencies {
 //    compile 'com.android.support:palette-v7:23.0.+'
 }
 
+//gradle task 练习start
 task hello {
     doLast {
         println 'hello world!'
     }
+}
+
+task hello1 <<{
+    println 'hello new world!'
+}
+
+task upper <<{
+    String someString = 'mY_nAmE'
+    println 'Original: ' + someString
+    println 'Upper case: ' + someString.toUpperCase()
+}
+
+task count << {
+    4.times {print "$it"}
+}
+
+task intro(dependsOn: hello) << {
+    println "I'm Gradle"
 }
