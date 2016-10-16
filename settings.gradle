@@ -1,1 +1,1 @@
-include ':app', ':datarequest', ':javatest', ':fragmentdemo', ':common'
+include ':fragmentdemo', ':common', ':app', ':datarequest', ':javatest'

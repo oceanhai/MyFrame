@@ -1,5 +1,6 @@
 package www.wuhai.fragmentdemo;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
@@ -13,11 +14,11 @@ public class LeftFragment extends Fragment {
 
 	public static String TAG = "LeftFragment";
 
-	@Override
-	public void onAttach(Context context) {
-		super.onAttach(context);
-		L.v(TAG, "onAttach");
-	}
+//	@Override
+//	public void onAttach(Context context) {
+//		super.onAttach((Activity)context);
+//		L.v(TAG, "onAttach");
+//	}
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {

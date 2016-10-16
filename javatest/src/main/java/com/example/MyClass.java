@@ -50,6 +50,10 @@ public class MyClass {
 //        Outer.Inner inner  = outer.new Inner();//public Inner(){} 时候可以
         outer.method();
 
+        /**
+         * 静态内部类
+         */
+        Outer.Inner1 inner1 = new Outer.Inner1();
     }
 
     public static void method03(){
