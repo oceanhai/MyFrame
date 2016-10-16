@@ -1,5 +1,7 @@
 package com.example;
 
+import java.util.Random;
+
 /**
  * Created by Administrator on 2016/10/15.
  */
@@ -8,9 +10,37 @@ public class JavaTest {
     private int num = 0;
 
     public static void main(String agr[]){
+        method09();
+    }
 
-//        method01();
-        method06();
+    /**
+     * 随机数
+     */
+    public static void method09(){
+        int x = (int) (Math.random()*10+1);//1-10随机数
+
+        Random random = new Random();
+        int y = random.nextInt(10);//0-9随机数
+
+        System.out.println("x="+x+",y="+y);
+    }
+
+    /**
+     * 排序和折半查询
+     */
+    public static void method08(){
+        int[] arr = new int[]{9,1,45,3,22,5,0};
+        SortUtils.maopaoSort(arr);
+        System.out.println();
+        int[] arr1 = new int[]{9,1,45,3,22,5,0};
+        SortUtils.xuanzheSort(arr1);
+        System.out.println();
+        int[] arr2 = new int[]{9,1,45,3,22,5,0};
+        SortUtils.charuSort(arr2);
+
+        System.out.println();
+        int[] arr3 = new int[]{1,5,9,13,22,65,99};
+        SearchUtils.zhebanSearch(13, arr3);
     }
 
     private static void method06(){
