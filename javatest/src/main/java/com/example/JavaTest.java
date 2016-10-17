@@ -1,6 +1,8 @@
 package com.example;
 
+import java.util.Iterator;
 import java.util.Random;
+import java.util.TreeSet;
 
 /**
  * Created by Administrator on 2016/10/15.
@@ -10,7 +12,42 @@ public class JavaTest {
     private int num = 0;
 
     public static void main(String agr[]){
-        method09();
+        method10();
+    }
+
+
+    public static void method10(){
+//        Set<Worker> set = new TreeSet<Worker>();
+//        Worker worker1 = new Worker("zhangsan", 20, 1);
+//        Worker worker4 = new Worker("ahai", 20, 1);
+//        Worker worker2 = new Worker("lisi", 19, 2);
+//        Worker worker3 = new Worker("wangwu", 18, 3);
+//        set.add(worker1);
+//        set.add(worker2);
+//        set.add(worker3);
+//        set.add(worker4);
+//
+//        Iterator<Worker> iterator = set.iterator();
+//        while (iterator.hasNext()){
+//            Worker worker = iterator.next();
+//            System.out.println(worker);
+//        }
+
+        TreeSet<Worker2> treeSet = new TreeSet<Worker2>(new Worker2Comparator());
+        Worker2 worker2a = new Worker2("zhangsan", 20, 1);
+        Worker2 worker2b = new Worker2("ahai", 20, 1);
+        Worker2 worker2c = new Worker2("lisi", 19, 2);
+        Worker2 worker2d = new Worker2("wangwu", 18, 3);
+        treeSet.add(worker2a);
+        treeSet.add(worker2b);
+        treeSet.add(worker2c);
+        treeSet.add(worker2d);
+        Iterator<Worker2> iterator2 = treeSet.iterator();
+        while (iterator2.hasNext()){
+            Worker2 worker = iterator2.next();
+            System.out.println(worker);
+        }
+
     }
 
     /**
