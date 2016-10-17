@@ -1,7 +1,10 @@
 package com.example;
 
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
 import java.util.Random;
+import java.util.Set;
 import java.util.TreeSet;
 
 /**
@@ -12,10 +15,37 @@ public class JavaTest {
     private int num = 0;
 
     public static void main(String agr[]){
-        method10();
+        method11();
     }
 
+    /**
+     * map
+     */
+    public static void method11(){
+        Map<String,String> map = new HashMap<>();
+        map.put("01","zhangsan");
+        map.put("02","lisi");
+        map.put("03", "wangwu");
 
+        Set<String> set = map.keySet();
+        Iterator<String> iterator = set.iterator();
+        while (iterator.hasNext()){
+            String key = iterator.next();
+            String value = map.get(key);
+            System.out.println("key="+key+",value="+value);
+        }
+
+        Set<Map.Entry<String,String>> set1 = map.entrySet();
+        Iterator<Map.Entry<String,String>> iterator1 = set1.iterator();
+        while (iterator1.hasNext()){
+            Map.Entry<String,String> entry = iterator1.next();
+            System.out.println("key="+entry.getKey()+",value="+entry.getValue());
+        }
+    }
+
+    /**
+     * set
+     */
     public static void method10(){
 //        Set<Worker> set = new TreeSet<Worker>();
 //        Worker worker1 = new Worker("zhangsan", 20, 1);
