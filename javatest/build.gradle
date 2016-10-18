@@ -3,4 +3,8 @@ apply plugin: 'java'
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile files('libs/gson-2.2.4.jar')
+
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+    }
 }
