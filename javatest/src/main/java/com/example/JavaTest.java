@@ -15,7 +15,63 @@ public class JavaTest {
     private int num = 0;
 
     public static void main(String agr[]){
-        method11();
+        method13();
+    }
+
+
+    public static void method13(){
+        //测试1
+        int[] data = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        print(data);
+        AlgorithmUtils.shuffleSort(data);
+        System.out.println("排序后的数组：");
+        print(data);
+
+        //测试2
+        int[] data1 = new int[] {0};
+        print(data1);
+        AlgorithmUtils.shuffleSort(data1);
+        System.out.println("排序后的数组：");
+        print(data1);
+
+        //测试3
+        int[] data2 = new int[54];
+        for(int x=0;x<54;x++){
+            data2[x] = x;
+        }
+        print(data2);
+        AlgorithmUtils.shuffleSort(data2);
+        System.out.println("排序后的数组：");
+        print(data2);
+
+        //测试4
+        int[] data3 = new int[]{} ;
+        print(data3);
+        AlgorithmUtils.shuffleSort(data3);
+        System.out.println("排序后的数组：");
+        print(data3);
+
+        //测试4
+        int[] data4 = null ;
+        print(data4);
+        AlgorithmUtils.shuffleSort(data4);
+        System.out.println("排序后的数组：");
+        print(data4);
+    }
+
+    private static void print(int[] data) {
+        if(data == null || data.length == 0){
+            return;
+        }
+
+        for (int i = 0; i < data.length; i++) {
+            System.out.print(data[i] + "\t");
+        }
+        System.out.println();
+    }
+
+    public static void method12(){
+        AlgorithmUtils.printOut(2634216);
     }
 
     /**
