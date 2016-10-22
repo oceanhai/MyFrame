@@ -12,10 +12,11 @@ import android.widget.RelativeLayout;
 
 import com.myframe.www.R;
 import com.myframe.www.ShowEdittextActivity;
-import com.myframe.www.utils.ToastUtils;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import www.wuhai.common.utils.ToastUtils;
 
 
 /** 

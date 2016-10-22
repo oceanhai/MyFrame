@@ -145,7 +145,7 @@
                 android:id="@+id/btn33"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="btn34"
+            <Button android:text="InnerClassActivity"
                 android:id="@+id/btn34"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

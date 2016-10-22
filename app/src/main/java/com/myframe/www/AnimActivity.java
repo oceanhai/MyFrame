@@ -11,10 +11,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.myframe.www.base.BaseActivity;
-import com.myframe.www.utils.ToastUtils;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import www.wuhai.common.utils.ToastUtils;
 
 public class AnimActivity extends BaseActivity implements View.OnClickListener {
 

@@ -11,7 +11,6 @@ import com.myframe.www.base.BaseActivity;
 import com.myframe.www.manager.XYWYImageLoader;
 import com.myframe.www.utils.CommonUtils;
 import com.myframe.www.utils.MyWindowManager;
-import com.myframe.www.utils.ToastUtils;
 import com.myframe.www.widget.titlebar1.TitleBar;
 import com.myframe.www.widget.banner.banner1.BannerView;
 import com.myframe.www.widget.banner.banner2.AutoScrollViewPager;
@@ -24,6 +23,7 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import www.wuhai.common.utils.ToastUtils;
 
 /**
  * 轮播图

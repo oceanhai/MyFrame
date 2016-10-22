@@ -7,7 +7,6 @@ import android.widget.ListView;
 
 import com.myframe.www.R;
 import com.myframe.www.ShowEdittextActivity;
-import com.myframe.www.utils.ToastUtils;
 import com.myframe.www.widget.stickyheaderlistview.adapter.HeaderChannelAdapter;
 import com.myframe.www.widget.stickyheaderlistview.model.ChannelEntity;
 
@@ -15,6 +14,7 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import www.wuhai.common.utils.ToastUtils;
 
 /**
  * Created by sunfusheng on 16/4/20.

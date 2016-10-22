@@ -1,4 +1,4 @@
-package com.myframe.www.utils;
+package www.wuhai.common.utils;
 
 
 import android.content.Context;
@@ -9,8 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.myframe.www.R;
-
+import www.wuhai.common.R;
 
 /**
  * Toast工具类
@@ -49,8 +48,8 @@ public class ToastUtils {
 	public static void showCenter(Context context, String text, int imageId) {
 		Toast toast = new Toast(context);
 		View view = LayoutInflater.from(context).inflate(R.layout.layout_toast,null);
-		ImageView image =(ImageView) view.findViewById(R.id.img);
-		TextView tv = (TextView)view.findViewById(R.id.tipTextView);
+		ImageView image =(ImageView) view.findViewById(R.id.toast_img);
+		TextView tv = (TextView)view.findViewById(R.id.toast_hint);
 		tv.setText(text);
 		image.setImageResource(imageId);
 		toast.setView(view);

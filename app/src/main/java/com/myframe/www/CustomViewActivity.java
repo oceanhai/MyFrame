@@ -8,6 +8,7 @@ import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.myframe.www.base.BaseActivity;
 import com.myframe.www.customview.ProgressImage1;
 import com.myframe.www.customview.ProgressImage2;
 import com.myframe.www.customview.RippleButton;
@@ -21,7 +22,7 @@ import butterknife.ButterKnife;
  * @author wuhai
  *         create at 2016/7/28 9:52
  */
-public class CustomViewActivity extends AppCompatActivity implements View.OnClickListener {
+public class CustomViewActivity extends BaseActivity implements View.OnClickListener {
 
     @Bind(R.id.rippleButton)
     RippleButton rippleButton;

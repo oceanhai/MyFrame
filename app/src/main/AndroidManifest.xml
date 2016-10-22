@@ -284,6 +284,8 @@
         </activity>
         <activity android:name=".UIActivity" >
         </activity>
+        <activity android:name=".InnerClassActivity" >
+        </activity>
     </application>
 
 </manifest>

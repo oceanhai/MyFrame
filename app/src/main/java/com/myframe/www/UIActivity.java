@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.myframe.www.base.BaseActivity;
 import com.myframe.www.widget.stickyheaderlistview.util.DensityUtil;
 
 import www.wuhai.common.utils.DensityUtils;
@@ -13,7 +14,7 @@ import www.wuhai.common.utils.DensityUtils;
 /**
  * 测试 l m h xh xxh 图片用
  */
-public class UIActivity extends AppCompatActivity {
+public class UIActivity extends BaseActivity {
 
     public static void startActivity(Context context) {
         Intent intent = new Intent(context, UIActivity.class);

@@ -12,11 +12,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.myframe.www.base.BaseActivity;
 import com.myframe.www.request.ApiParams;
 import com.myframe.www.request.Constants;
 import com.myframe.www.request.DataRequestTool;
 import com.myframe.www.request.ServiceProvider;
-import com.myframe.www.utils.ToastUtils;
 import com.myframe.www.utils.VerificationPhoneUtil;
 import com.myframe.www.widget.inputwidget.CountDownTimeUtil;
 import com.myframe.www.widget.inputwidget.InputWidget;
@@ -25,8 +25,9 @@ import com.xywy.component.datarequest.neworkWrapper.IDataResponse;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import www.wuhai.common.utils.ToastUtils;
 
-public class InputWidgetActivity extends AppCompatActivity implements View.OnClickListener, InputWidget.InputWidgetActionHandler {
+public class InputWidgetActivity extends BaseActivity implements View.OnClickListener, InputWidget.InputWidgetActionHandler {
 
     @Bind(R.id.inputwidget1)
     InputWidget inputwidget1;

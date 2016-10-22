@@ -7,10 +7,10 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import com.myframe.www.base.BaseActivity;
-import com.myframe.www.utils.ToastUtils;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import www.wuhai.common.utils.ToastUtils;
 
 /**
  * 可拖拽的控件

@@ -8,7 +8,6 @@ import android.widget.Button;
 
 import com.igexin.sdk.PushManager;
 import com.myframe.www.base.BaseActivity;
-import com.myframe.www.utils.ToastUtils;
 import com.myframe.www.widget.calendar.CalendarActivity;
 import com.myframe.www.widget.customview.CustomviewActivity;
 import com.myframe.www.widget.draggridview.DragGridViewActivity;
@@ -17,6 +16,7 @@ import com.myframe.www.widget.stickyheaderlistview.ui.StickyHeaderListView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import www.wuhai.common.utils.ToastUtils;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
@@ -269,6 +269,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.btn33://UIActivity
                 UIActivity.startActivity(this);
+                break;
+            case R.id.btn34://InnerClassActivity
+                InnerClassActivity.startActivity(this);
                 break;
         }
     }

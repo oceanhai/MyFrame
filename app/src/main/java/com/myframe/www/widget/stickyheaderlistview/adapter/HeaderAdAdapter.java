@@ -7,9 +7,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.myframe.www.ShowEdittextActivity;
-import com.myframe.www.utils.ToastUtils;
 
 import java.util.List;
+
+import www.wuhai.common.utils.ToastUtils;
 
 /**
  * Created by sunfusheng on 16/4/20.
@@ -61,7 +62,7 @@ public class HeaderAdAdapter extends PagerAdapter {
         iv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ToastUtils.showShort(mContext, "点击了"+newPosition);
+                ToastUtils.showShort(mContext, "点击了" + newPosition);
                 ShowEdittextActivity.startActivity(mContext);
             }
         });

@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.WindowManager;
 
 import com.myframe.www.base.BaseActivity;
-import com.myframe.www.utils.ToastUtils;
 import com.myframe.www.widget.titlebar1.TitleBar;
 import com.myframe.www.widget.titlebar2.TitleViewListener;
 import com.myframe.www.widget.titlebar2.TitleViewWithBack;
@@ -17,6 +16,7 @@ import com.myframe.www.widget.titlebar2.TitleViewWithCloseBtn;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import www.wuhai.common.utils.ToastUtils;
 
 public class TitleBarActivity extends BaseActivity {
 

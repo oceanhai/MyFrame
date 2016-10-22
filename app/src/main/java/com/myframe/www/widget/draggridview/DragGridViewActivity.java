@@ -6,7 +6,6 @@ import java.util.List;
 
 import com.myframe.www.R;
 import com.myframe.www.RoundProgressBarActivity;
-import com.myframe.www.utils.ToastUtils;
 import com.myframe.www.widget.draggridview.framework.DragGridView;
 
 import android.app.Activity;
@@ -15,6 +14,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+
+import www.wuhai.common.utils.ToastUtils;
 
 /**
  * @blog http://blog.csdn.net/xiaanming 

@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.myframe.www.base.BaseActivity;
 import com.myframe.www.view.GuideView;
 import com.myframe.www.widget.titlebar2.TitleViewWithBack;
 
@@ -23,7 +24,7 @@ import butterknife.ButterKnife;
  * @author wuhai
  *         create at 2016/7/28 18:37
  */
-public class GuideViewActivity extends AppCompatActivity {
+public class GuideViewActivity extends BaseActivity {
 
     @Bind(R.id.titleview_with_back)
     TitleViewWithBack titleviewWithBack;
