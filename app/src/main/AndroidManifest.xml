@@ -5,7 +5,6 @@
     <!-- 需要网络权限 -->
     <!-- <uses-permission android:name="android.permission.INTERNET"/> -->
 
-
     <uses-permission android:name="android.permission.GET_TASKS" />
 
     <!-- 个推SDK权限配置开始 -->
@@ -282,6 +281,8 @@
         <activity android:name=".GuideViewActivity" >
         </activity>
         <activity android:name=".InputWidgetActivity" >
+        </activity>
+        <activity android:name=".UIActivity" >
         </activity>
     </application>
 

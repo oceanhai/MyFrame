@@ -267,7 +267,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.btn32://InputWidget
                 InputWidgetActivity.startActivity(this);
                 break;
-
+            case R.id.btn33://UIActivity
+                UIActivity.startActivity(this);
+                break;
         }
     }
 }

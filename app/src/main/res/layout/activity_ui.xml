@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--
+        ldpi和xhdpi放得是同一张图片weixin，只不过名字变换了下
+        也就是说
+    -->
+    <ImageView
+        android:src="@drawable/weixin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:src="@drawable/weixinldpi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <ImageView
+        android:src="@drawable/weixin"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+    <ImageView
+        android:src="@drawable/weixinldpi"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+</LinearLayout>
