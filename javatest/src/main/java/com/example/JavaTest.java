@@ -15,9 +15,24 @@ public class JavaTest {
     private int num = 0;
 
     public static void main(String agr[]){
-        method13();
+        method14();
     }
 
+
+    public static void method14(){
+//        AlgorithmUtils.nineNineMultiplication();
+//        System.out.println(AlgorithmUtils.factorial(4));
+        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{},null));
+        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'a','b'},new char[]{'a'}));
+        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'a','b'},new char[]{'a','b'}));
+        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'a','b'},new char[]{'a','c'}));
+        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'a','b'},new char[]{'a','c','b'}));
+        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'a','b'},new char[]{'a','b','c','d'}));
+        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'b','c'},new char[]{'a','b','c','d'}));
+        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'c','d'},new char[]{'a','b','c','d'}));
+        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'d','e'},new char[]{'a','b','c','d'}));
+        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'d','e'},new char[]{'a','b','c','e'}));
+    }
 
     public static void method13(){
         //测试1
