@@ -45,6 +45,13 @@ public class ToastUtils {
 		toast.setGravity(GRAVITY, 0, 0);
  		toast.show();
 	}
+
+	/**
+	 * 自定义toast
+	 * @param context
+	 * @param text	  	文字描述
+	 * @param imageId 	图片id
+	 */
 	public static void showCenter(Context context, String text, int imageId) {
 		Toast toast = new Toast(context);
 		View view = LayoutInflater.from(context).inflate(R.layout.layout_toast,null);

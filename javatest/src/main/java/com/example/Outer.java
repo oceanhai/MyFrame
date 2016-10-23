@@ -15,6 +15,9 @@ public class Outer {
         private Inner(){}
 
         public void method01(){
+            String name1 ="局部属性";
+            this.name1 = "内部类属性";
+            Outer.this.name1 ="外部类属性";
             this.name1 = Outer.this.name1;
         }
     }
@@ -24,6 +27,9 @@ public class Outer {
         private String name;
 
         public void method01(){
+            String name = "局部属性";
+            this.name = "静态内部类属性";
+            Outer.name ="外部类属性";
             this.name = Outer.name;
         }
     }
