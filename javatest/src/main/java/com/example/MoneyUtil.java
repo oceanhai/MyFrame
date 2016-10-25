@@ -64,24 +64,25 @@ public class MoneyUtil {
                         if(parts[i-1] < 1000 && parts[i-1] > 0) { // 如果"万"的部分不为 0, 而"万"前面的部分小于 1000 大于 0， 则万后面应该跟“零”
                             chineseStr = "零" + chineseStr;
                         }
-                        chineseStr = "万" + chineseStr;
+                        if(!"".equals(partChinese)){//只有在万前面有值才加"万"（100000000-> 壹亿万元整 这是哪门子表示啊 修正此问题）
+                            chineseStr = "万" + chineseStr;
+                        }
                     }
                 }
             }
             chineseStr = partChinese + chineseStr;
         }
 
-        if("".equals(chineseStr)) {  // 整数部分为 0, 则表达为"零元"
-            chineseStr = chineseDigits[0];
-        }
-//        else if("".equals(chineseStr) && numFen == 0 && numJiao == 0){
-//            return "零元整";
-//        }
-        else if(negative) { // 整数部分不为 0, 并且原金额为负数
-            chineseStr = "负" + chineseStr;
+        if("".equals(chineseStr) && numFen == 0 && numJiao == 0){
+            return "零元整";
         }
 
-        chineseStr = chineseStr + "元";
+        if(!"".equals(chineseStr)) {
+            chineseStr = chineseStr + "元";
+        }
+        if(negative) { // 整数部分不为 0, 并且原金额为负数
+            chineseStr = "负" + chineseStr;
+        }
 
         if(numFen == 0 && numJiao == 0) {
             chineseStr = chineseStr + "整";
@@ -145,20 +146,21 @@ public class MoneyUtil {
         if(args.length == 0) {
             System.out.println("转换演示：");
             System.out.println("-------------------------");
-            System.out.println("99999999999999124111: " + amountToChinese(99999999999999124111d));
-            System.out.println("99999999999999124456: " + amountToChinese(99999999999999124456d));
-            System.out.println("99999999999999125456: " + amountToChinese(99999999999999125456d));
-            System.out.println("99999999999999126456: " + amountToChinese(99999999999999126456d));
-
-            System.out.println("99999999999999123456: " + amountToChinese(99999999999999123456d));
-            System.out.println("99999999999999122456: " + amountToChinese(99999999999999122456d));
-
-            System.out.println("99999999999999.124456: " + amountToChinese(99999999999999.124456));
-            System.out.println("99999999999999.125456: " + amountToChinese(99999999999999.125456));
-            System.out.println("99999999999999.126456: " + amountToChinese(99999999999999.126456));
-            System.out.println("-99999999999999.99: " + amountToChinese(-99999999999999.99));
-            System.out.println("99999999999999.99: " + amountToChinese(99999999999999.99));
-            System.out.println("25000000000005.09: " + amountToChinese(25000000000005.999));
+//            System.out.println("99999999999999124111: " + amountToChinese(99999999999999124111d));
+//            System.out.println("99999999999999124456: " + amountToChinese(99999999999999124456d));
+//            System.out.println("99999999999999125456: " + amountToChinese(99999999999999125456d));
+//            System.out.println("99999999999999126456: " + amountToChinese(99999999999999126456d));
+//
+//            System.out.println("99999999999999123456: " + amountToChinese(99999999999999123456d));
+//            System.out.println("99999999999999122456: " + amountToChinese(99999999999999122456d));
+//
+//            System.out.println("99999999999999.124456: " + amountToChinese(99999999999999.124456));
+//            System.out.println("99999999999999.125456: " + amountToChinese(99999999999999.125456));
+//            System.out.println("99999999999999.126456: " + amountToChinese(99999999999999.126456));
+            System.out.println("99999999999999.129: " + amountToChinese(99999999999999.129));
+//            System.out.println("-99999999999999.99: " + amountToChinese(-99999999999999.99));
+//            System.out.println("99999999999999.99: " + amountToChinese(99999999999999.99));
+            System.out.println("25000000000005.09: " + amountToChinese(25000000000005.09));
             System.out.println("25000000000005.999: " + amountToChinese(25000000000005.999));
             System.out.println("45689263.626: " + amountToChinese(45689263.626));
             System.out.println("0.69457: " + amountToChinese(0.69457));
@@ -166,7 +168,10 @@ public class MoneyUtil {
             System.out.println("0: " + amountToChinese(0));
             System.out.println("999: " + amountToChinese(999));
             System.out.println("90: " + amountToChinese(90));
-            System.out.println("1000005.12: " + amountToChinese(25000000000005.999));
+            System.out.println("1000005.12: " + amountToChinese(1000005.12));
+            System.out.println("1000000: " + amountToChinese(1000000));
+            System.out.println("100000000: " + amountToChinese(100000000));
+            System.out.println("1000000000000: " + amountToChinese(1000000000000d));
             System.out.println("-------------------------");
 
 
