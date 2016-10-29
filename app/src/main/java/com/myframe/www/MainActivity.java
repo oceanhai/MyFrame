@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.igexin.sdk.PushManager;
 import com.myframe.www.base.BaseActivity;
+import com.myframe.www.toucheventtest.TouchEventActivity;
 import com.myframe.www.widget.calendar.CalendarActivity;
 import com.myframe.www.widget.customview.CustomviewActivity;
 import com.myframe.www.widget.draggridview.DragGridViewActivity;
@@ -272,6 +273,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.btn34://InnerClassActivity
                 InnerClassActivity.startActivity(this);
+                break;
+            case R.id.btn35://view 分发机制
+                TouchEventActivity.startActivity(this);
                 break;
         }
     }

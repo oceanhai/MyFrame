@@ -149,7 +149,7 @@
                 android:id="@+id/btn34"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="btn35"
+            <Button android:text="view 分发机制"
                 android:id="@+id/btn35"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
