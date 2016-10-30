@@ -8,7 +8,7 @@ import android.widget.Button;
 
 import com.igexin.sdk.PushManager;
 import com.myframe.www.base.BaseActivity;
-import com.myframe.www.toucheventtest.TouchEventActivity;
+import com.myframe.www.testtouchevent.TouchEventActivity;
 import com.myframe.www.widget.calendar.CalendarActivity;
 import com.myframe.www.widget.customview.CustomviewActivity;
 import com.myframe.www.widget.draggridview.DragGridViewActivity;

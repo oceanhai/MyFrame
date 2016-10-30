@@ -298,7 +298,7 @@
         </activity>
         <activity android:name=".InnerClassActivity" >
         </activity>
-        <activity android:name=".toucheventtest.TouchEventActivity" >
+        <activity android:name=".testtouchevent.TouchEventActivity" >
         </activity>
     </application>
 

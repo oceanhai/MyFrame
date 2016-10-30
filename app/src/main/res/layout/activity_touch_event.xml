@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.myframe.www.toucheventtest.MyLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FF0">
+    android:layout_height="match_parent">
 
-    <com.myframe.www.toucheventtest.MyView
+    <com.myframe.www.testtouchevent.MyLayout
+        android:background="#FF0"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:background="#F00"
-        android:text="hello world" />
+        android:layout_height="200dp">
 
-</com.myframe.www.toucheventtest.MyLayout>
+        <com.myframe.www.testtouchevent.MyView
+            android:id="@+id/myview01"
+            android:onClick="myviw01"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#F00"
+            android:text="hello world" />
+        <!--<com.myframe.www.testtouchevent.MyView-->
+            <!--android:onClick="myviw02"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="150dp"-->
+            <!--android:background="#FFF"-->
+            <!--android:text="hello world" />-->
+    </com.myframe.www.testtouchevent.MyLayout>
+        
+
+
+</LinearLayout>

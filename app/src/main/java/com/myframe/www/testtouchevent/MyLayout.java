@@ -1,13 +1,14 @@
-package com.myframe.www.toucheventtest;
+package com.myframe.www.testtouchevent;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import www.wuhai.common.utils.L;
 
-public class MyLayout extends LinearLayout {
+public class MyLayout extends RelativeLayout {
 
 	// public MyLayout(Context context, AttributeSet attrs, int defStyleAttr) {
 	// super(context, attrs, defStyleAttr);
@@ -29,6 +30,7 @@ public class MyLayout extends LinearLayout {
 	public boolean dispatchTouchEvent(MotionEvent ev) {
 		L.v(TouchEventActivity.TAG, " MyLayout==dispatchTouchEvent==" + ev.getAction());
 		return super.dispatchTouchEvent(ev);
+//		return true;
 	}
 
 	// 拦截事件
