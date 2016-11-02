@@ -153,6 +153,38 @@
                 android:id="@+id/btn35"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
+            <Button android:text="btn36"
+                android:id="@+id/btn36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button android:text="btn37"
+                android:id="@+id/btn37"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button android:text="btn38"
+                android:id="@+id/btn38"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button android:text="btn39"
+                android:id="@+id/btn39"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button android:text="btn40"
+                android:id="@+id/btn40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button android:text="btn41"
+                android:id="@+id/btn41"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button android:text="btn42"
+                android:id="@+id/btn42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button android:text="btn43"
+                android:id="@+id/btn43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
 

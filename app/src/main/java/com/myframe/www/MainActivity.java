@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.igexin.sdk.PushManager;
 import com.myframe.www.base.BaseActivity;
+import com.myframe.www.teststartactivityforresult.FirstActivity;
 import com.myframe.www.testtouchevent.TouchEventActivity;
 import com.myframe.www.widget.calendar.CalendarActivity;
 import com.myframe.www.widget.customview.CustomviewActivity;
@@ -91,6 +92,22 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     Button btn34;
     @Bind(R.id.btn35)
     Button btn35;
+    @Bind(R.id.btn36)
+    Button btn36;
+    @Bind(R.id.btn37)
+    Button btn37;
+    @Bind(R.id.btn38)
+    Button btn38;
+    @Bind(R.id.btn39)
+    Button btn39;
+    @Bind(R.id.btn40)
+    Button btn40;
+    @Bind(R.id.btn41)
+    Button btn41;
+    @Bind(R.id.btn42)
+    Button btn42;
+    @Bind(R.id.btn43)
+    Button btn43;
 
     private String parameter;//TODO 这个以后应该是个json串，目前就简单用string代替
 
@@ -147,6 +164,14 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         btn33.setOnClickListener(this);
         btn34.setOnClickListener(this);
         btn35.setOnClickListener(this);
+        btn36.setOnClickListener(this);
+        btn37.setOnClickListener(this);
+        btn38.setOnClickListener(this);
+        btn39.setOnClickListener(this);
+        btn40.setOnClickListener(this);
+        btn41.setOnClickListener(this);
+        btn42.setOnClickListener(this);
+        btn43.setOnClickListener(this);
     }
 
     private void pareIntent() {
@@ -276,6 +301,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.btn35://view 分发机制
                 TouchEventActivity.startActivity(this);
+                break;
+            case R.id.btn36://activity跳转数据返回
+                FirstActivity.startActivity(this);
                 break;
         }
     }
