@@ -306,6 +306,10 @@
         </activity>
         <activity android:name=".teststartactivityforresult.ThirdActivity" >
         </activity>
+        <activity android:name=".teststartactivity.ThreadStartActivity" >
+        </activity>
+        <activity android:name=".teststartactivity.TargetActivity" >
+        </activity>
     </application>
 
 </manifest>

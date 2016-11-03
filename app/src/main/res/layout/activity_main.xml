@@ -157,7 +157,7 @@
                 android:id="@+id/btn36"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="btn37"
+            <Button android:text="非UI线程起activity,post所在线程相关，activity生命周期"
                 android:id="@+id/btn37"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

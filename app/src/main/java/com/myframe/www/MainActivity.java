@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.igexin.sdk.PushManager;
 import com.myframe.www.base.BaseActivity;
+import com.myframe.www.teststartactivity.ThreadStartActivity;
 import com.myframe.www.teststartactivityforresult.FirstActivity;
 import com.myframe.www.testtouchevent.TouchEventActivity;
 import com.myframe.www.widget.calendar.CalendarActivity;
@@ -304,6 +305,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.btn36://activity跳转数据返回
                 FirstActivity.startActivity(this);
+                break;
+            case R.id.btn37://非UI线程起activity
+                ThreadStartActivity.startActivity(this);
                 break;
         }
     }
