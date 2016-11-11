@@ -9,4 +9,10 @@
     <!-- 5.0系统转场动画的实现 -->
     <dimen name="spacing_large">16dp</dimen>
     <dimen name="spacing_medium">8dp</dimen>
+
+    <!-- swtichbutton -->
+    <dimen name="preference_icon_width">50.0dip</dimen>
+    <dimen name="preference_margin">19.0dip</dimen>
+    <dimen name="preference_widget_icon_width">48.0dip</dimen>
+    <dimen name="list_item_height">51.0dip</dimen>
 </resources>
