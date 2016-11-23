@@ -63,4 +63,7 @@
     <color name="common_tv_color">#32b4c2</color>
     <color name="famous_black">#333333</color>
     <color name="c_bbbbbb">#bbbbbb</color>
+
+    <!-- 品牌页 -->
+    <color name="color_ffffff">#ffffff</color>
 </resources>

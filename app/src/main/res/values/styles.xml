@@ -69,4 +69,9 @@
         <!--<item name="android:digits">1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_</item>-->
     <!--</style>-->
 
+    <!-- 品牌页-->
+    <style name="MyTabLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">#747474</item>
+    </style>
 </resources>

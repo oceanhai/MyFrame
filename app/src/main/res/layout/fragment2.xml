@@ -5,11 +5,9 @@
     android:background="#ffffff"
     android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/fragment3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Large Text2222"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </LinearLayout>

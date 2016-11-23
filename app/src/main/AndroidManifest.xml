@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.myframe.www" >
+    package="com.myframe.www">
 
     <!-- 需要网络权限 -->
     <!-- <uses-permission android:name="android.permission.INTERNET"/> -->
@@ -31,8 +31,7 @@
 
     <permission
         android:name="${GETUI_PERMISSION}"
-        android:protectionLevel="normal" >
-    </permission>
+        android:protectionLevel="normal"></permission>
 
     <!-- 个推SDK权限配置结束 -->
     <!--
@@ -47,25 +46,28 @@
         android:largeHeap="false"
         android:persistent="true"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
 
         <!-- 个推SDK配置开始 -->
         <!-- 配置的第三方参数属性 -->
         <meta-data
             android:name="PUSH_APPID"
-            android:value="${GETUI_PUSH_APPID}" /> <!-- 替换为第三方应用的APPID -->
+            android:value="${GETUI_PUSH_APPID}" />
+        <!-- 替换为第三方应用的APPID -->
         <meta-data
             android:name="PUSH_APPKEY"
-            android:value="${GETUI_PUSH_APPKEY}" /> <!-- 替换为第三方应用的APPKEY -->
+            android:value="${GETUI_PUSH_APPKEY}" />
+        <!-- 替换为第三方应用的APPKEY -->
         <meta-data
             android:name="PUSH_APPSECRET"
-            android:value="${GETUI_PUSH_APPSECRET}" /> <!-- 替换为第三方应用的APPSECRET -->
+            android:value="${GETUI_PUSH_APPSECRET}" />
+        <!-- 替换为第三方应用的APPSECRET -->
 
 
         <!-- 配置第三方Receiver -->
         <receiver
             android:name=".getui.PushReceiver"
-            android:exported="false" >
+            android:exported="false">
             <intent-filter>
                 <action android:name="${GETUI_PAYLOADRECEIVER_ACTION}" />
             </intent-filter>
@@ -82,7 +84,7 @@
             android:exported="true"
             android:label="NotificationCenterUser" />
 
-        <receiver android:name="com.igexin.sdk.PushReceiver" >
+        <receiver android:name="com.igexin.sdk.PushReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
@@ -96,7 +98,7 @@
         </receiver>
         <receiver
             android:name="com.igexin.sdk.PushManagerReceiver"
-            android:exported="false" >
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.igexin.sdk.action.pushmanager" />
             </intent-filter>
@@ -121,7 +123,7 @@
             android:name="com.igexin.download.DownloadService"
             android:process=":pushservice" />
 
-        <receiver android:name="com.igexin.download.DownloadReceiver" >
+        <receiver android:name="com.igexin.download.DownloadReceiver">
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
             </intent-filter>
@@ -131,7 +133,8 @@
             android:name="com.igexin.download.DownloadProvider"
             android:authorities="${GETUI_DOWNLOADPROVIDER_AUTHORITIES}"
             android:exported="true"
-            android:process=":pushservice" /> <!-- 替换为第三方应用的包名 -->
+            android:process=":pushservice" />
+        <!-- 替换为第三方应用的包名 -->
 
         <activity
             android:name="com.igexin.getuiext.activity.GetuiExtActivity"
@@ -144,10 +147,11 @@
 
         <receiver
             android:name="com.igexin.getuiext.service.PayloadReceiver"
-            android:exported="false" >
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4" />
-                <action android:name="${GETUI_PAYLOADRECEIVER_ACTION}" /> <!-- 替换为第三方应用的APPID -->
+                <action android:name="${GETUI_PAYLOADRECEIVER_ACTION}" />
+                <!-- 替换为第三方应用的APPID -->
             </intent-filter>
         </receiver>
 
@@ -163,7 +167,7 @@
 
         <activity
             android:name=".MainActivity"
-            android:launchMode="singleTop" >
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -174,144 +178,92 @@
             android:name=".AutoWrapActivity"
             android:exported="false"
             android:process=":auto"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".BannerActivity"
             android:exported="false"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".HorizontalScrollview03Activity"
             android:exported="false"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity android:name=".HorizontalScrollview01Activity" >
-        </activity>
-        <activity android:name=".HorizontalScrollview02Activity" >
-        </activity>
-        <activity android:name=".RecyclerviewActivity" >
-        </activity>
-        <activity android:name=".HorizontalScrollview04Activity" >
-        </activity>
-        <activity android:name=".SoftKeyboardActivity" >
-        </activity>
-        <activity android:name=".FloatViewActivity" >
-        </activity>
-        <activity android:name=".FloatView1Activity" >
-        </activity>
-        <activity android:name=".FloatView2Activity" >
-        </activity>
-        <activity android:name=".widget.slidingfinish.SlidingFinishActivity" >
-        </activity>
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".HorizontalScrollview01Activity"></activity>
+        <activity android:name=".HorizontalScrollview02Activity"></activity>
+        <activity android:name=".RecyclerviewActivity"></activity>
+        <activity android:name=".HorizontalScrollview04Activity"></activity>
+        <activity android:name=".SoftKeyboardActivity"></activity>
+        <activity android:name=".FloatViewActivity"></activity>
+        <activity android:name=".FloatView1Activity"></activity>
+        <activity android:name=".FloatView2Activity"></activity>
+        <activity android:name=".widget.slidingfinish.SlidingFinishActivity"></activity>
 
         <!-- Theme.Translucent 有titlebar -->
         <activity
             android:name=".widget.slidingfinish.AbsActivity"
-            android:theme="@android:style/Theme.Translucent" >
-        </activity>
+            android:theme="@android:style/Theme.Translucent"></activity>
         <!-- Theme.Translucent.NoTitleBar 没有titlebar -->
         <activity
             android:name=".widget.slidingfinish.NormalActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-        </activity>
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
         <activity
             android:name=".widget.slidingfinish.ScrollActivity"
-            android:theme="@android:style/Theme.Translucent" >
-        </activity>
+            android:theme="@android:style/Theme.Translucent"></activity>
         <activity
             android:name=".widget.slidingfinish.ViewPagerActivity"
-            android:theme="@android:style/Theme.Translucent" >
-        </activity>
-        <activity android:name=".PullToRefreshActivity" >
-        </activity>
-        <activity android:name=".PullToRefresh1Activity" >
-        </activity>
-        <activity android:name=".PrinterTextviewActivity" >
-        </activity>
-        <activity android:name=".TitleBarActivity" >
-        </activity>
-        <activity android:name=".NavigationMenuActivity" >
-        </activity>
-        <activity android:name=".widget.navigationmenu1.NavigationMenu1Activity" >
-        </activity>
-        <activity android:name=".widget.navigationmenu2.NavigationMenu2Activity" >
-        </activity>
-        <activity android:name=".ShowEdittextActivity" >
-        </activity>
-        <activity android:name=".WheelViewActivity" >
-        </activity>
-        <activity android:name=".ColourImageViewActivity" >
-        </activity>
+            android:theme="@android:style/Theme.Translucent"></activity>
+        <activity android:name=".PullToRefreshActivity"></activity>
+        <activity android:name=".PullToRefresh1Activity"></activity>
+        <activity android:name=".PrinterTextviewActivity"></activity>
+        <activity android:name=".TitleBarActivity"></activity>
+        <activity android:name=".NavigationMenuActivity"></activity>
+        <activity android:name=".widget.navigationmenu1.NavigationMenu1Activity"></activity>
+        <activity android:name=".widget.navigationmenu2.NavigationMenu2Activity"></activity>
+        <activity android:name=".ShowEdittextActivity"></activity>
+        <activity android:name=".WheelViewActivity"></activity>
+        <activity android:name=".ColourImageViewActivity"></activity>
         <!-- 日历 -->
         <activity
             android:name=".widget.calendar.CalendarActivity"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity android:name=".WebViewActivity" >
-        </activity>
-        <activity android:name=".CanDragViewActivity" >
-        </activity>
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".WebViewActivity"></activity>
+        <activity android:name=".CanDragViewActivity"></activity>
 
         <!-- StickyHeaderListView start -->
         <activity
             android:name=".widget.stickyheaderlistview.ui.StickyHeaderListView"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".widget.stickyheaderlistview.ui.AboutActivity"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <!-- StickyHeaderListView end -->
 
-        <activity android:name=".AnimActivity" >
-        </activity>
-        <activity android:name=".RoundProgressBarActivity" >
-        </activity>
-        <activity android:name=".AboutActivity" >
-        </activity>
+        <activity android:name=".AnimActivity"></activity>
+        <activity android:name=".RoundProgressBarActivity"></activity>
+        <activity android:name=".AboutActivity"></activity>
         <activity
             android:name=".widget.draggridview.DragGridViewActivity"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".MenuActivity"
-            android:theme="@android:style/android:Theme.Holo.Light" >
-        </activity>
-        <activity android:name=".ScrollviewTextViewActivity" >
-        </activity>
-        <activity android:name=".SwipemenulistviewActivity" >
-        </activity>
-        <activity android:name=".widget.customview.CustomviewActivity" >
-        </activity>
-        <activity android:name=".ShowHintinfoActivity" >
-        </activity>
-        <activity android:name=".ShowMoreInfoActivity" >
-        </activity>
-        <activity android:name=".CustomViewActivity" >
-        </activity>
-        <activity android:name=".GuideViewActivity" >
-        </activity>
-        <activity android:name=".InputWidgetActivity" >
-        </activity>
-        <activity android:name=".UIActivity" >
-        </activity>
-        <activity android:name=".InnerClassActivity" >
-        </activity>
-        <activity android:name=".testtouchevent.TouchEventActivity" >
-        </activity>
-        <activity android:name=".teststartactivityforresult.FirstActivity" >
-        </activity>
-        <activity android:name=".teststartactivityforresult.SecondActivity" >
-        </activity>
-        <activity android:name=".teststartactivityforresult.ThirdActivity" >
-        </activity>
-        <activity android:name=".teststartactivity.ThreadStartActivity" >
-        </activity>
-        <activity android:name=".teststartactivity.TargetActivity" >
-        </activity>
-        <activity android:name=".widget.swtichbutton.MovableCheckboxActivity" >
-        </activity>
+            android:theme="@android:style/android:Theme.Holo.Light"></activity>
+        <activity android:name=".ScrollviewTextViewActivity"></activity>
+        <activity android:name=".SwipemenulistviewActivity"></activity>
+        <activity android:name=".widget.customview.CustomviewActivity"></activity>
+        <activity android:name=".ShowHintinfoActivity"></activity>
+        <activity android:name=".ShowMoreInfoActivity"></activity>
+        <activity android:name=".CustomViewActivity"></activity>
+        <activity android:name=".GuideViewActivity"></activity>
+        <activity android:name=".InputWidgetActivity"></activity>
+        <activity android:name=".UIActivity"></activity>
+        <activity android:name=".InnerClassActivity"></activity>
+        <activity android:name=".testtouchevent.TouchEventActivity"></activity>
+        <activity android:name=".teststartactivityforresult.FirstActivity"></activity>
+        <activity android:name=".teststartactivityforresult.SecondActivity"></activity>
+        <activity android:name=".teststartactivityforresult.ThirdActivity"></activity>
+        <activity android:name=".teststartactivity.ThreadStartActivity"></activity>
+        <activity android:name=".teststartactivity.TargetActivity"></activity>
+        <activity android:name=".widget.swtichbutton.MovableCheckboxActivity"></activity>
+        <activity android:name=".yxt01.RetailSalerBrandPageActivity"></activity>
     </application>
 
 </manifest>

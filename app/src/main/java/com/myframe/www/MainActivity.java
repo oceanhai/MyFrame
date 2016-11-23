@@ -17,6 +17,7 @@ import com.myframe.www.widget.draggridview.DragGridViewActivity;
 import com.myframe.www.widget.slidingfinish.SlidingFinishActivity;
 import com.myframe.www.widget.stickyheaderlistview.ui.StickyHeaderListView;
 import com.myframe.www.widget.swtichbutton.MovableCheckboxActivity;
+import com.myframe.www.yxt01.RetailSalerBrandPageActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -312,6 +313,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.btn38://switchbutton
                 MovableCheckboxActivity.startActivity(this);
+                break;
+            case R.id.btn39://品牌页
+                RetailSalerBrandPageActivity.startActivity(this);
                 break;
         }
     }
