@@ -32,4 +32,10 @@
         android:text="好可惜 终于失去你 对不起 我已静静离"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn01"
+        android:text="button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </LinearLayout>

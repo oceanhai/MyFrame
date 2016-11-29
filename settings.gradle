@@ -1,1 +1,1 @@
-include ':fragmentdemo', ':common', ':app', ':datarequest', ':javatest', ':yxtbrand'
+include ':fragmentdemo', ':common', ':app', ':datarequest', ':javatest'

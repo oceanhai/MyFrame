@@ -3,7 +3,6 @@ package com.myframe.www.testtouchevent;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import www.wuhai.common.utils.L;
@@ -38,7 +37,7 @@ public class MyLayout extends RelativeLayout {
 	// true 拦截 onTounch
 	@Override
 	public boolean onInterceptTouchEvent(MotionEvent ev) {
-		L.v(TouchEventActivity.TAG, " MyLayout==onInterceptHoverEvent==" + ev.getAction());
+		L.v(TouchEventActivity.TAG, " MyLayout==onInterceptTouchEvent==" + ev.getAction());
 //		if (ev.getAction() == MotionEvent.ACTION_MOVE) {
 //			return true;
 //			// action_cancel 通知内蹭的组件，不用处理事件了

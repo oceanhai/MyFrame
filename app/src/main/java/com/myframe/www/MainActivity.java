@@ -317,6 +317,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.btn39://品牌页
                 RetailSalerBrandPageActivity.startActivity(this);
                 break;
+            case R.id.btn40://
+//                RetailSalerBrandPageActivity.startActivity(this);
+                break;
         }
     }
 }
