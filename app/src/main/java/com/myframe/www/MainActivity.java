@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.igexin.sdk.PushManager;
 import com.myframe.www.base.BaseActivity;
+import com.myframe.www.testdb.DBActivity;
 import com.myframe.www.teststartactivity.ThreadStartActivity;
 import com.myframe.www.teststartactivityforresult.FirstActivity;
 import com.myframe.www.testtouchevent.TouchEventActivity;
@@ -317,8 +318,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.btn39://品牌页
                 RetailSalerBrandPageActivity.startActivity(this);
                 break;
-            case R.id.btn40://
-//                RetailSalerBrandPageActivity.startActivity(this);
+            case R.id.btn40://数据库测试
+                DBActivity.startActivity(this);
                 break;
         }
     }
