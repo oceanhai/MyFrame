@@ -15,24 +15,31 @@ public class JavaTest {
     private int num = 0;
 
     public static void main(String agr[]){
-        method14();
+        method15();
     }
 
+    /**
+     * 打印一字符中只出现一次的第一个字母
+     */
+    public static void method15(){
+//        AlgorithmUtils.printOnlyFirstLetter1("daabcbf");
+//        AlgorithmUtils.printOnlyFirstLetter2("daabcbf");
+        AlgorithmUtils.printOnlyFirstLetter3("daabcbf");
+    }
 
     public static void method14(){
-//        AlgorithmUtils.nineNineMultiplication();
-//        System.out.println(AlgorithmUtils.factorial(4));
-//        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{},null));
-//        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'a','b'},new char[]{'a'}));
-//        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'a','b'},new char[]{'a','b'}));
-//        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'a','b'},new char[]{'a','c'}));
-//        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'a','b'},new char[]{'a','c','b'}));
-//        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'a','b'},new char[]{'a','b','c','d'}));
-//        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'b','c'},new char[]{'a','b','c','d'}));
-//        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'c','d'},new char[]{'a','b','c','d'}));
-//        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'d','e'},new char[]{'a','b','c','d'}));
-//        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'d','e'},new char[]{'a','b','c','e'}));
-        method12();
+        AlgorithmUtils.nineNineMultiplication();
+        System.out.println(AlgorithmUtils.factorial(4));
+        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{},null));
+        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'a','b'},new char[]{'a'}));
+        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'a','b'},new char[]{'a','b'}));
+        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'a','b'},new char[]{'a','c'}));
+        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'a','b'},new char[]{'a','c','b'}));
+        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'a','b'},new char[]{'a','b','c','d'}));
+        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'b','c'},new char[]{'a','b','c','d'}));
+        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'c','d'},new char[]{'a','b','c','d'}));
+        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'d','e'},new char[]{'a','b','c','d'}));
+        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'d','e'},new char[]{'a','b','c','e'}));
     }
 
     public static void method13(){

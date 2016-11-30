@@ -1,5 +1,7 @@
 package com.example;
 
+import java.util.HashMap;
+
 /**
  * 算法utils
  */
@@ -128,4 +130,54 @@ public final class AlgorithmUtils {
 
         return true;
     }
+
+    /**
+     *  打印一字符中只出现一次的第一个字母
+     */
+    public static void printOnlyFirstLetter1(String str){
+        for(int x=0;x<str.length();x++){
+            char c = str.charAt(x);
+            if(str.indexOf(c) == str.lastIndexOf(c)){
+                System.out.println(c);
+            }
+        }
+    }
+    public static void printOnlyFirstLetter2(String str){
+        int num = 0;
+        for(int x=0;x<str.length();x++){
+            char c1 = str.charAt(x);
+            for(int y=0;y<str.length();y++){
+                char c2 = str.charAt(y);
+                if(c1 == c2){
+                    num++;
+                }
+            }
+            if(num == 1){
+                System.out.println(c1);
+            }
+            num=0;
+        }
+    }
+    public static void printOnlyFirstLetter3(String str){
+        boolean flag = false;
+        HashMap map = new HashMap();
+        for(int x=0;x<str.length();x++){
+            char c1 = str.charAt(x);
+            for(int y=x+1;y<str.length();y++){
+                char c2 = str.charAt(y);
+                if(c1 == c2){
+                    flag = true;
+                    map.put(String.valueOf(c1),String.valueOf(c1));
+                    break;
+                }
+            }
+            if(!flag && map.get(String.valueOf(c1))==null){
+                System.out.println(c1);
+            }
+            flag = false;
+        }
+    }
+
+
+
 }
