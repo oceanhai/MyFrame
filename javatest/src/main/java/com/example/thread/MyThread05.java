@@ -29,14 +29,14 @@ public class MyThread05 implements Runnable {
 		t1.start();
 		t2.start();
 		t3.start();
-		for (int i = 0; i < 30; i++) {
-			System.out.println("main...." + i);
-			try {
-				t1.sleep(500);// main线程睡眠。
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-		}
+//		for (int i = 0; i < 30; i++) {
+//			System.out.println("main...." + i);
+//			try {
+//				t1.sleep(500);// main线程睡眠。
+//			} catch (InterruptedException e) {
+//				e.printStackTrace();
+//			}
+//		}
 
 	}
 }

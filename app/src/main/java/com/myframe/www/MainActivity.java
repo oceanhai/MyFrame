@@ -9,6 +9,7 @@ import android.widget.Button;
 import com.igexin.sdk.PushManager;
 import com.myframe.www.base.BaseActivity;
 import com.myframe.www.testdb.DBActivity;
+import com.myframe.www.testokhttp.OkHttpActivity;
 import com.myframe.www.teststartactivity.ThreadStartActivity;
 import com.myframe.www.teststartactivityforresult.FirstActivity;
 import com.myframe.www.testtouchevent.TouchEventActivity;
@@ -320,6 +321,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.btn40://数据库测试
                 DBActivity.startActivity(this);
+                break;
+            case R.id.btn41://数据库测试
+                OkHttpActivity.startActivity(this);
                 break;
         }
     }

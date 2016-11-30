@@ -266,6 +266,8 @@
         <activity android:name=".yxt01.RetailSalerBrandPageActivity" />
         <activity android:name=".testdb.DBActivity" >
         </activity>
+        <activity android:name=".testokhttp.OkHttpActivity" >
+        </activity>
     </application>
 
 </manifest>
