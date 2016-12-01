@@ -1,7 +1,9 @@
 package com.example.algorithm;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 /**
  * Created by Administrator on 2016/12/1.
@@ -34,18 +36,39 @@ public class NodeTest {
         list1.add(node4);
         Node node1 = new Node(1,list1);
 
-        search(node1);
+        search1(node1);
+//        search2(node1);
     }
 
     /**
      * 打印 节点信息num
+     * 深度优先
      * @param node
      */
-    public static void search(Node node){
+    public static void search1(Node node){
         System.out.println(node.getNum());
         if(node.getList() != null){
             for(int x=0;x<node.getList().size();x++){
-                search(node.getList().get(x));
+                search1(node.getList().get(x));
+            }
+        }
+    }
+
+    /**
+     * 广度优先
+     * @param node
+     */
+    public static void search2(Node node){
+        Queue<Node> queue = new LinkedList<Node>();
+        queue.offer(node);
+
+        while (!queue.isEmpty()){
+            Node node1 =  queue.poll();
+            System.out.println(node1.getNum());
+            if(node1.getList() != null){
+                for(int x=0;x<node1.getList().size();x++){
+                    queue.offer(node1.getList().get(x));
+                }
             }
         }
     }
