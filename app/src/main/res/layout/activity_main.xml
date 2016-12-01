@@ -177,7 +177,7 @@
                 android:id="@+id/btn41"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="btn42"
+            <Button android:text="handler测试"
                 android:id="@+id/btn42"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
