@@ -197,7 +197,7 @@ public class OkHttpActivity extends BaseActivity implements View.OnClickListener
 
         RequestBody requestBody = new MultipartBuilder()
                 .type(MultipartBuilder.FORM)
-                .addPart(Headers.of("Content-Disposition","form-data; name='username'"),
+                .addPart(Headers.of("Content-Disposition", "form-data; name='username'"),
                         RequestBody.create(null,"胖大海"))
                 .addPart(Headers.of("Content-Disposition","form-data;name='mFile'; filename='goldfallen.mp3'"),
                         fileBody)

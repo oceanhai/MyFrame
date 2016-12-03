@@ -88,9 +88,12 @@ dependencies {
 
     //基础module
     compile project(':common')
-    //okhttp
+    //okhttp 跟下面module用的不是同一套
     compile 'com.squareup.okhttp:okhttp:2.4.0'
     compile 'com.squareup.okio:okio:1.5.0'
+
+    //okhttp
+    compile project(':okhttprequest')
 }
 
 //gradle task 练习start
