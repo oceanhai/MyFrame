@@ -1,5 +1,6 @@
 package www.wuhai.common.utils;
 
+import android.content.Context;
 import android.util.Log;
 
 /**
@@ -14,6 +15,27 @@ public final class L {
         throw new UnsupportedOperationException("cannot be instantiated");
     }
 
+    /**
+     * 初始化 debug模式下才打印信息
+     * @param context
+     */
+    public static void init(Context context){
+        try {
+            Class classZ = Class.forName(context.getPackageName() + ".BuildConfig");
+            String build_type = (String) classZ.getDeclaredField("BUILD_TYPE").get(classZ);
+            if("release".equalsIgnoreCase(build_type)){
+                isDebug = false;
+            }else{
+                isDebug = true;
+            }
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+    }
 
     public static void i(String msg) {
         if (isDebug){

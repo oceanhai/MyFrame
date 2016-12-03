@@ -1,7 +1,6 @@
 package com.myframe.www.app;
 
 import android.app.Application;
-import android.os.*;
 
 import com.myframe.www.utils.MyUtils;
 import com.xywy.component.datarequest.imageWrapper.ImageLoaderUtils;
@@ -39,5 +38,9 @@ public class MyApplication extends Application{
          */
         ImageLoaderUtils.getInstance().init(this);
 
+        /**
+         * log 初始化
+         */
+        L.init(this);
     }
 }
