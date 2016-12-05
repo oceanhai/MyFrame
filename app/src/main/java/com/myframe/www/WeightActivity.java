@@ -1,6 +1,9 @@
 package com.myframe.www;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+
 import com.myframe.www.base.BaseActivity;
 
 /**
@@ -28,6 +31,11 @@ layout_width=“match_parent”，,屏幕空间按照3:1:1的比列分配给3个
 第三个TextView的实际所占宽度=parent_width + 3/6*(-2parent_width)=0parent_width；所以就是2:1:0的比列显示了。第三个就直接没有空间了。
  */
 public class WeightActivity extends BaseActivity {
+
+    public static void startActivity(Context context) {
+        Intent intent = new Intent(context, WeightActivity.class);
+        context.startActivity(intent);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -348,7 +348,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 HandlerActivity.startActivity(this);
                 break;
             case R.id.btn43://权重测试
-                HandlerActivity.startActivity(this);
+                WeightActivity.startActivity(this);
                 break;
         }
     }
