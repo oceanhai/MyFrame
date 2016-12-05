@@ -26,6 +26,12 @@ public class Fragment2 extends Fragment {
 
     private List<String> mDatas;
     private HomeAdapter mAdapter;
+    private static String itemStr = "fragment2";
+
+    public static Fragment2 newInstace(String str){
+        itemStr = str;
+        return new Fragment2();
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -54,7 +60,7 @@ public class Fragment2 extends Fragment {
         mDatas = new ArrayList<String>();
         for (int i = 'A'; i < 'z'; i++)
         {
-            mDatas.add("" + (char) i);
+            mDatas.add(itemStr + (char) i);
         }
         L.v("data:" + mDatas.toString());
     }

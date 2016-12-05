@@ -94,6 +94,10 @@ dependencies {
 
     //okhttp
     compile project(':okhttprequest')
+
+    //材料设计 design 包
+    //NavigationView
+    compile 'de.hdodenhof:circleimageview:1.3.0'
 }
 
 //gradle task 练习start

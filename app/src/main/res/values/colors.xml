@@ -66,4 +66,10 @@
 
     <!-- 品牌页 -->
     <color name="color_ffffff">#ffffff</color>
+
+    <!-- 材料设计 start-->
+    <!-- NavigationView-->
+    <color name="PrimaryColor">#2196F3</color>
+    <color name="PrimaryDarkColor">#1976D2</color>
+    <!-- 材料设计 end-->
 </resources>

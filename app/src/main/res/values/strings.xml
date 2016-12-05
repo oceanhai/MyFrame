@@ -32,4 +32,17 @@
 
     <!-- InputWidget -->
     <string name="identifying_code_again">重新获取验证码</string>
+
+    <!-- 材料设计 start-->
+    <!-- NavigationView-->
+    <string name="inbox_string">Inbox</string>
+    <string name="starred_string">Starred</string>
+    <string name="sent_mail_string">Sent mail</string>
+    <string name="draft_string">Drafts</string>
+    <string name="all_mail_string">All mails</string>
+    <string name="trash_string">Trash</string>
+    <string name="spam_string">Spams</string>
+    <string name="closeDrawer">Navigation View</string>
+    <string name="openDrawer">Navigation View Closed</string>
+    <!-- 材料设计 end-->
 </resources>

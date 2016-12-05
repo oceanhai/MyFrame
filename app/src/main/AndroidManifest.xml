@@ -272,6 +272,11 @@
         </activity>
         <activity android:name=".WeightActivity" >
         </activity>
+        <activity android:name=".materialdesign.MaterialDesignActivity" >
+        </activity>
+        <activity android:name=".materialdesign.NavigationViewActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

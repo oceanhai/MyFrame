@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.igexin.sdk.PushManager;
 import com.myframe.www.base.BaseActivity;
+import com.myframe.www.materialdesign.MaterialDesignActivity;
 import com.myframe.www.testdb.DBActivity;
 import com.myframe.www.testhandler.HandlerActivity;
 import com.myframe.www.testokhttp.OkHttpActivity;
@@ -349,6 +350,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.btn43://权重测试
                 WeightActivity.startActivity(this);
+                break;
+            case R.id.btn44://材料设计
+                MaterialDesignActivity.startActivity(this);
                 break;
         }
     }

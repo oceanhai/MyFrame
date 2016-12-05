@@ -185,7 +185,7 @@
                 android:id="@+id/btn43"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="btn44"
+            <Button android:text="材料设计"
                 android:id="@+id/btn44"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

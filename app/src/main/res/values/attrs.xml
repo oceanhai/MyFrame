@@ -18,8 +18,8 @@
         <attr name="ci_drawable_unselected" format="reference" />
     </declare-styleable>
 
-    <declare-styleable name="ColourImageView">
-        <attr name="border_color" format="color|reference"></attr>
+    <declare-styleable name="ColourImageView1">
+        <attr name="border_color1" format="color|reference"></attr>
     </declare-styleable>
 
     <!--RoundProgressBar -->

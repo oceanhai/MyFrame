@@ -36,8 +36,8 @@ public class ColourImageView extends ImageView
     {
         super(context, attrs);
 
-        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.ColourImageView);
-        mBorderColor = ta.getColor(R.styleable.ColourImageView_border_color, -1);
+        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.ColourImageView1);
+        mBorderColor = ta.getColor(R.styleable.ColourImageView1_border_color1, -1);
         hasBorderColor = (mBorderColor != -1);
 
         L.e("hasBorderColor = " + hasBorderColor + " , mBorderColor = " + mBorderColor);
