@@ -270,6 +270,8 @@
         </activity>
         <activity android:name=".testhandler.HandlerActivity" >
         </activity>
+        <activity android:name=".WeightActivity" >
+        </activity>
     </application>
 
 </manifest>

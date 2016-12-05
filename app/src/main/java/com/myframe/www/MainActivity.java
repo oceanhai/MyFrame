@@ -114,6 +114,18 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     Button btn42;
     @Bind(R.id.btn43)
     Button btn43;
+    @Bind(R.id.btn44)
+    Button btn44;
+    @Bind(R.id.btn45)
+    Button btn45;
+    @Bind(R.id.btn46)
+    Button btn46;
+    @Bind(R.id.btn47)
+    Button btn47;
+    @Bind(R.id.btn48)
+    Button btn48;
+    @Bind(R.id.btn49)
+    Button btn49;
 
     private String parameter;//TODO 这个以后应该是个json串，目前就简单用string代替
 
@@ -178,6 +190,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         btn41.setOnClickListener(this);
         btn42.setOnClickListener(this);
         btn43.setOnClickListener(this);
+        btn44.setOnClickListener(this);
+        btn45.setOnClickListener(this);
+        btn46.setOnClickListener(this);
+        btn47.setOnClickListener(this);
+        btn48.setOnClickListener(this);
+        btn49.setOnClickListener(this);
     }
 
     private void pareIntent() {
@@ -327,6 +345,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 OkHttpActivity.startActivity(this);
                 break;
             case R.id.btn42://handler测试
+                HandlerActivity.startActivity(this);
+                break;
+            case R.id.btn43://权重测试
                 HandlerActivity.startActivity(this);
                 break;
         }

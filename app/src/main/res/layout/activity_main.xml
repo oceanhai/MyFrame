@@ -181,11 +181,34 @@
                 android:id="@+id/btn42"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="btn43"
+            <Button android:text="权重测试"
                 android:id="@+id/btn43"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-
+            <Button android:text="btn44"
+                android:id="@+id/btn44"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button android:text="btn45"
+                android:id="@+id/btn45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button android:text="btn46"
+                android:id="@+id/btn46"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button android:text="btn47"
+                android:id="@+id/btn47"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button android:text="btn48"
+                android:id="@+id/btn48"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button android:text="btn49"
+                android:id="@+id/btn49"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
         </LinearLayout>
 
     </ScrollView>
