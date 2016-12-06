@@ -74,4 +74,14 @@
         <item name="android:textSize">17sp</item>
         <item name="android:textColor">#747474</item>
     </style>
+
+    <!-- 材料设计 start-->
+    <!-- CollapsingtToolbarlayout 主题 -->
+    <style name="Base.Theme.DesignDemo" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#0fb73d</item>
+        <item name="colorPrimaryDark">#0ba823</item>
+        <item name="colorAccent">#FF4081</item>
+        <item name="android:windowBackground">@color/window_background</item>
+    </style>
+    <!-- 材料设计 end-->
 </resources>

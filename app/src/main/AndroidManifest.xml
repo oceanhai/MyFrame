@@ -264,9 +264,16 @@
         <activity android:name=".teststartactivity.TargetActivity" />
         <activity android:name=".widget.swtichbutton.MovableCheckboxActivity" />
         <activity android:name=".yxt01.RetailSalerBrandPageActivity" />
-        <activity android:name=".testdb.DBActivity" >
+
+        <!-- theme 效果测试 -->
+        <activity
+            android:name=".testdb.DBActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         </activity>
-        <activity android:name=".testokhttp.OkHttpActivity" >
+        <!-- theme 效果测试 -->
+        <activity
+            android:name=".testokhttp.OkHttpActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
         </activity>
         <activity android:name=".testhandler.HandlerActivity" >
         </activity>
@@ -274,8 +281,12 @@
         </activity>
         <activity android:name=".materialdesign.MaterialDesignActivity" >
         </activity>
-        <activity android:name=".materialdesign.NavigationViewActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name=".materialdesign.NavigationViewActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity android:name=".materialdesign.CollapsingtToolbarlayoutActivity"
+            android:theme="@style/Base.Theme.DesignDemo">
         </activity>
     </application>
 

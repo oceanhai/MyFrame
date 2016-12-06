@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.myframe.www.R;
 import com.myframe.www.base.BaseActivity;
+import com.myframe.www.yxt01.RetailSalerBrandPageActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -19,6 +20,10 @@ public class MaterialDesignActivity extends BaseActivity implements View.OnClick
 
     @Bind(R.id.navigation_view)
     Button navigationView;
+    @Bind(R.id.coordinator_layout)
+    Button coordinatorLayout;
+    @Bind(R.id.collapsing_toolbar_layout)
+    Button collapsingToolbarLayout;
 
     public static void startActivity(Context context) {
         Intent intent = new Intent(context, MaterialDesignActivity.class);
@@ -36,13 +41,21 @@ public class MaterialDesignActivity extends BaseActivity implements View.OnClick
 
     private void initListener() {
         navigationView.setOnClickListener(this);
+        coordinatorLayout.setOnClickListener(this);
+        collapsingToolbarLayout.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.navigation_view:
                 NavigationViewActivity.startActivity(this);
+                break;
+            case R.id.coordinator_layout:
+                RetailSalerBrandPageActivity.startActivity(this);
+                break;
+            case R.id.collapsing_toolbar_layout:
+                CollapsingtToolbarlayoutActivity.startActivity(this);
                 break;
         }
     }

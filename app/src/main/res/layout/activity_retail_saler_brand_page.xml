@@ -23,13 +23,41 @@
                 android:background="@color/white">
 
                 <TextView
-                    android:text="我是头部"
+                    android:text="我是头部 layout_scrollFlags=scroll"
                     android:background="@color/c_bbbbbb"
                     android:textColor="@color/black"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     app:layout_scrollFlags="scroll"/>
 
+                <!-- 向下的滚动都会导致该view变为可见,向上滚消失 -->
+                <TextView
+                    android:text="layout_scrollFlags=scroll|enterAlways"
+                    android:background="#ff0000"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    app:layout_scrollFlags="scroll|enterAlways"/>
+
+                <!--向下的滚动显示minHeight内容,向上滚消失 -->
+                <TextView
+                    android:text="layout_scrollFlags=scroll|enterAlwaysCollapsed"
+                    android:background="#00ff00"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:minHeight="10dp"
+                    android:layout_height="40dp"
+                    app:layout_scrollFlags="scroll|enterAlwaysCollapsed"/>
+
+                <!--向上滚只隐藏layout_height-minHeight高度，向下滚显示出来 -->
+                <TextView
+                    android:text="layout_scrollFlags=scroll|exitUntilCollapsed"
+                    android:background="#0000ff"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:minHeight="30dp"
+                    android:layout_height="40dp"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed"/>
                 <android.support.design.widget.TabLayout
                     android:id="@+id/tab_layout"
                     android:layout_width="match_parent"
@@ -51,6 +79,7 @@
 
         </android.support.design.widget.CoordinatorLayout>
     <!--</ScrollView>-->
+
     <TextView
         android:text="我是底部"
         android:layout_width="match_parent"
