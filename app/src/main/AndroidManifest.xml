@@ -285,8 +285,11 @@
             android:name=".materialdesign.NavigationViewActivity"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-        <activity android:name=".materialdesign.CollapsingtToolbarlayoutActivity"
-            android:theme="@style/Base.Theme.DesignDemo">
+        <activity
+            android:name=".materialdesign.CollapsingtToolbarlayoutActivity"
+            android:theme="@style/Base.Theme.DesignDemo" >
+        </activity>
+        <activity android:name=".jni.NdkJniActivity" >
         </activity>
     </application>
 

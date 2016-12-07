@@ -189,7 +189,7 @@
                 android:id="@+id/btn44"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="btn45"
+            <Button android:text="如何生成.so 和 JNI调用"
                 android:id="@+id/btn45"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
