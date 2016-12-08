@@ -193,7 +193,7 @@
                 android:id="@+id/btn45"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="btn46"
+            <Button android:text="性能优化"
                 android:id="@+id/btn46"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

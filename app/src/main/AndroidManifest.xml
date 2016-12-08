@@ -291,6 +291,8 @@
         </activity>
         <activity android:name=".jni.NdkJniActivity" >
         </activity>
+        <activity android:name=".performance.MatActivity" >
+        </activity>
     </application>
 
 </manifest>

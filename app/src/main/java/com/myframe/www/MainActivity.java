@@ -10,6 +10,7 @@ import com.igexin.sdk.PushManager;
 import com.myframe.www.base.BaseActivity;
 import com.myframe.www.jni.NdkJniActivity;
 import com.myframe.www.materialdesign.MaterialDesignActivity;
+import com.myframe.www.performance.MatActivity;
 import com.myframe.www.testdb.DBActivity;
 import com.myframe.www.testhandler.HandlerActivity;
 import com.myframe.www.testokhttp.OkHttpActivity;
@@ -357,6 +358,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.btn45://如何生成.so 和 JNI调用
                 NdkJniActivity.startActivity(this);
+                break;
+            case R.id.btn46://性能优化
+                MatActivity.startActivity(this);
                 break;
         }
     }
