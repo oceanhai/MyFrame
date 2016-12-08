@@ -17,6 +17,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
+ * android studio MAT使用
  * 参考http://blog.csdn.net/zxm317122667/article/details/52162764
  */
 public class MatActivity extends BaseActivity implements View.OnClickListener {
