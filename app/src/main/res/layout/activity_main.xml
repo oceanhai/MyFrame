@@ -197,7 +197,7 @@
                 android:id="@+id/btn46"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="btn47"
+            <Button android:text="Listview_convertView"
                 android:id="@+id/btn47"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

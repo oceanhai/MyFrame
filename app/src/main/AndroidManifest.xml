@@ -293,6 +293,8 @@
         </activity>
         <activity android:name=".performance.MatActivity" >
         </activity>
+        <activity android:name=".ListviewActivity" >
+        </activity>
     </application>
 
 </manifest>

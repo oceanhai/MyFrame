@@ -1,7 +1,5 @@
 package com.myframe.www.adapter;
 
-import java.util.ArrayList;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +9,10 @@ import android.widget.TextView;
 
 import com.myframe.www.R;
 
+import java.util.ArrayList;
+
+import www.wuhai.common.utils.L;
+
 /**
  * @author: wuhai
  * @类   说   明:	
@@ -19,8 +21,11 @@ import com.myframe.www.R;
  * 
  */
 public class FloatItemAdapter extends BaseAdapter {
+	private static final String TAG = "BaseAdapter";
+
 	private ArrayList<String> mData;
 	private Context mContext;
+	private int num = 0;
 
 	public FloatItemAdapter(Context context){
 		this.mContext=context;
@@ -47,14 +52,23 @@ public class FloatItemAdapter extends BaseAdapter {
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
+		ViewHolder viewHolder = null;
 		if(convertView==null){
 			convertView=LayoutInflater.from(mContext).inflate(R.layout.item_floatview2_activity, parent, false);
+			//TODO 这里查看复用 没意义，因为listview重写了
+			L.e(TAG,"convertView="+convertView+",num="+(++num));
+			viewHolder = new ViewHolder();
+			viewHolder.mTvTitle = (TextView) convertView.findViewById(R.id.tv_title);
+			convertView.setTag(viewHolder);
+		}else{
+			viewHolder = (ViewHolder) convertView.getTag();
 		}
-		TextView tv_tilte=(TextView) convertView.findViewById(R.id.tv_title);
-		tv_tilte.setText(mData.get(position));
+		viewHolder.mTvTitle.setText(mData.get(position));
 		return convertView;
 	}
 
-
+	static class ViewHolder{
+		private TextView mTvTitle;
+	}
 
 }

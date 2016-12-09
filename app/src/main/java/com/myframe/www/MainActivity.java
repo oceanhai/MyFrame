@@ -362,6 +362,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.btn46://性能优化
                 MatActivity.startActivity(this);
                 break;
+            case R.id.btn47://Listview_convertView
+                ListviewActivity.startActivity(this);
+                break;
         }
     }
 }
