@@ -201,7 +201,7 @@
                 android:id="@+id/btn47"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="btn48"
+            <Button android:text="计步器"
                 android:id="@+id/btn48"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

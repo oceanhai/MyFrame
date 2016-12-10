@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xywy.component.uimodules.photoPicker.PhotoSelectActivity">
+
+    <RelativeLayout
+        android:id="@+id/titlebar"
+        android:background="#23292B"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/pp_iv_back"
+            android:layout_width="@dimen/pp_title_bar_height"
+            android:layout_height="@dimen/pp_title_bar_height"
+            android:layout_gravity="center_vertical"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_pp_back"/>
+
+        <View
+            android:layout_toRightOf="@+id/pp_iv_back"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#000000"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="图片"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_toRightOf="@id/pp_iv_back"
+            android:layout_centerVertical="true"/>
+
+        <Button
+            android:id="@+id/pp_tv_indicator"
+            android:padding="3dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/public_dark_green"
+            android:textColor="@color/uimodules_grey"
+            android:textSize="18sp"
+            android:text="完成"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/pp_photo_panel"
+        android:layout_below="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <GridView
+            android:id="@+id/pp_photo_grid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:listSelector="@android:color/transparent"
+            android:cacheColorHint="@android:color/transparent"
+            android:clipToPadding="false"
+            android:fadingEdge="none"
+            android:horizontalSpacing="2dp"
+            android:numColumns="3"
+            android:verticalSpacing="2dp"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/pp_bottom_panel"
+        android:background="#A0000000"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:id="@+id/pp_tv_album"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/public_textview_color_selector1"
+            android:textSize="18sp"
+            android:text="所有图片"
+            android:drawableRight="@drawable/public_oblique_triangle_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/pp_tv_preview"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:text="预览"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/pp_folder_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/uimodules_public_layout_bg01"
+        android:layout_below="@+id/titlebar"
+        android:layout_above="@id/pp_bottom_panel">
+
+        <ListView
+            android:id="@+id/pp_lv_folder_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dp"
+            android:background="#FFFFFF"
+            android:backgroundTint="@android:color/white"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="#d2d2d7"
+            android:dividerHeight="0.5dp"/>
+    </FrameLayout>
+
+</RelativeLayout>

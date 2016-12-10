@@ -1,0 +1,64 @@
+ext {
+    //Android
+    androidBuildToolsVersion = "23.0.3"
+    androidMinSdkVersion = 16
+    androidTargetSdkVersion = 23
+    androidCompileSdkVersion = 23
+    appVersionCode = 1
+    appVersionName = "1.0"
+    if(!rootProject.getExtensions().getExtraProperties().has("checkApk")){
+        checkApk="assembleDebug"
+    }
+    if(!rootProject.getExtensions().getExtraProperties().has("androidCommonDir")){
+        androidCommonDir = "${project.rootDir}";
+    }
+    if(!rootProject.getExtensions().getExtraProperties().has("relativePath")){
+        relativePath = ":libs/";
+    }
+}
+
+
+ext.gradlePlugins = [
+        android : "com.android.tools.build:gradle:2.1.2",
+        jacoco  : "org.jacoco:org.jacoco.core:0.7.6.201602180812",
+        dexcount: "com.getkeepsafe.dexcount:dexcount-gradle-plugin:0.5.5",
+        small   : "net.wequick.tools.build:gradle-small:0.7.0",
+
+]
+
+ext.versions = [
+        supportLibs: '23.3.0',
+]
+ext.libraries = [
+
+        supportAnnotations : "com.android.support:support-annotations:$versions.supportLibs",
+        supportAppCompatV7 : "com.android.support:appcompat-v7:$versions.supportLibs",
+        supportAppCompatV4 : "com.android.support:support-v4:$versions.supportLibs",
+        supportDesign      : "com.android.support:design:$versions.supportLibs",
+        supportRecyclerView: "com.android.support:recyclerview-v7:$versions.supportLibs",
+        supportCardView    : "com.android.support:cardview-v7:$versions.supportLibs",
+
+        volley             : "eu.the4thfloor.volley:com.android.volley:2015.05.28",
+        imageLoader        : "com.nostra13.universalimageloader:universal-image-loader:1.9.3",
+        gson               : "com.google.code.gson:gson:2.4",
+        butterKnife        : "com.jakewharton:butterknife:7.0.1",
+        rxjava             : "io.reactivex:rxjava:1.0.14",
+        greendao           : "org.greenrobot:greendao:2.2.1",
+        greendaoGen        : "org.greenrobot:greendao-generator:2.2.0",
+
+        // Developer Tools
+        stetho             : "com.facebook.stetho:stetho:1.3.1",
+        leakCanary         : "com.squareup.leakcanary:leakcanary-android:1.4-beta2",
+        tinyDancer         : "com.github.brianPlummer:tinydancer:0.0.9",
+        lynx               : "com.github.pedrovgs:lynx:1.6",
+        processPhoenix     : "com.jakewharton:process-phoenix:1.0.2",
+
+        // Test dependencies
+        junit              : "junit:junit:4.12",
+        robolectric        : "org.robolectric:robolectric:3.0",
+        assertj            : "org.assertj:assertj-core:1.7.0",
+        mockito            : "org.mockito:mockito-core:1.+",
+        blockcanary        : "com.github.markzhai:blockcanary-android:1.3.1",
+]
+
+

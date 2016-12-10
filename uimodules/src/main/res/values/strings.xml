@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">uimodules</string>
+
+    <string name="pp_permissions_tips_gallery">这个App请求访问你的相册</string>
+    <string name="pp_all_photo">所有图片</string>
+    <string name="pp_folder_photo_size">共%1$d张</string>
+
+    <string name="finish">完成</string>
+    <string name="preview">预览</string>
+    <string name="select">选择</string>
+</resources>
