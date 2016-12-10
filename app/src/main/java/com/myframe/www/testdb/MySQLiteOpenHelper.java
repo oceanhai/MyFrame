@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class MySQLiteOpenHelper extends SQLiteOpenHelper {
 	private static final String DB_NAME="myframe.db";
 	private static final int START_VERSION = 1;
-	private static final int DATABASE_VERSION = 5;
+	private static final int DATABASE_VERSION = 2;
 
 	public MySQLiteOpenHelper(Context context) {
 		super(context, DB_NAME, null, DATABASE_VERSION);
@@ -31,8 +31,8 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
 			switch (i){
 				case 1:
 					//对table 增加字段
-//					sql1 = "alter table student add height varchar";
-//					db.execSQL(sql1);
+					sql1 = "alter table student add height varchar";
+					db.execSQL(sql1);
 					break;
 				case 2:
 //					sql1 = "alter table student add COLUMN weight varchar";

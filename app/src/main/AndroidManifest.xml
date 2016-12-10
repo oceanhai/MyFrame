@@ -297,6 +297,19 @@
         </activity>
         <activity android:name=".customview.CustomView1Activity" >
         </activity>
+
+        <!-- authorities这个可以和name不一致的 -->
+        <!-- exported:属性值为true，则对外暴露数据 -->
+        <provider
+            android:authorities="com.myframe.www.testcontentprovider.MyProvider"
+            android:name="com.myframe.www.testcontentprovider.MyProvider"
+            android:exported="true">
+        </provider>
+        <provider
+            android:authorities="com.myframe.www.testcontentprovider.MyProvider2"
+            android:name="com.myframe.www.testcontentprovider.MyProvider2"
+            android:exported="true">
+        </provider>
     </application>
 
 </manifest>
