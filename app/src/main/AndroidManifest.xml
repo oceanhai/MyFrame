@@ -29,6 +29,9 @@
     <!-- 自定义权限 -->
     <uses-permission android:name="getui.permission.GetuiService.com.myframe.www" />
 
+    <!-- 读通讯录 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <permission
         android:name="${GETUI_PERMISSION}"
         android:protectionLevel="normal" />
@@ -301,15 +304,18 @@
         <!-- authorities这个可以和name不一致的 -->
         <!-- exported:属性值为true，则对外暴露数据 -->
         <provider
+            android:name=".testcontentprovider.MyProvider"
             android:authorities="com.myframe.www.testcontentprovider.MyProvider"
-            android:name="com.myframe.www.testcontentprovider.MyProvider"
-            android:exported="true">
+            android:exported="true" >
         </provider>
         <provider
+            android:name=".testcontentprovider.MyProvider2"
             android:authorities="com.myframe.www.testcontentprovider.MyProvider2"
-            android:name="com.myframe.www.testcontentprovider.MyProvider2"
-            android:exported="true">
+            android:exported="true" >
         </provider>
+
+        <activity android:name=".testcontentprovider.ContentResolverActivity" >
+        </activity>
     </application>
 
 </manifest>

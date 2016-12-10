@@ -205,7 +205,7 @@
                 android:id="@+id/btn48"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="btn49"
+            <Button android:text="ContentResolver 通讯录"
                 android:id="@+id/btn49"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

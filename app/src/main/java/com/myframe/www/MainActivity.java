@@ -12,6 +12,7 @@ import com.myframe.www.customview.CustomViewActivity;
 import com.myframe.www.jni.NdkJniActivity;
 import com.myframe.www.materialdesign.MaterialDesignActivity;
 import com.myframe.www.performance.MatActivity;
+import com.myframe.www.testcontentprovider.ContentResolverActivity;
 import com.myframe.www.testdb.DBActivity;
 import com.myframe.www.testhandler.HandlerActivity;
 import com.myframe.www.testokhttp.OkHttpActivity;
@@ -405,6 +406,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.btn48://计步器  ※上传数据策略根据情况设定
                 StepCountActivity.startActivity(this);
+                break;
+            case R.id.btn49://ContentResolver 通讯录
+                ContentResolverActivity.startActivity(this);
                 break;
         }
     }
