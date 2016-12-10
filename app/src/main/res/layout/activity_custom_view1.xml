@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/view01"
+        android:visibility="gone"
+        android:background="#00ff00"
+        android:layout_width="200dp"
+        android:layout_height="200dp"/>
+
+    <com.myframe.www.customview.MyView01
+        android:id="@+id/myview01"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/view01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.myframe.www.customview.PieView
+        android:id="@+id/pieview"
+        android:layout_centerInParent="true"
+        android:layout_width="300dp"
+        android:layout_height="300dp"/>
+</RelativeLayout>

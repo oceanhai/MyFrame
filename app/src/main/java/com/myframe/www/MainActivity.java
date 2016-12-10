@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.igexin.sdk.PushManager;
 import com.myframe.www.base.BaseActivity;
+import com.myframe.www.customview.CustomViewActivity;
 import com.myframe.www.jni.NdkJniActivity;
 import com.myframe.www.materialdesign.MaterialDesignActivity;
 import com.myframe.www.performance.MatActivity;

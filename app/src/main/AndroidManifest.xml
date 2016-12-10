@@ -251,7 +251,7 @@
         <activity android:name=".widget.customview.CustomviewActivity" />
         <activity android:name=".ShowHintinfoActivity" />
         <activity android:name=".ShowMoreInfoActivity" />
-        <activity android:name=".CustomViewActivity" />
+        <activity android:name=".customview.CustomViewActivity" />
         <activity android:name=".GuideViewActivity" />
         <activity android:name=".InputWidgetActivity" />
         <activity android:name=".UIActivity" />
@@ -294,6 +294,8 @@
         <activity android:name=".performance.MatActivity" >
         </activity>
         <activity android:name=".ListviewActivity" >
+        </activity>
+        <activity android:name=".customview.CustomView1Activity" >
         </activity>
     </application>
 

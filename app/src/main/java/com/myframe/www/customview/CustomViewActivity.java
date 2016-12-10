@@ -1,4 +1,4 @@
-package com.myframe.www;
+package com.myframe.www.customview;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,10 +9,8 @@ import android.os.SystemClock;
 import android.view.View;
 import android.widget.Button;
 
+import com.myframe.www.R;
 import com.myframe.www.base.BaseActivity;
-import com.myframe.www.customview.ProgressImage1;
-import com.myframe.www.customview.ProgressImage2;
-import com.myframe.www.customview.RippleButton;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -34,6 +32,8 @@ public class CustomViewActivity extends BaseActivity implements View.OnClickList
     ProgressImage2 progressImage2;
     @Bind(R.id.btn01)
     Button btn01;
+    @Bind(R.id.btn02)
+    Button btn02;
 
     private Handler handler = new Handler() {
         public void handleMessage(Message msg) {
@@ -80,6 +80,7 @@ public class CustomViewActivity extends BaseActivity implements View.OnClickList
     private void initListener() {
         rippleButton.setOnClickListener(this);
         btn01.setOnLongClickListener(this);
+        btn02.setOnClickListener(this);
     }
 
     @Override
@@ -106,12 +107,15 @@ public class CustomViewActivity extends BaseActivity implements View.OnClickList
                     }
                 }, 4000);
                 break;
+            case R.id.btn02:
+                CustomView1Activity.startActivity(this);
+                break;
         }
     }
 
     @Override
     public boolean onLongClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.btn01:
                 ToastUtils.showShort(this, "长按监听");
                 break;
