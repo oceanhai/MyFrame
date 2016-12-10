@@ -102,7 +102,7 @@ public class RoundProgressBar extends View {
 		//中间进度百分比的字符串的颜色
 		textColor = mTypedArray.getColor(R.styleable.RoundProgressBar_textColor, Color.GREEN);
 		//中间进度百分比的字符串的字体
-		textSize = mTypedArray.getDimension(R.styleable.RoundProgressBar_textSize, 15);
+		textSize = mTypedArray.getDimension(R.styleable.RoundProgressBar_roundTextSize, 15);
 		//圆环的宽度
 		roundWidth = mTypedArray.getDimension(R.styleable.RoundProgressBar_roundWidth, 5);
 		//最大进度

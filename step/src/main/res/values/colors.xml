@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 主题色-->
+    <color name="step_ThemeColor">#44b790</color>
+    <color name="step_primary_color">#ff5925</color>
+    <color name="step_light_primary_color">#ff6a36</color>
+    <color name="step_dark_primary_color">#dd3703</color>
+    <color name="step_trans_primary_color">#99ff5925</color>
+    <color name="step_trans_primary_color_light">#44ff5925</color>
+    <color name="step_trans_dark_primary_color">#99dd3703</color>
+    <color name="step_light_grey">#e8e8e8</color>
+    <color name="step_grey">#d5d5d5</color>
+    <color name="step_dark_grey">#a0a0a0</color>
+    <color name="step_white">#ffffff</color>
+    <color name="step_trans_white">#99ffffff</color>
+    <color name="step_trans_light_white">#77ffffff</color>
+    <color name="step_transparent">#00000000</color>
+    <color name="step_trans_light_grey">#11000000</color>
+    <color name="step_trans_grey">#22000000</color>
+    <color name="step_trans_dark_grey">#33000000</color>
+    <color name="step_trans_light_black">#44000000</color>
+    <color name="step_trans_black">#66000000</color>
+    <color name="step_trans_dark_black">#88000000</color>
+    <color name="step_color_f2f2f2">#f2f2f2</color>
+    <color name="step_color_fafafa">#fafafa</color>
+
+    <!-- common -->
+    <color name="step_text_color_333">#333333</color>
+    <color name="step_text_color_666">#666666</color>
+    <color name="step_text_color_999">#999999</color>
+    <color name="step_text_color_46">#464646</color>
+
+    <color name="step_common_line">#eaeaea</color>
+    <color name="step_background">#f2f2f2</color>
+
+
+
+    <!-- Tab-->
+    <!-- TabText未选中颜色-->
+    <color name="step_tab_text_unselected">#44000000</color>
+    <!-- TabText选中颜色-->
+    <color name="step_tab_text_selected">#88000000</color>
+    <!-- Tab未选中颜色-->
+    <color name="step_tab_background_unselected">#11000000</color>
+    <!-- Tab选中颜色-->
+    <color name="step_tab_background_selected">#44000000</color>
+
+    <!--tab textcolor-->
+    <color name="step_tab_text_color_unselected">#999999</color>
+    <color name="step_tab_text_color_selected">#44b790</color>
+
+    <color name="step_devider_line">#e7e7e7</color>
+    <color name="step_message_item_bg_normal">#ffffff</color>
+    <color name="step_message_item_bg_pressed">#fafafa</color>
+
+
+    <color name="step_text_color_light">#999999</color>
+    <color name="step_text_color_middle">#666666</color>
+    <color name="step_text_color_deep">#333333</color>
+    <color name="step_front_ground">#ac000000</color>
+
+    <color name="step_radio_selected">#44b790</color>
+    <color name="step_radio_unselected">#eaeaea</color>
+
+    <color name="step_c333">#333333</color>
+    <color name="step_c666">#666666</color>
+    <color name="step_color_dbdbdb">#dbdbdb</color>
+    <color name="step_color_eaeaea">#eaeaea</color>
+    <color name="step_color_fffb8c">#fffb8c</color>
+    <color name="step_color_87f358">#87f358</color>
+    <color name="step_color_26ea9e">#26ea9e</color>
+    <color name="step_color_26d5ea">#26d5ea</color>
+    <color name="step_color_2667ea">#2667ea</color>
+    <color name="step_color_b026ea">#b026ea</color>
+    <color name="step_color_ea266b">#ea266b</color>
+    <color name="step_color_ffa147">#ffa147</color>
+    <color name="step_color_44b790">#44b790</color>
+    <color name="step_color_ffeddc">#ffeddc</color>
+    <color name="step_color_ebf7f2">#ebf7f2</color>
+    <color name="step_color_7066E2">#7066E2</color>
+    <color name="step_color_EF9854">#EF9854</color>
+    <color name="step_color_4b60f4">#4b60f4</color>
+    <color name="step_color_19b48e">#19b48e</color>
+    <color name="step_color_8526c2">#8526c2</color>
+    <color name="step_color_ffb48c">#ffb48c</color>
+
+    <color name="step_common_btn_normal">@color/step_ThemeColor</color>
+    <color name="step_common_btn_disabled">#999999</color>
+    <color name="step_common_btn_pressed">#19b48e</color>
+
+    <color name="step_colorPrimaryDark">#f57257</color>
+    <color name="step_colorPrimary">#f46444</color>
+    <color name="step_navigationBarColor">#f46444</color>
+
+</resources>

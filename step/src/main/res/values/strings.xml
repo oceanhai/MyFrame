@@ -1,0 +1,7 @@
+<resources>
+    <string name="step_app_name">StepApp</string>
+    <string name="step_count_textview">每日健走5000步,可领取</string>
+    <string name="step_count_distance">距离</string>
+    <string name="step_count_expend">消耗</string>
+    <string name="step_count_sport_time">运动时长</string>
+</resources>

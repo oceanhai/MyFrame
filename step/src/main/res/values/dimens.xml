@@ -1,0 +1,136 @@
+<resources>
+
+    <!-- DO NOT TOUCH THEM, LET THEM GO......-->
+    <dimen name="step_activity_horizontal_margin">16dp</dimen>
+    <dimen name="step_activity_vertical_margin">16dp</dimen>
+
+    <!-- PageIndicator的Dimens-->
+    <dimen name="step_page_indicator_margin_bottom">40dp</dimen>
+
+    <!-- Tab图标的Dimens-->
+    <!-- 底栏图标尺寸-->
+    <dimen name="step_tab_icon_image_size">32dp</dimen>
+    <!-- 底栏字体尺寸-->
+    <dimen name="step_tab_text_size">10dp</dimen>
+    <!-- 底栏图标水平间距-->
+    <dimen name="step_tab_padding_horizontal">5dp</dimen>
+    <!-- 底栏上边距-->
+    <dimen name="step_tab_padding_vertical">8dp</dimen>
+    <!-- 底栏图标上下间距（文字、图标）-->
+    <dimen name="step_tab_icon_text_margin">1dp</dimen>
+    <!-- 底栏上方阴影宽度-->
+    <dimen name="step_tab_shadow_height">0.5dp</dimen>
+    <!--名医-->
+    <dimen name="step_famous_grey_text">16dp</dimen>
+    <dimen name="step_famous_black">18dp</dimen>
+    <dimen name="step_famous_dark">14dp</dimen>
+    <!--header -->
+    <dimen name="step_header_image">62dp</dimen>
+
+    <dimen name="step_line_height">0.5dp</dimen>
+
+    <!-- common 公共尺寸写这里 -->
+    <dimen name="step_common_font_14sp">14sp</dimen>
+    <dimen name="step_common_font_12sp">12sp</dimen>
+    <dimen name="step_common_font_16sp">16sp</dimen>
+    <dimen name="step_common_font_26sp">26sp</dimen>
+    <dimen name="step_common_font_15sp">15sp</dimen>
+    <dimen name="step_common_line_height">0.5dp</dimen>
+
+
+    <!-- 首页尺寸 -->
+    <dimen name="step_main_banner_height">180dp</dimen>
+    <dimen name="step_main_6dp_margin">6dp</dimen>
+    <dimen name="step_main_8dp_margin">8dp</dimen>
+    <dimen name="step_main_11dp_margin">11dp</dimen>
+    <dimen name="step_main_12dp_margin">12dp</dimen>
+    <dimen name="step_main_14dp_margin">14dp</dimen>
+    <dimen name="step_main_15dp_margin">15dp</dimen>
+    <dimen name="step_main_16dp_margin">16dp</dimen>
+    <dimen name="step_main_18dp_margin">18dp</dimen>
+    <dimen name="step_main_26dp_margin">26dp</dimen>
+    <dimen name="step_main_44dp_margin">44dp</dimen>
+    <dimen name="step_main_title_height">44dp</dimen>
+    <dimen name="step_main_plan_height">86dp</dimen>
+    <dimen name="step_main_scroll_viewpager_height">100dp</dimen>
+    <dimen name="step_main_list_item_height">91dp</dimen>
+    <dimen name="step_main_scroll_viewpager_width">260dp</dimen>
+
+    <!-- 消息页面item尺寸 -->
+    <dimen name="step_message_head_image_width">40dp</dimen>
+    <dimen name="step_message_head_image_height">40dp</dimen>
+    <dimen name="step_message_image_width">34dp</dimen>
+    <dimen name="step_message_image_height">34dp</dimen>
+    <dimen name="step_message_red_dot_width">6dp</dimen>
+    <dimen name="step_message_red_dot_height">6dp</dimen>
+    <dimen name="step_message_image_left_margin">10dp</dimen>
+    <dimen name="step_message_image_top_margin">14dp</dimen>
+    <dimen name="step_message_image_bottom_margin">14dp</dimen>
+    <dimen name="step_message_text_left_margin">10dp</dimen>
+    <dimen name="step_message_text_top_margin">18dp</dimen>
+    <dimen name="step_message_text_bottom_margin">18dp</dimen>
+    <dimen name="step_message_content_text_top_margin">8dp</dimen>
+    <dimen name="step_message_text_right_margin">10dp</dimen>
+    <dimen name="step_message_subtype_time_margin_top">16dp</dimen>
+    <dimen name="step_message_subtype_entity_margin_top">10dp</dimen>
+    <dimen name="step_message_subtype_entity_margin_right">55dp</dimen>
+    <dimen name="step_divider_width">1dp</dimen>
+
+
+    <!-- 字体大小 -->
+    <!-- 标题栏文字大小 -->
+    <dimen name="step_title_tv_size">20dp</dimen>
+    <dimen name="step_tv_size_xxxlarge">24dp</dimen>
+    <dimen name="step_tv_size_xxlarge">22dp</dimen>
+    <dimen name="step_tv_size_xlarge">20dp</dimen>
+    <dimen name="step_tv_size_large">18dp</dimen>
+    <dimen name="step_tv_size_middle">16dp</dimen>
+    <dimen name="step_tv_size_small">14dp</dimen>
+    <dimen name="step_tv_size_xsmall">12dp</dimen>
+
+    <!-- 控件尺寸 -->
+    <!-- 登录按钮宽度 -->
+    <dimen name="step_btn_login_width">160dp</dimen>
+
+    <dimen name="step_btn_min_width">80dp</dimen>
+    <dimen name="step_btn_min_height">40dp</dimen>
+
+    <dimen name="step_btn_min_width_small">60dp</dimen>
+    <dimen name="step_btn_min_height_small">30dp</dimen>
+
+    <dimen name="step_btn_common_width">160dp</dimen>
+    <dimen name="step_btn_common_height">40dp</dimen>
+
+    <dimen name="step_btn_large_width">240dp</dimen>
+    <dimen name="step_btn_large_height">48dp</dimen>
+
+
+    <dimen name="step_btn_full_height">48dp</dimen>
+    <dimen name="step_btn_full_margin">16dp</dimen>
+
+
+    <!-- 按钮边距 -->
+    <dimen name="step_btn_margin_large">10dp</dimen>
+    <dimen name="step_btn_margin_middle">8dp</dimen>
+    <dimen name="step_btn_margin_small">4dp</dimen>
+
+
+    <!-- 输入框 -->
+    <!-- 登录页输入框 宽度 -->
+    <dimen name="step_et_login_width">250dp</dimen>
+    <dimen name="step_et_min_width">80dp</dimen>
+    <dimen name="step_et_min_width_small">60dp</dimen>
+    <dimen name="step_et_min_height">40dp</dimen>
+    <dimen name="step_et_min_height_small">30dp</dimen>
+
+    <!-- 输入框边距 -->
+    <dimen name="step_et_padding_small">5dp</dimen>
+    <dimen name="step_et_padding_middle">8dp</dimen>
+    <dimen name="step_et_padding_large">10dp</dimen>
+
+
+    <!-- 通长按钮边距 -->
+    <dimen name="step_total_btn_margin">16dp</dimen>
+
+
+</resources>

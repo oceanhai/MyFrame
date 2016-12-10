@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/commonTitle"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/step_titlebar_bg">
+
+        <RelativeLayout
+            android:id="@+id/Lback"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/back"
+                android:clickable="false" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/app_name"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+
+        <ImageButton
+            android:id="@+id/right_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/step_main_16dp_margin"
+            android:background="@null"
+            android:clickable="false"
+            android:gravity="center"
+            android:src="@drawable/refresh_btn"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/left_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/step_main_16dp_margin"
+            android:layout_toLeftOf="@id/right_btn"
+            android:background="@null"
+            android:clickable="false"
+            android:src="@drawable/refresh_btn"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/right_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:clickable="false"
+            android:gravity="center"
+            android:src="@drawable/refresh_btn"
+            android:text="保存"
+            android:lines="1"
+            android:textColor="@color/step_white"
+            android:textSize="14sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</merge>

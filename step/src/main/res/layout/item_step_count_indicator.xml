@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_bg"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:background="@drawable/oval_step_indicator_selector">
+
+    <TextView
+        android:id="@+id/tv_indicator_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="一"
+        android:textColor="@color/step_indicator_text_selector"
+        android:textSize="@dimen/step_common_font_12sp" />
+</FrameLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:color="@color/step_white" android:state_enabled="true"></item>
+    <item android:color="@color/step_text_color_999" android:state_enabled="false"></item>
+
+</selector>

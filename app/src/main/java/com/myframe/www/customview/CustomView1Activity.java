@@ -16,6 +16,9 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import www.wuhai.common.utils.L;
 
+/**
+ * https://github.com/GcsSloop/AndroidNote/blob/master/CustomView/Advance/%5B02%5DCanvas_BasicGraphics.md
+ */
 public class CustomView1Activity extends BaseActivity {
 
     private static final String TAG = "CustomView";

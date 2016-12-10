@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/step_color_fafafa"
+    android:orientation="vertical"
+>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+
+        <step.view.DateTextView
+            android:id="@+id/tv_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <ImageButton
+            android:id="@+id/ibt_back_today"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/icon_back_today" />
+    </RelativeLayout>
+
+
+    <step.view.CircleView
+        android:id="@+id/step_view"
+        android:layout_width="225dp"
+        android:layout_height="225dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/step_main_12dp_margin"
+        app:TopTextColor="@color/step_text_color_666"
+        app:circlePadding="8dp"
+        app:circleWidth="12dp"
+        app:stepTextColor="#464646"
+        app:stepTextSize="50sp"
+        app:targetTextColor="@color/step_text_color_666"
+        app:targetTextSize="12sp"
+        app:topTextSize="12sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/step_main_16dp_margin"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3.6"
+                    android:textColor="@color/step_text_color_46"
+                    android:textSize="@dimen/step_common_font_26sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="km"
+                    android:textColor="@color/step_text_color_46"
+                    android:textSize="@dimen/step_common_font_15sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/step_main_6dp_margin"
+                android:text="距离"
+                android:textColor="@color/step_text_color_999" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/step_common_line_height"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/step_common_line" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_calories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6"
+                    android:textColor="@color/step_text_color_46"
+                    android:textSize="@dimen/step_common_font_26sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="卡"
+                    android:textColor="@color/step_text_color_46"
+                    android:textSize="@dimen/step_common_font_15sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/step_main_6dp_margin"
+                android:text="@string/step_count_expend"
+                android:textColor="@color/step_text_color_999" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/step_common_line_height"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/step_common_line" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_sport_hour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:textColor="@color/step_text_color_46"
+                    android:textSize="@dimen/step_common_font_26sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/tv_hour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="小时"
+                    android:textColor="@color/step_text_color_46"
+                    android:textSize="@dimen/step_common_font_15sp" />
+                <TextView
+                    android:id="@+id/tv_sport_minute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:textColor="@color/step_text_color_46"
+                    android:textSize="@dimen/step_common_font_26sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/tv_minute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="分钟"
+                    android:textColor="@color/step_text_color_46"
+                    android:textSize="@dimen/step_common_font_15sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/step_main_6dp_margin"
+                android:text="@string/step_count_sport_time"
+                android:textColor="@color/step_text_color_999" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

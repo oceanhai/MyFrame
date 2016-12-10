@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.largeimg.stepapp">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <application
+            android:allowBackup="false"
+            android:label="@string/app_name"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+
+        <activity
+            android:name="step.StepCountActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+
+        <service android:name="step.StepService$GrayInnerService"
+                 android:enabled="true"
+        />
+        <service android:name="step.StepService"
+        >
+            <intent-filter>
+                <action android:name="com.service.platform.StepService"/>
+
+                <category android:name="android.intent.category.default"/>
+            </intent-filter>
+        </service>
+
+
+        <!--计步相关的广播-->
+        <receiver
+                android:name="step.receiver.DateChangedReceiver"
+                android:enabled="true"
+                android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.DATE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false"
+                  android:name="step.receiver.SystemReceiver"> 
+            <intent-filter> 
+                <action android:name="android.intent.action.BOOT_COMPLETED"/> 
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/> 
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/> 
+                <action android:name="android.intent.action.BATTERY_LOW"/> 
+                <action android:name="android.intent.action.BATTERY_CHANGED"/> 
+                <action android:name="android.intent.action.BATTERY_OKAY"/> 
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/> 
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED"/> 
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION"/>
+                <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION"/>
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED"/>
+                <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED"/>
+                <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED"/>
+                <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK"/>
+                <!-- Optional 用户接受Rich Push Javascript 回调函数的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION"/>
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+
+                <data android:scheme="package"/>
+            </intent-filter>
+             
+        </receiver>
+
+        <receiver android:exported="false"
+                  android:name="step.receiver.TimerReceiver"> 
+            <intent-filter>
+                 <action android:name="me.chunyu.pedometer.midnight_alarm_filter"/> 
+                <action android:name="me.chunyu.pedometer.service_alive_alarm_filter"/> 
+                <action android:name="android.intent.action.DATE_CHANGED"/> 
+                <action android:name="android.intent.action.TIME_SET"/> 
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/> 
+            </intent-filter>
+             
+        </receiver>
+
+        <receiver android:name="step.receiver.AutoStarter"/>
+        <!--计步相关的广播   end-->
+
+    </application>
+
+</manifest>

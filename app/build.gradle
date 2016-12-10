@@ -75,7 +75,10 @@ dependencies {
     //个推
     compile files('libs/GetuiSDK2.8.1.0.jar')
     compile files('libs/GetuiExt-2.0.3.jar')
+    //请求 module
     compile project(':datarequest')
+    //计步器
+    compile project(':step')
     compile 'com.android.support:appcompat-v7:23.3.0'
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'com.android.support:recyclerview-v7:23.3.0'

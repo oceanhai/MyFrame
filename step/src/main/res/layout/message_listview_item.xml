@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/message_item_bg_selector">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/step_message_image_left_margin"
+        android:layout_marginTop="@dimen/step_message_image_top_margin"
+        android:layout_marginBottom="@dimen/step_message_image_bottom_margin">
+        <ImageView
+            android:id="@+id/msgTypeLogo"
+            android:layout_width="@dimen/step_message_image_width"
+            android:layout_height="@dimen/step_message_image_height"
+            android:src="@drawable/message_system_info"/>
+
+
+        <ImageView
+            android:id="@+id/message_red_dot"
+            android:layout_width="@dimen/step_message_red_dot_width"
+            android:layout_height="@dimen/step_message_red_dot_height"
+            android:src="@drawable/message_red_dot"
+            android:layout_gravity="right|top"/>
+    </FrameLayout>
+    
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/step_message_text_left_margin"
+        android:layout_marginRight="@dimen/step_message_text_right_margin"
+        android:layout_marginTop="@dimen/step_message_text_top_margin"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                    android:id="@+id/msgType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#666666"
+                    android:textSize="14sp"
+                    />
+
+            <TextView
+                android:id="@+id/lastTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="#999999"
+                android:layout_gravity="right"/>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/msgContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/step_message_content_text_top_margin"
+            android:layout_marginBottom="@dimen/step_message_text_bottom_margin"
+            android:textSize="12sp"
+            android:textColor="#999999"
+            android:singleLine="true"/>
+
+    </LinearLayout>
+
+</LinearLayout>

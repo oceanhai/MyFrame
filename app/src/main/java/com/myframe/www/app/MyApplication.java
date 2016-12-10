@@ -6,6 +6,7 @@ import com.myframe.www.utils.MyUtils;
 import com.xywy.component.datarequest.imageWrapper.ImageLoaderUtils;
 import com.xywy.component.datarequest.network.RequestManager;
 
+import step.StepManager;
 import www.wuhai.common.utils.L;
 
 /**
@@ -42,5 +43,10 @@ public class MyApplication extends Application{
          * log 初始化
          */
         L.init(this);
+
+        /**
+         * 计步器 aar 初始化
+         */
+        StepManager.init(this,"all");//all 以手机记录步数
     }
 }

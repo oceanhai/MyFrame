@@ -28,6 +28,7 @@ import com.myframe.www.yxt01.RetailSalerBrandPageActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import step.StepCountActivity;
 import www.wuhai.common.utils.ToastUtils;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
@@ -130,6 +131,30 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     Button btn48;
     @Bind(R.id.btn49)
     Button btn49;
+    @Bind(R.id.btn50)
+    Button btn50;
+    @Bind(R.id.btn51)
+    Button btn51;
+    @Bind(R.id.btn52)
+    Button btn52;
+    @Bind(R.id.btn53)
+    Button btn53;
+    @Bind(R.id.btn54)
+    Button btn54;
+    @Bind(R.id.btn55)
+    Button btn55;
+    @Bind(R.id.btn56)
+    Button btn56;
+    @Bind(R.id.btn57)
+    Button btn57;
+    @Bind(R.id.btn58)
+    Button btn58;
+    @Bind(R.id.btn59)
+    Button btn59;
+    @Bind(R.id.btn60)
+    Button btn60;
+    @Bind(R.id.btn61)
+    Button btn61;
 
     private String parameter;//TODO 这个以后应该是个json串，目前就简单用string代替
 
@@ -200,6 +225,18 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         btn47.setOnClickListener(this);
         btn48.setOnClickListener(this);
         btn49.setOnClickListener(this);
+        btn50.setOnClickListener(this);
+        btn51.setOnClickListener(this);
+        btn52.setOnClickListener(this);
+        btn53.setOnClickListener(this);
+        btn54.setOnClickListener(this);
+        btn55.setOnClickListener(this);
+        btn56.setOnClickListener(this);
+        btn57.setOnClickListener(this);
+        btn58.setOnClickListener(this);
+        btn59.setOnClickListener(this);
+        btn60.setOnClickListener(this);
+        btn61.setOnClickListener(this);
     }
 
     private void pareIntent() {
@@ -365,6 +402,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.btn47://Listview_convertView
                 ListviewActivity.startActivity(this);
+                break;
+            case R.id.btn48://计步器  ※上传数据策略根据情况设定
+                StepCountActivity.startActivity(this);
                 break;
         }
     }
