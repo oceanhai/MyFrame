@@ -29,6 +29,7 @@ import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Set;
+
 import step.data.StepCountAdapter;
 import step.data.StepDBManager;
 import step.model.StepDBModel;
@@ -249,13 +250,13 @@ public class StepCountActivity extends BaseActivity implements OnPageChangeListe
 
     private void initTitle() {
 
-        titleCommonTv.setText("");
+        titleCommonTv.setText("");//标题
         titleCommonTv.setVisibility(View.VISIBLE);
-        leftCommonImgBtn.setVisibility(View.VISIBLE);
+        leftCommonImgBtn.setVisibility(View.VISIBLE);//返回箭头
+        rightCommonImgBtn.setImageResource(R.drawable.icon_record);//计步图 btn
         rightCommonImgBtn.setVisibility(View.VISIBLE);
+        leftImgBtn.setImageResource(R.drawable.icon_step_selected);//曲线图 btn
         leftImgBtn.setVisibility(View.VISIBLE);
-        rightCommonImgBtn.setImageResource(R.drawable.icon_record);
-        leftImgBtn.setImageResource(R.drawable.icon_step_selected);
 
     }
 
@@ -316,6 +317,10 @@ public class StepCountActivity extends BaseActivity implements OnPageChangeListe
 
     }
 
+    /**
+     * 获取 计步器数据
+     * @return
+     */
     private List<StepDBModel> getData() {
         StepDBManager manager = StepDBManager.getIns();
         //        stepDBManager.writeStepToDb();
@@ -349,12 +354,15 @@ public class StepCountActivity extends BaseActivity implements OnPageChangeListe
         vpStepCount.setCurrentItem(mList.size() - 1);
     }
 
+    /**
+     * 初始化 星期一至星期日 图标
+     */
     private void initIndicator() {
         textArray = new SparseArray<>();
         llWeek.removeAllViews();
         if (mList != null && mList.size() > 0) {
             week = DateUtils.getWeekIndex(mList.get(mList.size() - 1)
-                    .getDate());
+                    .getDate());//0~6=>星期一到星期日
         }
         for (int i = 0; i < 7; i++) {
             View view = View.inflate(this, R.layout.item_step_count_indicator, null);

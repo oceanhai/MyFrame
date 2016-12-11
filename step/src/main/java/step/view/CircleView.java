@@ -83,7 +83,9 @@ public class CircleView extends View {
 
         initTypeArray(context, attrs);
 
-
+        /**
+         * 最外层 灰色圆环画笔
+         */
         backCirclePaint = new Paint();
         //设置画笔的风格(空心或者实心)
         backCirclePaint.setStyle(Paint.Style.STROKE);
@@ -95,12 +97,15 @@ public class CircleView extends View {
         backCirclePaint.setStrokeWidth(circleBorderWidth);
 //        backCirclePaint.setMaskFilter(new BlurMaskFilter(20, BlurMaskFilter.Blur.OUTER));
 
+        /**
+         * 最内侧 实心圆画笔
+         */
         innerCirclePaint = new Paint();
         innerCirclePaint.setStyle(Paint.Style.FILL);
         innerCirclePaint.setAntiAlias(true);
         innerCirclePaint.setColor(getResources().getColor(R.color.step_white));
 
-        //刻度盘外侧圆圈
+        //刻度盘外侧圆圈 那条灰色的圆环线
         lineCirclePaint = new Paint();
         lineCirclePaint.setStyle(Paint.Style.STROKE);
         lineCirclePaint.setAntiAlias(true);
@@ -113,6 +118,9 @@ public class CircleView extends View {
         linePaint.setColor(getResources().getColor(R.color.step_trans_light_grey));
         linePaint.setStrokeWidth(4);
 
+        /**
+         * 走步 进度
+         */
         gradientCirclePaint = new Paint();
         gradientCirclePaint.setStyle(Paint.Style.STROKE);
         gradientCirclePaint.setAntiAlias(true);
@@ -125,7 +133,18 @@ public class CircleView extends View {
         textPaint.setAntiAlias(true);
         textPaint.setTextSize(textSize);
         textPaint.setColor(stepTextColor);
-        textPaint.setTypeface(Typeface.defaultFromStyle(Typeface.ITALIC));
+        /**
+        Typeface.DEFAULT //常规字体类型
+        Typeface.DEFAULT_BOLD //黑体字体类型
+        Typeface.MONOSPACE //等宽字体类型
+        Typeface.SANS_SERIF //sans serif字体类型
+        常用的字体风格名称还有：
+        Typeface.BOLD //粗体
+        Typeface.BOLD_ITALIC //粗斜体
+        Typeface.ITALIC //斜体
+        Typeface.NORMAL //常规
+         */
+        textPaint.setTypeface(Typeface.defaultFromStyle(Typeface.ITALIC));//设置或清除字体样式
 //        textPaint.setTextAlign(Paint.Align.CENTER);
 
         topPaint = new Paint();

@@ -43,4 +43,9 @@
         android:text="自定义view之基本图形，eg.饼图"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn03"
+        android:text="圆环刻度"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </LinearLayout>

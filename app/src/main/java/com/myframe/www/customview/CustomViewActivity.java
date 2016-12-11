@@ -34,6 +34,8 @@ public class CustomViewActivity extends BaseActivity implements View.OnClickList
     Button btn01;
     @Bind(R.id.btn02)
     Button btn02;
+    @Bind(R.id.btn03)
+    Button btn03;
 
     private Handler handler = new Handler() {
         public void handleMessage(Message msg) {
@@ -81,6 +83,7 @@ public class CustomViewActivity extends BaseActivity implements View.OnClickList
         rippleButton.setOnClickListener(this);
         btn01.setOnLongClickListener(this);
         btn02.setOnClickListener(this);
+        btn03.setOnClickListener(this);
     }
 
     @Override
@@ -107,8 +110,11 @@ public class CustomViewActivity extends BaseActivity implements View.OnClickList
                     }
                 }, 4000);
                 break;
-            case R.id.btn02:
+            case R.id.btn02://自定义view之基本图形，eg.饼图
                 CustomView1Activity.startActivity(this);
+                break;
+            case R.id.btn03://圆环刻度
+                CustomView2Activity.startActivity(this);
                 break;
         }
     }

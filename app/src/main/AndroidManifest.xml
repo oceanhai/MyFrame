@@ -316,6 +316,8 @@
 
         <activity android:name=".testcontentprovider.ContentResolverActivity" >
         </activity>
+        <activity android:name=".customview.CustomView2Activity" >
+        </activity>
     </application>
 
 </manifest>
