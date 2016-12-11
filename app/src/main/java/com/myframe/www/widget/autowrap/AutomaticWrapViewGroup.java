@@ -5,19 +5,10 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * 自动换行控件
  */
 public class AutomaticWrapViewGroup extends ViewGroup {
-
-    //存储所有子View
-    private List<List<View>> mAllChildViews = new ArrayList<>();
-
-    //每一行的高度
-    private List<Integer> mLineHeight = new ArrayList<>();
 
     public AutomaticWrapViewGroup(Context context) {
         super(context);

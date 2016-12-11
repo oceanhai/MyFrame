@@ -79,13 +79,6 @@ public class AutomaticWrapLayout extends RelativeLayout {
         return model;
     }
 
-    private void inflateView() {
-        LayoutInflater inflater = LayoutInflater.from(getContext());
-        inflater.inflate(R.layout.widget_automatic_wrap_layout, this, true);
-
-        AutomaticWrapView = (AutomaticWrapViewGroup) findViewById(R.id.autowrap);
-    }
-
     private void init() {
         inflateView();
 
@@ -121,6 +114,13 @@ public class AutomaticWrapLayout extends RelativeLayout {
                 }
             }
         }
+    }
+
+    private void inflateView() {
+        LayoutInflater inflater = LayoutInflater.from(getContext());
+        inflater.inflate(R.layout.widget_automatic_wrap_layout, this, true);
+
+        AutomaticWrapView = (AutomaticWrapViewGroup) findViewById(R.id.autowrap);
     }
 
     public class CheckBoxClistListener implements OnClickListener {
@@ -230,11 +230,12 @@ public class AutomaticWrapLayout extends RelativeLayout {
             return true;
         }
 
-        if(box.isChecked()) {
-            //没有选中就不做判断了
+        if(box.isChecked()) {//选中
             return hasDone;
-        } else {
+        } else {//未选中
             int count = selectionCount();
+            //1.没有选项->选择当前点击的选项；2.单选，点击选中项之后因为count==0，又再次把这个选项置为true
+            //其实就是保证选项中至少被选择一个
             if(count == 0) {
                 box.setChecked(true);
                 hasDone = true;

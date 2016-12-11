@@ -32,7 +32,7 @@
             <com.myframe.www.widget.autowrap.AutomaticWrapLayout
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
-                android:background="#ffffff"
+                android:background="#ff0000"
                 android:paddingTop="20dp"
                 android:paddingBottom="15dp"
                 android:id="@+id/caseview1"

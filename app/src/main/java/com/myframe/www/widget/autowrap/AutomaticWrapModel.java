@@ -1,10 +1,12 @@
 package com.myframe.www.widget.autowrap;
 
 /**
- * Created by shijiazi on 16/1/11.
  * 问题数据结构
  */
 public class AutomaticWrapModel {
+    private String caseText;
+    private boolean isDefault = false;
+    private boolean isExclusive = false;
 
     public String getCaseText() {
         return caseText;
@@ -29,6 +31,10 @@ public class AutomaticWrapModel {
         this.isDefault = isDefault;
     }
 
+    /**
+     * 是否排他
+     * @return
+     */
     public boolean isExclusive() {
         return isExclusive;
     }
@@ -45,9 +51,4 @@ public class AutomaticWrapModel {
         return caseText;
     }
 
-    private String caseText;
-
-    private boolean isDefault = false;
-
-    private boolean isExclusive = false;
 }

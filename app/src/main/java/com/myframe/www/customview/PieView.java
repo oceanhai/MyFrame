@@ -9,10 +9,14 @@ import android.view.View;
 
 import java.util.List;
 
+import www.wuhai.common.utils.L;
+
 /**
  * 饼图
  */
 public class PieView extends View {
+    private static final String TAG = "PieView";
+
     private Paint mPaint = new Paint();
 
     private int[] mColors = {0xFFCCFF00, 0xFF6495ED, 0xFFE32636, 0xFF800000, 0xFF808000, 0xFFFF8C69, 0xFF808080,
@@ -37,6 +41,7 @@ public class PieView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+        L.e(TAG, "onDraw执行了一次");
         if(mData == null){
             return;
         }
@@ -89,5 +94,23 @@ public class PieView extends View {
             data.setAngle(angle);
             data.setPercentage(percentage);
         }
+    }
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        L.e(TAG,"onMeasure执行了一次");
+    }
+
+    @Override
+    protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
+        super.onLayout(changed, left, top, right, bottom);
+        L.e(TAG, "onLayout执行了一次");
+    }
+
+    @Override
+    public void layout(int l, int t, int r, int b) {
+        super.layout(l, t, r, b);
+        L.e(TAG, "layout执行了一次");
     }
 }
