@@ -67,6 +67,14 @@ public class DBDAO {
 	}
 
 	/**
+	 * 插入时，某条记录不存在则插入，存在则更新。或更新时，某条记录存在则更新，不存在则插入
+	 * @param values
+	 */
+	public void replace(ContentValues values){
+		db.replace("student",null,values);
+	}
+
+	/**
 	 * 查询语句
 	 * @param columns
 	 * @param selection

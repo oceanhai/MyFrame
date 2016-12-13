@@ -318,6 +318,8 @@
         </activity>
         <activity android:name=".customview.CustomView2Activity" >
         </activity>
+        <activity android:name=".testasynctask.AsynctaskActivity" >
+        </activity>
     </application>
 
 </manifest>

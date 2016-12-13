@@ -12,6 +12,7 @@ import com.myframe.www.customview.CustomViewActivity;
 import com.myframe.www.jni.NdkJniActivity;
 import com.myframe.www.materialdesign.MaterialDesignActivity;
 import com.myframe.www.performance.MatActivity;
+import com.myframe.www.testasynctask.AsynctaskActivity;
 import com.myframe.www.testcontentprovider.ContentResolverActivity;
 import com.myframe.www.testdb.DBActivity;
 import com.myframe.www.testhandler.HandlerActivity;
@@ -409,6 +410,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.btn49://ContentResolver 通讯录
                 ContentResolverActivity.startActivity(this);
+                break;
+            case R.id.btn50://asynctask 测试
+                AsynctaskActivity.startActivity(this);
                 break;
         }
     }

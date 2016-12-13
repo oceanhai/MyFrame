@@ -209,7 +209,7 @@
                 android:id="@+id/btn49"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="btn50"
+            <Button android:text="asynctask 测试"
                 android:id="@+id/btn50"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
