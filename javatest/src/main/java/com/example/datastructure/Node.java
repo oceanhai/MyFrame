@@ -1,7 +1,7 @@
 package com.example.datastructure;
 
 /**
- * Created by Administrator on 2016/12/4.
+ * 多叉树
  */
 public class Node {
     private int data;  //数据域
