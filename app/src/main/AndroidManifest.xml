@@ -320,6 +320,14 @@
         </activity>
         <activity android:name=".testasynctask.AsynctaskActivity" >
         </activity>
+        <activity
+            android:name=".teststartactivityforresult.SingleTopActivity"
+            android:launchMode="singleTop">
+        </activity>
+        <activity
+            android:name=".teststartactivityforresult.SingleTaskActivity"
+            android:launchMode="singleTask">
+        </activity>
     </application>
 
 </manifest>

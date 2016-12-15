@@ -16,12 +16,38 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <ImageView
-        android:id="@+id/imageview01"
-        android:layout_width="200dp"
-        android:layout_height="200dp" />
-    <ImageView
-        android:id="@+id/imageview02"
-        android:layout_width="200dp"
-        android:layout_height="200dp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/imageview01"
+                android:layout_width="200dp"
+                android:layout_height="200dp" />
+            <ImageView
+                android:id="@+id/imageview02"
+                android:layout_width="200dp"
+                android:layout_height="200dp" />
+            <ImageView
+                android:id="@+id/imageview03"
+                android:layout_width="200dp"
+                android:layout_height="200dp" />
+            <ImageView
+                android:id="@+id/imageview04"
+                android:layout_width="200dp"
+                android:layout_height="200dp" />
+            <ImageView
+                android:id="@+id/imageview05"
+                android:layout_width="200dp"
+                android:layout_height="200dp" />
+            <ImageView
+                android:id="@+id/imageview06"
+                android:layout_width="200dp"
+                android:layout_height="200dp" />
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>

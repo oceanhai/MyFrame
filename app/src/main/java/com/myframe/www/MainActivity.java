@@ -369,7 +369,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.btn35://view 分发机制
                 TouchEventActivity.startActivity(this);
                 break;
-            case R.id.btn36://activity跳转数据返回
+            case R.id.btn36://activity跳转数据返回 和启动模式
                 FirstActivity.startActivity(this);
                 break;
             case R.id.btn37://非UI线程起activity
