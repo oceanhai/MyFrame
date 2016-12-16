@@ -328,6 +328,11 @@
             android:name=".teststartactivityforresult.SingleTaskActivity"
             android:launchMode="singleTask">
         </activity>
+        <activity
+            android:name=".teststartactivityforresult.SingleInstanceActivity"
+            android:exported="true"
+            android:launchMode="singleInstance">
+        </activity>
     </application>
 
 </manifest>

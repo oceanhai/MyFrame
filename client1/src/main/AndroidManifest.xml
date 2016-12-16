@@ -17,6 +17,18 @@
         </activity>
         <activity android:name=".ContentResolverActivity" >
         </activity>
+        <activity
+            android:name=".teststartactivity.StandardActivity"
+            android:launchMode="standard">
+        </activity>
+        <activity
+            android:name=".teststartactivity.SingleTopActivity"
+            android:launchMode="singleTop">
+        </activity>
+        <activity
+            android:name=".teststartactivity.SingleTaskActivity"
+            android:launchMode="singleTask">
+        </activity>
     </application>
 
 </manifest>

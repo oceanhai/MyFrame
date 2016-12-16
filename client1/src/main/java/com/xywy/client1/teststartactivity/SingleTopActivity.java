@@ -1,5 +1,6 @@
-package com.myframe.www.teststartactivityforresult;
+package com.xywy.client1.teststartactivity;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,14 +10,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.myframe.www.R;
-import com.myframe.www.base.BaseActivity;
+import com.xywy.client1.R;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import www.wuhai.common.utils.L;
 
-public class SingleTopActivity extends BaseActivity implements View.OnClickListener {
+public class SingleTopActivity extends Activity implements View.OnClickListener {
 
 
     @Bind(R.id.hint)
@@ -115,7 +115,7 @@ public class SingleTopActivity extends BaseActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.standard:
-                FirstActivity.startActivity(this);
+                StandardActivity.startActivity(this);
                 break;
             case R.id.singleTop:
                 SingleTopActivity.startActivity(this, message.getText().toString());
@@ -124,7 +124,7 @@ public class SingleTopActivity extends BaseActivity implements View.OnClickListe
                 SingleTaskActivity.startActivity(this, message.getText().toString());
                 break;
             case R.id.singleInstance:
-                SingleInstanceActivity.startActivity(this);
+//                SingleInstanceActivity.startActivity(this);
                 break;
         }
     }

@@ -118,12 +118,13 @@ public class SingleTaskActivity extends BaseActivity implements View.OnClickList
                 FirstActivity.startActivity(this);
                 break;
             case R.id.singleTop:
-                SingleTopActivity.startActivity(this);
+                SingleTopActivity.startActivity(this, message.getText().toString());
                 break;
             case R.id.singleTask:
                 SingleTaskActivity.startActivity(this, message.getText().toString());
                 break;
             case R.id.singleInstance:
+                SingleInstanceActivity.startActivity(this);
                 break;
         }
     }
@@ -134,7 +135,6 @@ public class SingleTaskActivity extends BaseActivity implements View.OnClickList
      * 而且原先持有的属性不变，例如int变量num,原先是啥就是啥
      * 但onStart()，onResume()还是要执行的
      */
-
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);

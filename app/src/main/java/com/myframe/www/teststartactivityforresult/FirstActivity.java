@@ -64,12 +64,13 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
                 FirstActivity.startActivity(this);
                 break;
             case R.id.singleTop:
-                SingleTopActivity.startActivity(this);
+                SingleTopActivity.startActivity(this,message.getText().toString());
                 break;
             case R.id.singleTask:
                 SingleTaskActivity.startActivity(this,message.getText().toString());
                 break;
             case R.id.singleInstance:
+                SingleInstanceActivity.startActivity(this);
                 break;
         }
     }

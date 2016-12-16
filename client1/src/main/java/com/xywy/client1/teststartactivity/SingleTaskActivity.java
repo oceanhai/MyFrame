@@ -1,5 +1,6 @@
-package com.myframe.www.teststartactivityforresult;
+package com.xywy.client1.teststartactivity;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,15 +10,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.myframe.www.R;
-import com.myframe.www.base.BaseActivity;
+import com.xywy.client1.R;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import www.wuhai.common.utils.L;
 
-public class SingleTopActivity extends BaseActivity implements View.OnClickListener {
+public class SingleTaskActivity extends Activity implements View.OnClickListener {
 
+    private static final String TAG = SingleTaskActivity.class.getSimpleName();
 
     @Bind(R.id.hint)
     TextView hint;
@@ -36,12 +37,11 @@ public class SingleTopActivity extends BaseActivity implements View.OnClickListe
     @Bind(R.id.num)
     TextView num;
 
-    private static final String TAG = SingleTopActivity.class.getSimpleName();
     private String messageStr;
     private int numInt;
 
     public static void startActivity(Context context, String message) {
-        Intent intent = new Intent(context, SingleTopActivity.class);
+        Intent intent = new Intent(context, SingleTaskActivity.class);
         intent.putExtra("message", message);
         context.startActivity(intent);
     }
@@ -100,11 +100,11 @@ public class SingleTopActivity extends BaseActivity implements View.OnClickListe
         }
 
         numInt = 100;
-        num.setText(num.getText().toString() + numInt);
+        num.setText(num.getText().toString()+numInt);
     }
 
     private void init() {
-        hint.setText("singleTop模式");
+        hint.setText("singleTask模式");
         standard.setOnClickListener(this);
         singleTop.setOnClickListener(this);
         singleTask.setOnClickListener(this);
@@ -115,7 +115,7 @@ public class SingleTopActivity extends BaseActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.standard:
-                FirstActivity.startActivity(this);
+                StandardActivity.startActivity(this);
                 break;
             case R.id.singleTop:
                 SingleTopActivity.startActivity(this, message.getText().toString());
@@ -124,13 +124,13 @@ public class SingleTopActivity extends BaseActivity implements View.OnClickListe
                 SingleTaskActivity.startActivity(this, message.getText().toString());
                 break;
             case R.id.singleInstance:
-                SingleInstanceActivity.startActivity(this);
+//                SingleInstanceActivity.startActivity(this);
                 break;
         }
     }
 
     /**
-     * TODO SingleTop启动模式，执行onNewIntent的时候并不会执行onCreate方法
+     * TODO SingleTask启动模式，执行onNewIntent的时候并不会执行onCreate方法
      * 区域医疗里有调用一次startActivity其实多此一举，其实在onNewIntent里初始化就好了
      * 而且原先持有的属性不变，例如int变量num,原先是啥就是啥
      * 但onStart()，onResume()还是要执行的
