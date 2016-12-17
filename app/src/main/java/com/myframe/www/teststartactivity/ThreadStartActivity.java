@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
+import android.os.Looper;
 import android.os.Message;
 import android.widget.TextView;
 
@@ -42,10 +43,14 @@ public class ThreadStartActivity extends BaseActivity {
 
         L.v(TAG, "onCreate-1");
 
+        L.e(TAG,"UI isMainThread:"+isMainThread1()+","+isMainThread2()+","+isMainThread3());
+
         //非Ui线程能否启动activity？
         new Thread(new Runnable() {
             @Override
             public void run() {
+                L.e(TAG,"new Thread isMainThread:"+isMainThread1()+","+isMainThread2()+","+isMainThread3());
+
                 Intent intent = new Intent(ThreadStartActivity.this, TargetActivity.class);
                 startActivity(intent);
             }
@@ -90,6 +95,19 @@ public class ThreadStartActivity extends BaseActivity {
         for(int x=0;x<10;x++){
             L.v(TAG, "threadd3-oncreate:" + Thread.currentThread().getName());
         }
+    }
+
+    /**
+     * 判断是否是主线程的三种方式
+     */
+    private boolean isMainThread1(){
+        return Looper.getMainLooper() == Looper.myLooper();
+    }
+    private boolean isMainThread2(){
+        return Looper.getMainLooper().getThread() == Thread.currentThread();
+    }
+    private boolean isMainThread3(){
+        return Looper.getMainLooper().getThread().getId() == Thread.currentThread().getId();
     }
 
     @Override
