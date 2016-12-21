@@ -53,6 +53,7 @@ public class AsynctaskActivity extends BaseActivity implements View.OnClickListe
 //            TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>());
     private Executor exec = new ThreadPoolExecutor(3, 5, 10,
             TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>(10));
+
     public static void startActivity(Context context) {
         Intent intent = new Intent(context, AsynctaskActivity.class);
         context.startActivity(intent);

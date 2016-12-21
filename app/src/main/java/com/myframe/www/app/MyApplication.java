@@ -48,5 +48,10 @@ public class MyApplication extends Application{
          * 计步器 aar 初始化
          */
         StepManager.init(this,"all");//all 以手机记录步数
+
+        /**
+         * Uncaught异常 捕获
+         */
+        CrashHandler.getInstance().init(this);
     }
 }

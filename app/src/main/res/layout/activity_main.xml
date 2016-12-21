@@ -213,7 +213,7 @@
                 android:id="@+id/btn50"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="btn51"
+            <Button android:text="抛出一个异常"
                 android:id="@+id/btn51"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

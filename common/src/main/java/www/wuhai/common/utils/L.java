@@ -61,15 +61,21 @@ public final class L {
         }
     }
 
-    public static void e(String msg) {
-        if (isDebug){
-            Log.e(TAG, msg);
-        }
-    }
-
     public static void v(String msg) {
         if (isDebug){
             Log.v(TAG, msg);
+        }
+    }
+
+    public static void v(String tag, String msg) {
+        if (isDebug){
+            Log.v(tag, msg);
+        }
+    }
+
+    public static void v(String tag, String msg, Throwable tr) {
+        if (isDebug){
+            Log.v(tag, msg, tr);
         }
     }
 
@@ -85,15 +91,22 @@ public final class L {
         }
     }
 
+    public static void e(String msg) {
+        if (isDebug){
+            Log.e(TAG, msg);
+        }
+    }
+
     public static void e(String tag, String msg) {
         if (isDebug){
             Log.e(tag, msg);
         }
     }
 
-    public static void v(String tag, String msg) {
+    public static void e(String tag, String msg, Throwable tr) {
         if (isDebug){
-            Log.v(tag, msg);
+            Log.e(tag, msg, tr);
         }
     }
+
 }

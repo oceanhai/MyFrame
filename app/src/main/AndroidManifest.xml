@@ -322,16 +322,18 @@
         </activity>
         <activity
             android:name=".teststartactivityforresult.SingleTopActivity"
-            android:launchMode="singleTop">
+            android:launchMode="singleTop" >
         </activity>
         <activity
             android:name=".teststartactivityforresult.SingleTaskActivity"
-            android:launchMode="singleTask">
+            android:launchMode="singleTask" >
         </activity>
         <activity
             android:name=".teststartactivityforresult.SingleInstanceActivity"
             android:exported="true"
-            android:launchMode="singleInstance">
+            android:launchMode="singleInstance" >
+        </activity>
+        <activity android:name=".ExceptionActivity" >
         </activity>
     </application>
 
