@@ -335,6 +335,12 @@
         </activity>
         <activity android:name=".ExceptionActivity" >
         </activity>
+        <activity android:name=".customview.Canvas1Activity" >
+        </activity>
+        <activity
+            android:name=".customview.Canvas2Activity"
+            android:hardwareAccelerated="false">
+        </activity>
     </application>
 
 </manifest>

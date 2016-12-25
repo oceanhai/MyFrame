@@ -417,6 +417,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.btn51://抛出一个异常
                 ExceptionActivity.startActivity(this);
                 break;
+
         }
     }
 }

@@ -52,6 +52,6 @@ public class MyApplication extends Application{
         /**
          * Uncaught异常 捕获
          */
-        CrashHandler.getInstance().init(this);
+//        CrashHandler.getInstance().init(this);
     }
 }

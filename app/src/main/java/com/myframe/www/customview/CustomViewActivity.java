@@ -36,6 +36,24 @@ public class CustomViewActivity extends BaseActivity implements View.OnClickList
     Button btn02;
     @Bind(R.id.btn03)
     Button btn03;
+    @Bind(R.id.btn04)
+    Button btn04;
+    @Bind(R.id.btn05)
+    Button btn05;
+    @Bind(R.id.btn06)
+    Button btn06;
+    @Bind(R.id.btn07)
+    Button btn07;
+    @Bind(R.id.btn08)
+    Button btn08;
+    @Bind(R.id.btn09)
+    Button btn09;
+    @Bind(R.id.btn10)
+    Button btn10;
+    @Bind(R.id.btn11)
+    Button btn11;
+    @Bind(R.id.btn12)
+    Button btn12;
 
     private Handler handler = new Handler() {
         public void handleMessage(Message msg) {
@@ -82,8 +100,18 @@ public class CustomViewActivity extends BaseActivity implements View.OnClickList
     private void initListener() {
         rippleButton.setOnClickListener(this);
         btn01.setOnLongClickListener(this);
+//        btn01.setOnClickListener(this);
         btn02.setOnClickListener(this);
         btn03.setOnClickListener(this);
+        btn04.setOnClickListener(this);
+        btn05.setOnClickListener(this);
+        btn06.setOnClickListener(this);
+        btn07.setOnClickListener(this);
+        btn08.setOnClickListener(this);
+        btn09.setOnClickListener(this);
+        btn10.setOnClickListener(this);
+        btn11.setOnClickListener(this);
+        btn12.setOnClickListener(this);
     }
 
     @Override
@@ -110,11 +138,20 @@ public class CustomViewActivity extends BaseActivity implements View.OnClickList
                     }
                 }, 4000);
                 break;
+//            case R.id.btn01://Canvas之画布操作
+//                CanvasActivity.startActivity(this);
+//                break;
             case R.id.btn02://自定义view之基本图形，eg.饼图
                 CustomView1Activity.startActivity(this);
                 break;
             case R.id.btn03://圆环刻度
                 CustomView2Activity.startActivity(this);
+                break;
+            case R.id.btn04://Canvas之画布操作
+                Canvas1Activity.startActivity(this);
+                break;
+            case R.id.btn05://Canvas之图片文字
+                Canvas2Activity.startActivity(this);
                 break;
         }
     }
