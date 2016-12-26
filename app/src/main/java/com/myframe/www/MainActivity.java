@@ -300,7 +300,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.btn12://导航菜单
                 NavigationMenuActivity.startActivity(this);
                 break;
-            case R.id.btn13://有一个输入框的界面
+            case R.id.btn13://有一个输入框的界面  and oncreate里起线程刷新UI
                 ShowEdittextActivity.startActivity(this);
                 break;
             case R.id.btn14://wheelview

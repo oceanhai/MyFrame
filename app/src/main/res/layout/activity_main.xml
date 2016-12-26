@@ -61,7 +61,7 @@
                 android:id="@+id/btn12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="有一个输入框的界面"
+            <Button android:text="有一个输入框的界面 and oncreate里起线程刷新UI"
                 android:id="@+id/btn13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
