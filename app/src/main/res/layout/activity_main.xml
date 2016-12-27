@@ -213,11 +213,11 @@
                 android:id="@+id/btn50"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="抛出一个异常"
+            <Button android:text="抛出一个异常 UncaughtExceptionHandler"
                 android:id="@+id/btn51"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="btn52"
+            <Button android:text="为什么要用Fragment.setArguments(Bundle bundle)来传递参数"
                 android:id="@+id/btn52"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

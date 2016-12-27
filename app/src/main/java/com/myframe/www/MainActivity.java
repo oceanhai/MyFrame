@@ -15,6 +15,7 @@ import com.myframe.www.performance.MatActivity;
 import com.myframe.www.testasynctask.AsynctaskActivity;
 import com.myframe.www.testcontentprovider.ContentResolverActivity;
 import com.myframe.www.testdb.DBActivity;
+import com.myframe.www.testfragment.FragmentSetArgumentsActivity;
 import com.myframe.www.testhandler.HandlerActivity;
 import com.myframe.www.testokhttp.OkHttpActivity;
 import com.myframe.www.teststartactivity.ThreadStartActivity;
@@ -414,10 +415,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.btn50://asynctask 测试
                 AsynctaskActivity.startActivity(this);
                 break;
-            case R.id.btn51://抛出一个异常
+            case R.id.btn51://抛出一个异常 UncaughtExceptionHandler
                 ExceptionActivity.startActivity(this);
                 break;
-
+            case R.id.btn52://为什么要用Fragment.setArguments(Bundle bundle)来传递参数
+                FragmentSetArgumentsActivity.startActivity(this);
+                break;
         }
     }
 }

@@ -339,7 +339,11 @@
         </activity>
         <activity
             android:name=".customview.Canvas2Activity"
-            android:hardwareAccelerated="false">
+            android:hardwareAccelerated="false" >
+        </activity>
+        <activity android:name=".testfragment.FragmentSetArgumentsActivity" >
+        </activity>
+        <activity android:name=".testfragment.FragmentSetArguments1Activity" >
         </activity>
     </application>
 
