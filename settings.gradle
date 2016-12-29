@@ -1,1 +1,1 @@
-include ':fragmentdemo', ':common', ':app', ':datarequest', ':javatest', ':okhttprequest', ':step', ':uimodules', ':client1'
+include ':fragmentdemo', ':sub_module/common', ':app', ':datarequest', ':javatest', ':okhttprequest', ':step', ':uimodules', ':client1'

@@ -8,6 +8,27 @@
 //    relativePath=":";
 //}
 
+//统一版本
+ext{
+    compileSdkVersion = 23
+    buildToolsVersion = '23.0.3'
+
+    targetSdkVersion = 23
+    //主程序版本
+    minSdkVersion = 15
+    versionCode = 1
+    versionName = "1.0"
+    //library版本用
+    root_minSdkVersion = 9
+    root_versionCode = 1
+    root_versionName = "1.0"
+
+    root_v4 = 'com.android.support:support-v4:23.3.0'
+    root_v7 = 'com.android.support:appcompat-v7:23.3.0'
+    root_design = 'com.android.support:design:23.3.0'
+    root_gson = 'com.google.code.gson:gson:2.4'
+}
+
 buildscript {
     repositories {
         jcenter()

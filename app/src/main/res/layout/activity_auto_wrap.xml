@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         titlebar:titleText="选项自动换行"/>
 
-    <ScrollView
+    <com.myframe.www.view.OverScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -89,6 +89,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="43dp"/>
         </LinearLayout>
-    </ScrollView>
+    </com.myframe.www.view.OverScrollView>
 
 </LinearLayout>

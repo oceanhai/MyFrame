@@ -1,0 +1,3 @@
+[submodule "sub_module"]
+	path = sub_module
+	url = https://github.com/oceanhai/common_module.git

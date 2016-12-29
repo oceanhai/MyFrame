@@ -170,6 +170,7 @@
 
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="portrait"
             android:launchMode="singleTop" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -190,46 +191,71 @@
             android:name=".HorizontalScrollview03Activity"
             android:exported="false"
             android:screenOrientation="portrait" />
-        <activity android:name=".HorizontalScrollview01Activity" />
-        <activity android:name=".HorizontalScrollview02Activity" />
-        <activity android:name=".RecyclerviewActivity" />
-        <activity android:name=".HorizontalScrollview04Activity" />
-        <activity android:name=".SoftKeyboardActivity" />
-        <activity android:name=".FloatViewActivity" />
-        <activity android:name=".FloatView1Activity" />
-        <activity android:name=".FloatView2Activity" />
-        <activity android:name=".widget.slidingfinish.SlidingFinishActivity" />
+        <activity android:name=".HorizontalScrollview01Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".HorizontalScrollview02Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".RecyclerviewActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".HorizontalScrollview04Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SoftKeyboardActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".FloatViewActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".FloatView1Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".FloatView2Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".widget.slidingfinish.SlidingFinishActivity"
+            android:screenOrientation="portrait"/>
 
         <!-- Theme.Translucent 有titlebar -->
         <activity
             android:name=".widget.slidingfinish.AbsActivity"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent" />
         <!-- Theme.Translucent.NoTitleBar 没有titlebar -->
         <activity
             android:name=".widget.slidingfinish.NormalActivity"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity
             android:name=".widget.slidingfinish.ScrollActivity"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent" />
         <activity
             android:name=".widget.slidingfinish.ViewPagerActivity"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent" />
-        <activity android:name=".PullToRefreshActivity" />
-        <activity android:name=".PullToRefresh1Activity" />
-        <activity android:name=".PrinterTextviewActivity" />
-        <activity android:name=".TitleBarActivity" />
-        <activity android:name=".NavigationMenuActivity" />
-        <activity android:name=".widget.navigationmenu1.NavigationMenu1Activity" />
-        <activity android:name=".widget.navigationmenu2.NavigationMenu2Activity" />
-        <activity android:name=".ShowEdittextActivity" />
-        <activity android:name=".WheelViewActivity" />
-        <activity android:name=".ColourImageViewActivity" />
+        <activity android:name=".PullToRefreshActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".PullToRefresh1Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".PrinterTextviewActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".TitleBarActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".NavigationMenuActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".widget.navigationmenu1.NavigationMenu1Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".widget.navigationmenu2.NavigationMenu2Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ShowEdittextActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".WheelViewActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ColourImageViewActivity"
+            android:screenOrientation="portrait"/>
         <!-- 日历 -->
         <activity
             android:name=".widget.calendar.CalendarActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".WebViewActivity" />
-        <activity android:name=".CanDragViewActivity" />
+        <activity android:name=".WebViewActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".CanDragViewActivity"
+            android:screenOrientation="portrait"/>
 
         <!-- StickyHeaderListView start -->
         <activity
@@ -240,65 +266,97 @@
             android:screenOrientation="portrait" />
         <!-- StickyHeaderListView end -->
 
-        <activity android:name=".AnimActivity" />
-        <activity android:name=".RoundProgressBarActivity" />
-        <activity android:name=".AboutActivity" />
+        <activity android:name=".AnimActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".RoundProgressBarActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".AboutActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".widget.draggridview.DragGridViewActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".MenuActivity"
+            android:screenOrientation="portrait"
             android:theme="@android:style/android:Theme.Holo.Light" />
-        <activity android:name=".ScrollviewTextViewActivity" />
-        <activity android:name=".SwipemenulistviewActivity" />
-        <activity android:name=".widget.customview.CustomviewActivity" />
-        <activity android:name=".ShowHintinfoActivity" />
-        <activity android:name=".ShowMoreInfoActivity" />
-        <activity android:name=".customview.CustomViewActivity" />
-        <activity android:name=".GuideViewActivity" />
-        <activity android:name=".InputWidgetActivity" />
+        <activity android:name=".ScrollviewTextViewActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SwipemenulistviewActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".widget.customview.CustomviewActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ShowHintinfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ShowMoreInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".customview.CustomViewActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".GuideViewActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".InputWidgetActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name=".UIActivity" />
-        <activity android:name=".InnerClassActivity" />
-        <activity android:name=".testtouchevent.TouchEventActivity" />
-        <activity android:name=".teststartactivityforresult.FirstActivity" />
-        <activity android:name=".teststartactivityforresult.SecondActivity" />
-        <activity android:name=".teststartactivityforresult.ThirdActivity" />
-        <activity android:name=".teststartactivity.ThreadStartActivity" />
-        <activity android:name=".teststartactivity.TargetActivity" />
-        <activity android:name=".widget.swtichbutton.MovableCheckboxActivity" />
-        <activity android:name=".yxt01.RetailSalerBrandPageActivity" />
+        <activity android:name=".InnerClassActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".testtouchevent.TouchEventActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".teststartactivityforresult.FirstActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".teststartactivityforresult.SecondActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".teststartactivityforresult.ThirdActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".teststartactivity.ThreadStartActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".teststartactivity.TargetActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".widget.swtichbutton.MovableCheckboxActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".yxt01.RetailSalerBrandPageActivity"
+            android:screenOrientation="portrait"/>
 
         <!-- theme 效果测试 -->
         <activity
             android:name=".testdb.DBActivity"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         </activity>
         <!-- theme 效果测试 -->
         <activity
             android:name=".testokhttp.OkHttpActivity"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
         </activity>
-        <activity android:name=".testhandler.HandlerActivity" >
+        <activity android:name=".testhandler.HandlerActivity"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".WeightActivity" >
+        <activity android:name=".WeightActivity"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".materialdesign.MaterialDesignActivity" >
+        <activity android:name=".materialdesign.MaterialDesignActivity"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".materialdesign.NavigationViewActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
             android:name=".materialdesign.CollapsingtToolbarlayoutActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/Base.Theme.DesignDemo" >
         </activity>
-        <activity android:name=".jni.NdkJniActivity" >
+        <activity android:name=".jni.NdkJniActivity"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".performance.MatActivity" >
+        <activity android:name=".performance.MatActivity"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".ListviewActivity" >
+        <activity android:name=".ListviewActivity"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".customview.CustomView1Activity" >
+        <activity android:name=".customview.CustomView1Activity"
+            android:screenOrientation="portrait">
         </activity>
 
         <!-- authorities这个可以和name不一致的 -->
@@ -314,34 +372,44 @@
             android:exported="true" >
         </provider>
 
-        <activity android:name=".testcontentprovider.ContentResolverActivity" >
+        <activity android:name=".testcontentprovider.ContentResolverActivity"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".customview.CustomView2Activity" >
+        <activity android:name=".customview.CustomView2Activity"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".testasynctask.AsynctaskActivity" >
+        <activity android:name=".testasynctask.AsynctaskActivity"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".teststartactivityforresult.SingleTopActivity"
+            android:screenOrientation="portrait"
             android:launchMode="singleTop" >
         </activity>
         <activity
             android:name=".teststartactivityforresult.SingleTaskActivity"
+            android:screenOrientation="portrait"
             android:launchMode="singleTask" >
         </activity>
         <activity
             android:name=".teststartactivityforresult.SingleInstanceActivity"
+            android:screenOrientation="portrait"
             android:exported="true"
             android:launchMode="singleInstance" >
         </activity>
-        <activity android:name=".ExceptionActivity" >
+        <activity android:name=".ExceptionActivity"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".customview.Canvas1Activity" >
+        <activity android:name=".customview.Canvas1Activity"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".customview.Canvas2Activity"
+            android:screenOrientation="portrait"
             android:hardwareAccelerated="false" >
         </activity>
-        <activity android:name=".testfragment.FragmentSetArgumentsActivity" >
+        <activity android:name=".testfragment.FragmentSetArgumentsActivity"
+            android:screenOrientation="portrait">
         </activity>
         <activity android:name=".testfragment.FragmentSetArguments1Activity" >
         </activity>

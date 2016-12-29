@@ -26,6 +26,7 @@ import javax.net.ssl.HttpsURLConnection;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import www.wuhai.common.utils.L;
 
 public class AsynctaskActivity extends BaseActivity implements View.OnClickListener {
 
@@ -46,6 +47,8 @@ public class AsynctaskActivity extends BaseActivity implements View.OnClickListe
     ImageView imageview05;
     @Bind(R.id.imageview06)
     ImageView imageview06;
+
+    private static final String TAG = AsynctaskActivity.class.getSimpleName();
 
     private String imageviewUrl1 = "https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png";
     private String imageviewUrl2 = "https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2352764292,448478286&fm=80&w=179&h=119&img.JPEG";
@@ -83,10 +86,10 @@ public class AsynctaskActivity extends BaseActivity implements View.OnClickListe
             case R.id.btn01:
                 new MyAsyncTask().execute(imageviewUrl1, "imageview01");
                 new MyAsyncTask().execute(imageviewUrl2, "imageview02");
-                new MyAsyncTask().execute(imageviewUrl2, "imageview03");
-                new MyAsyncTask().execute(imageviewUrl2, "imageview04");
-                new MyAsyncTask().execute(imageviewUrl2, "imageview05");
-                new MyAsyncTask().execute(imageviewUrl2, "imageview06");
+//                new MyAsyncTask().execute(imageviewUrl2, "imageview03");
+//                new MyAsyncTask().execute(imageviewUrl2, "imageview04");
+//                new MyAsyncTask().execute(imageviewUrl2, "imageview05");
+//                new MyAsyncTask().execute(imageviewUrl2, "imageview06");
                 //TODO 虽然不抛出异常，但也会存在问题，数据反回不来了，过多的时候
 //                for(int x=0;x<200;x++){
 //                    new MyAsyncTask().execute(imageviewUrl2, "imageview06");
@@ -95,10 +98,10 @@ public class AsynctaskActivity extends BaseActivity implements View.OnClickListe
             case R.id.btn02:
                 new MyAsyncTask().executeOnExecutor(exec, imageviewUrl1, "imageview01");
                 new MyAsyncTask().executeOnExecutor(exec, imageviewUrl2, "imageview02");
-                new MyAsyncTask().executeOnExecutor(exec, imageviewUrl2, "imageview03");
-                new MyAsyncTask().executeOnExecutor(exec, imageviewUrl2, "imageview04");
-                new MyAsyncTask().executeOnExecutor(exec, imageviewUrl2, "imageview05");
-                new MyAsyncTask().executeOnExecutor(exec, imageviewUrl2, "imageview06");
+//                new MyAsyncTask().executeOnExecutor(exec, imageviewUrl2, "imageview03");
+//                new MyAsyncTask().executeOnExecutor(exec, imageviewUrl2, "imageview04");
+//                new MyAsyncTask().executeOnExecutor(exec, imageviewUrl2, "imageview05");
+//                new MyAsyncTask().executeOnExecutor(exec, imageviewUrl2, "imageview06");
                 /**
                  * 如果此时线程池中的数量大于corePoolSize，缓冲队列workQueue满，
                  * 并且线程池中的数量等于maximumPoolSize，那么通过 handler所指定的策略来处理此任务。
@@ -127,9 +130,11 @@ public class AsynctaskActivity extends BaseActivity implements View.OnClickListe
                 url = new URL(urlStr);
                 HttpsURLConnection conn = (HttpsURLConnection) url.openConnection();
                 conn.setConnectTimeout(3000);
+                printHeadInfo(conn);
                 conn.connect();
 
                 if (conn.getResponseCode() == 200) {
+                    printHeadInfo(conn);
                     InputStream inputStream = conn.getInputStream();
                     try {
                         Thread.sleep(5000);
@@ -172,5 +177,14 @@ public class AsynctaskActivity extends BaseActivity implements View.OnClickListe
 //            }
         }
 
+    }
+
+    private void printHeadInfo(HttpsURLConnection conn) {
+        L.e(TAG, "ContentEncoding:" + conn.getContentEncoding());
+        L.e(TAG, "ContentLength:" + conn.getContentLength());
+        L.e(TAG, "ContentType:" + conn.getContentType());
+        L.e(TAG, "Date:" + conn.getDate());
+        L.e(TAG, "Expiration:" + conn.getExpiration());
+        L.e(TAG, "Modified:" + conn.getLastModified());
     }
 }
