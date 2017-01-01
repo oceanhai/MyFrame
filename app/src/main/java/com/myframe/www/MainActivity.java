@@ -11,6 +11,7 @@ import com.myframe.www.base.BaseActivity;
 import com.myframe.www.customview.CustomViewActivity;
 import com.myframe.www.jni.NdkJniActivity;
 import com.myframe.www.materialdesign.MaterialDesignActivity;
+import com.myframe.www.percentlayout.PercentLayoutActivity;
 import com.myframe.www.performance.MatActivity;
 import com.myframe.www.testasynctask.AsynctaskActivity;
 import com.myframe.www.testcontentprovider.ContentResolverActivity;
@@ -424,6 +425,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.btn53://activity 进出动画
                 InOutActivity.startActivity(this);
+                break;
+            case R.id.btn54://百分比布局库
+                PercentLayoutActivity.startActivity(this);
                 break;
         }
     }

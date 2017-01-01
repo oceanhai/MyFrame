@@ -225,7 +225,7 @@
                 android:id="@+id/btn53"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="btn54"
+            <Button android:text="百分比布局库"
                 android:id="@+id/btn54"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
