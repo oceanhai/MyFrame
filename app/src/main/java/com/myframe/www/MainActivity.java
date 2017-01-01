@@ -17,6 +17,7 @@ import com.myframe.www.testcontentprovider.ContentResolverActivity;
 import com.myframe.www.testdb.DBActivity;
 import com.myframe.www.testfragment.FragmentSetArgumentsActivity;
 import com.myframe.www.testhandler.HandlerActivity;
+import com.myframe.www.testinoutactivity.InOutActivity;
 import com.myframe.www.testokhttp.OkHttpActivity;
 import com.myframe.www.teststartactivity.ThreadStartActivity;
 import com.myframe.www.teststartactivityforresult.FirstActivity;
@@ -420,6 +421,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.btn52://为什么要用Fragment.setArguments(Bundle bundle)来传递参数
                 FragmentSetArgumentsActivity.startActivity(this);
+                break;
+            case R.id.btn53://activity 进出动画
+                InOutActivity.startActivity(this);
                 break;
         }
     }

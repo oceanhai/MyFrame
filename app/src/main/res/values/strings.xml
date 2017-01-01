@@ -48,4 +48,8 @@
     <string name="study">好好学习天天向上</string>
     <string name="expandedTitle">床前明月光</string>
     <!-- 材料设计 end-->
+
+    <!-- 测试下app 和子module下资源问题-->
+    <!--<string name="app_str">我是app下的字符串</string>-->
+
 </resources>

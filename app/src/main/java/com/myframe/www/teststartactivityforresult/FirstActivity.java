@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -34,8 +35,16 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
     @Bind(R.id.message)
     EditText message;
 
+    private String messageStr;
+
     public static void startActivity(Context context) {
         Intent intent = new Intent(context, FirstActivity.class);
+        context.startActivity(intent);
+    }
+
+    public static void startActivity(Context context, String message) {
+        Intent intent = new Intent(context, FirstActivity.class);
+        intent.putExtra("message",message);
         context.startActivity(intent);
     }
 
@@ -45,11 +54,23 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_first);
         ButterKnife.bind(this);
 
+        initParse();
+
         button1.setOnClickListener(this);
         standard.setOnClickListener(this);
         singleTop.setOnClickListener(this);
         singleTask.setOnClickListener(this);
         singleInstance.setOnClickListener(this);
+    }
+
+    private void initParse() {
+        Intent intent = getIntent();
+        if(intent!=null){
+            messageStr = intent.getStringExtra("message");
+        }
+        if(TextUtils.isEmpty(messageStr)){
+            text1.setText(messageStr);
+        }
     }
 
     @Override

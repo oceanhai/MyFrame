@@ -221,7 +221,7 @@
                 android:id="@+id/btn52"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="btn53"
+            <Button android:text="activity 进出动画"
                 android:id="@+id/btn53"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
