@@ -229,7 +229,7 @@
                 android:id="@+id/btn54"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="btn55"
+            <Button android:text="enventbus发布/订阅的事件"
                 android:id="@+id/btn55"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

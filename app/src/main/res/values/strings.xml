@@ -47,6 +47,9 @@
     <!-- CollapsingToolbarLayout -->
     <string name="study">好好学习天天向上</string>
     <string name="expandedTitle">床前明月光</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <!-- 材料设计 end-->
 
     <!-- 测试下app 和子module下资源问题-->

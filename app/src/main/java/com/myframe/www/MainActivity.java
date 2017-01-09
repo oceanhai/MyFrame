@@ -16,6 +16,7 @@ import com.myframe.www.performance.MatActivity;
 import com.myframe.www.testasynctask.AsynctaskActivity;
 import com.myframe.www.testcontentprovider.ContentResolverActivity;
 import com.myframe.www.testdb.DBActivity;
+import com.myframe.www.testenventbus.EnventbusActivity;
 import com.myframe.www.testfragment.FragmentSetArgumentsActivity;
 import com.myframe.www.testhandler.HandlerActivity;
 import com.myframe.www.testinoutactivity.InOutActivity;
@@ -428,6 +429,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.btn54://百分比布局库
                 PercentLayoutActivity.startActivity(this);
+                break;
+            case R.id.btn55://enventbus发布/订阅的事件
+                EnventbusActivity.startActivity(this);
                 break;
         }
     }

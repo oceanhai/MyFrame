@@ -467,11 +467,17 @@
         </activity>
         <activity android:name=".testfragment.FragmentSetArguments1Activity" >
         </activity>
-        <activity android:name=".testinoutactivity.InOutActivity"
-            android:screenOrientation="portrait">
+        <activity
+            android:name=".testinoutactivity.InOutActivity"
+            android:screenOrientation="portrait" >
         </activity>
-        <activity android:name=".percentlayout.PercentLayoutActivity"
-            android:screenOrientation="portrait">
+        <activity
+            android:name=".percentlayout.PercentLayoutActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name=".testenventbus.EnventbusActivity" >
+        </activity>
+        <activity android:name=".testenventbus.Enventbus1Activity" >
         </activity>
     </application>
 
