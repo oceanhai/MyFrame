@@ -2,7 +2,7 @@ package com.myframe.www.testenventbus;
 
 import java.util.List;
 
-public class Event
+public class Event extends BaseEvent
 {
     /** 列表加载事件 */
     public static class ItemListEvent
