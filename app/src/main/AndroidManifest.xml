@@ -481,6 +481,8 @@
         </activity>
         <activity android:name=".testenventbus.Enventbus2Activity" >
         </activity>
+        <activity android:name=".testenventbus.Enventbus3Activity" >
+        </activity>
     </application>
 
 </manifest>

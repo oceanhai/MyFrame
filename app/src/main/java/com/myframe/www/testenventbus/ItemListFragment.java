@@ -54,6 +54,7 @@ public class ItemListFragment extends ListFragment
         }.start();
     }
 
+    //子线程发送  UI线程更新view
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventMainThread(Event.ItemListEvent event)
     {

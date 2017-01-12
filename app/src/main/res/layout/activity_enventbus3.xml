@@ -6,18 +6,7 @@
 
     <Button
         android:id="@+id/btn01"
-        android:text="左右fragment之间使用"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <Button
-        android:id="@+id/btn02"
-        android:text="Enventbus3Activity界面"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:id="@+id/textview01"
+        android:text="跳到一个post event界面"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 </LinearLayout>

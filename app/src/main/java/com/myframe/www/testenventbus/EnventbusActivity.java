@@ -21,7 +21,7 @@ import www.wuhai.common.utils.L;
 
 public class EnventbusActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private static final String TAG = EnventbusActivity.class.getSimpleName();
+    public static final String TAG = EnventbusActivity.class.getSimpleName();
 
     @Bind(R.id.btn01)
     Button btn01;
@@ -57,15 +57,15 @@ public class EnventbusActivity extends AppCompatActivity implements View.OnClick
         String event = baseEvent.getEventStr();
         switch (event){
             case "event1":
-                L.e(TAG, "收到event1事件");
+                L.e(TAG, "EnventbusActivity收到event1事件");
                 textview01.setText(event);
                 break;
             case "event2":
-                L.e(TAG, "收到event2事件");
+                L.e(TAG, "EnventbusActivity收到event2事件");
                 textview01.setText(event);
                 break;
             case "event3":
-                L.e(TAG, "收到event3事件");
+                L.e(TAG, "EnventbusActivity收到event3事件");
                 textview01.setText(event);
                 break;
         }
@@ -78,7 +78,7 @@ public class EnventbusActivity extends AppCompatActivity implements View.OnClick
         String event = baseEvent.getEventStr();
         switch (event){
             case "listevent":
-                L.e(TAG, "收到listevent事件");
+                L.e(TAG, "showEvent2收到listevent事件");
                 ListEvent listEvent = (ListEvent) baseEvent;
                 StringBuilder stringBuilder = new StringBuilder();
                 List<String> mdata = listEvent.getmData();
@@ -95,6 +95,23 @@ public class EnventbusActivity extends AppCompatActivity implements View.OnClick
         L.e(TAG, "非继承base event");
     }
 
+    @Subscribe
+    public void showEvent4(ListEvent baseEvent){
+        L.e(TAG, "showEvnent4");
+        String event = baseEvent.getEventStr();
+        switch (event){
+            case "listevent":
+                L.e(TAG, "showEvent4收到listevent事件");
+                StringBuilder stringBuilder = new StringBuilder();
+                List<String> mdata = baseEvent.getmData();
+                for(int x=0;x<mdata.size();x++){
+                    stringBuilder.append(mdata.get(x)).append(" ");
+                }
+                textview01.setText(stringBuilder.toString());
+                break;
+        }
+    }
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -102,7 +119,7 @@ public class EnventbusActivity extends AppCompatActivity implements View.OnClick
                 Enventbus1Activity.startActivity(this);
                 break;
             case R.id.btn02:
-                Enventbus2Activity.startActivity(this);
+                Enventbus3Activity.startActivity(this);
                 break;
         }
     }
