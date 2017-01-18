@@ -21,6 +21,7 @@ import com.myframe.www.testfragment.FragmentSetArgumentsActivity;
 import com.myframe.www.testhandler.HandlerActivity;
 import com.myframe.www.testinoutactivity.InOutActivity;
 import com.myframe.www.testokhttp.OkHttpActivity;
+import com.myframe.www.testormlite.OrmliteActivity;
 import com.myframe.www.teststartactivity.ThreadStartActivity;
 import com.myframe.www.teststartactivityforresult.FirstActivity;
 import com.myframe.www.testtouchevent.TouchEventActivity;
@@ -432,6 +433,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.btn55://enventbus发布/订阅的事件
                 EnventbusActivity.startActivity(this);
+                break;
+            case R.id.btn56://Ormlite
+                OrmliteActivity.startActivity(this);
                 break;
         }
     }

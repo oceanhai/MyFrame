@@ -93,29 +93,25 @@ dependencies {
     //cardview
     //    compile 'com.android.support:cardview-v7:23.0.+'
     //    compile 'com.android.support:palette-v7:23.0.+'
-
     //基础module
-//    compile project(':common')
+    //    compile project(':common')
     compile project(':sub_module/common')
     //okhttp 跟下面module用的不是同一套
     compile 'com.squareup.okhttp:okhttp:2.4.0'
     compile 'com.squareup.okio:okio:1.5.0'
-
     //okhttp
     compile project(':okhttprequest')
-
     //材料设计 design 包
     //NavigationView
     compile 'de.hdodenhof:circleimageview:1.3.0'
     //cardview
     compile 'com.android.support:cardview-v7:23.0.0'
-
     //百分比布局库(percent-support-lib)
     compile 'com.android.support:percent:23.0.0'
-
     //EventBus是一款针对Android优化的发布/订阅事件总线。主要功能是替代Intent,Handler,BroadCast
     // 在Fragment，Activity，Service，线程之间传递消息.优点是开销小，代码更优雅。以及将发送者和接收者解耦
     compile 'org.greenrobot:eventbus:3.0.0'
+    compile files('libs/ormlite-android-4.49-SNAPSHOT.jar')
 }
 
 //gradle task 练习start
