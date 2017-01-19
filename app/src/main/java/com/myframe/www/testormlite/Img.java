@@ -15,4 +15,6 @@ public class Img implements Serializable{
 
     @DatabaseField(id = true)
     public String id;
+    @DatabaseField
+    public String imageUrl;
 }

@@ -8,12 +8,15 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import www.wuhai.common.utils.L;
+
 /**
  * Created by wuhai on 2017/01/18 17:00.
  * 描述：
  */
 
 public class ThemeDao {
+    private static final String TAG = ThemeDao.class.getSimpleName();
 
     private Dao<Theme, Integer> themeDao;
     private DBHelper dbHelper;
@@ -41,6 +44,7 @@ public class ThemeDao {
             themeDao.create(theme);
         } catch (SQLException e) {
             e.printStackTrace();
+            L.e(TAG,"add 失败，ErrorCode："+e.getErrorCode()+",Message:"+e.getMessage());
         }
     }
 

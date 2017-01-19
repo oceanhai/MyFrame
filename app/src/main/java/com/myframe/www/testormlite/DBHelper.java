@@ -69,6 +69,8 @@ public class DBHelper extends OrmLiteSqliteOpenHelper{
             TableUtils.createTable(connectionSource, Photographer.class);
             TableUtils.createTable(connectionSource, Theme.class);
             TableUtils.createTable(connectionSource, Img.class);
+            TableUtils.createTable(connectionSource, User.class);
+            TableUtils.createTable(connectionSource, Article.class);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -81,10 +83,20 @@ public class DBHelper extends OrmLiteSqliteOpenHelper{
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, ConnectionSource connectionSource, int i, int i1) {
         try
         {
+            /**
+             * 逻辑混乱下面的表
+             */
             TableUtils.dropTable(connectionSource, PackageInfo.class, true);
             TableUtils.dropTable(connectionSource, Photographer.class, true);
             TableUtils.dropTable(connectionSource, Theme.class, true);
             TableUtils.dropTable(connectionSource, Img.class, true);
+
+            /**
+             * 以下面的为主
+             */
+            TableUtils.createTable(connectionSource, User.class);
+            TableUtils.createTable(connectionSource, Article.class);
+
             onCreate(sqLiteDatabase, connectionSource);
         } catch (SQLException e)
         {

@@ -14,45 +14,17 @@ import java.io.Serializable;
 
 @DatabaseTable
 public class Theme implements Serializable{
-    @DatabaseField(id = true)
-    public String id;
-    @DatabaseField
-    public String tid;
-    @DatabaseField
-    public String photographerId;
-    @DatabaseField
-    public String packageId; // 隶属套餐
-    @DatabaseField
-    public String status; // 后台审核状态
+//    @DatabaseField(id = true)//标示为主键，可以为String
+    @DatabaseField(generatedId = true)//自增主键，必须为int等数据类型
+    public int id;
     @DatabaseField
     public String title; // 标题
     @DatabaseField
-    public String coverId; // 封面Id
-    @DatabaseField
-    public String coverUrl; // 封面img
-    @DatabaseField
     public String detail;  // 详情
     @DatabaseField
-    public int photoCount; // 图片个数
-    @DatabaseField
-    public String photos; //图集
-    @DatabaseField
-    public String createTime; // 上传时间
-    @DatabaseField
-    public String recordTime; // 拍摄时间
-    @DatabaseField
     public double cost; // 花费
-    @DatabaseField
-    public String tags; // 标签
-    @DatabaseField
-    public String address;// 地址
-    @DatabaseField
-    public String loacationCode; // 位置代码
-    @DatabaseField
-    public int popularCount; // 热度
     @DatabaseField(defaultValue = "0")
     public int favStatus; // 收藏状态
-
 
     // 外部对象字段
     @DatabaseField(foreign = true, foreignAutoRefresh = true)
@@ -65,6 +37,20 @@ public class Theme implements Serializable{
      * 如果需要懒加载（延迟加载）可以在@ForeignCollectionField加上参数eager=false
      * 这个属性也就说明一个部门对应着多个用户
      */
-    @ForeignCollectionField(eager = true)
-    public ForeignCollection<Img> imgs;
+//    @ForeignCollectionField(eager = true)
+//    public ForeignCollection<Img> imgs;
+
+
+    @Override
+    public String toString() {
+        return "Theme{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", detail='" + detail + '\'' +
+                ", cost=" + cost +
+                ", favStatus=" + favStatus +
+                ", mPackage=" + mPackage +
+                ", photographer=" + photographer +
+                '}';
+    }
 }
