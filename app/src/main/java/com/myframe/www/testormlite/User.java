@@ -19,6 +19,10 @@ public class User
     private String id;
     @DatabaseField(columnName = "name")
     private String name;
+    @DatabaseField
+    private int age;
+    @DatabaseField
+    private int height;
 
     @ForeignCollectionField
     private Collection<Article> articles;

@@ -171,7 +171,7 @@ public class OrmliteActivity extends AppCompatActivity implements View.OnClickLi
         List<Article> articles = new ArticleDao(this).listByUserId(1);
         L.e(TAG, "articles：" + articles);
 
-        User user = new UserDao(this).get(1);
+        User user = new UserDao(this).get("1");
         L.e(TAG, "user：" + user);
         if (user.getArticles() != null) {
 //            Collection<Article> articles2 = user.getArticles();

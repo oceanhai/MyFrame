@@ -27,7 +27,8 @@ public class DBHelper extends OrmLiteSqliteOpenHelper{
     /**
      * 数据库版本
      */
-    private static final int DB_VERSION = 1;
+    private static final int START_VERSION = 1;
+    private static final int DATABASE_VERSION = 3;
     /**
      * 用来存放Dao的map
      */
@@ -40,7 +41,7 @@ public class DBHelper extends OrmLiteSqliteOpenHelper{
      * @param context
      */
     public DBHelper(Context context) {
-        super(context, DB_NAME, null, DB_VERSION);
+        super(context, DB_NAME, null, START_VERSION);
     }    /**
      * 获取单例
      * @param context
@@ -65,39 +66,63 @@ public class DBHelper extends OrmLiteSqliteOpenHelper{
     public void onCreate(SQLiteDatabase sqLiteDatabase, ConnectionSource connectionSource) {
         // 创建表
         try {
+            /**
+             * 逻辑混乱下面的表
+             */
             TableUtils.createTable(connectionSource, PackageInfo.class);
             TableUtils.createTable(connectionSource, Photographer.class);
             TableUtils.createTable(connectionSource, Theme.class);
             TableUtils.createTable(connectionSource, Img.class);
-            TableUtils.createTable(connectionSource, User.class);
-            TableUtils.createTable(connectionSource, Article.class);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
-    /**
-     * 这里进行更新表操作
-     */
-    @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, ConnectionSource connectionSource, int i, int i1) {
-        try
-        {
-            /**
-             * 逻辑混乱下面的表
-             */
-            TableUtils.dropTable(connectionSource, PackageInfo.class, true);
-            TableUtils.dropTable(connectionSource, Photographer.class, true);
-            TableUtils.dropTable(connectionSource, Theme.class, true);
-            TableUtils.dropTable(connectionSource, Img.class, true);
-
             /**
              * 以下面的为主
              */
             TableUtils.createTable(connectionSource, User.class);
             TableUtils.createTable(connectionSource, Article.class);
 
-            onCreate(sqLiteDatabase, connectionSource);
+            //版本升级
+            onUpgrade(sqLiteDatabase, connectionSource, START_VERSION, DATABASE_VERSION);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+//    onupgrade
+
+    /**
+     * 这里进行更新表操作
+     */
+    @Override
+    public void onUpgrade(SQLiteDatabase sqLiteDatabase, ConnectionSource connectionSource, int oldVersion, int newVersion) {
+        try
+        {
+//            /**
+//             * 逻辑混乱下面的表
+//             */
+//            TableUtils.dropTable(connectionSource, PackageInfo.class, true);//这种是直接删掉表了
+//            TableUtils.dropTable(connectionSource, Photographer.class, true);
+//            TableUtils.dropTable(connectionSource, Theme.class, true);
+//            TableUtils.dropTable(connectionSource, Img.class, true);
+//            /**
+//             * 以下面的为主
+//             */
+//            TableUtils.dropTable(connectionSource, User.class, true);
+//            TableUtils.dropTable(connectionSource, Article.class, true);
+//            onCreate(sqLiteDatabase, connectionSource);
+
+            String sql1 = "";
+            for(int i=oldVersion;i<newVersion;i++) {
+                switch (i) {
+                    case 1://数据库版本1 升级到 版本2
+                        //对table 增加字段
+                        sql1 = "alter table tb_user add age integer";
+                        getDao(User.class).executeRawNoArgs(sql1);
+                        break;
+                    case 2://数据库版本2 升级到 版本3
+                        sql1 = "alter table tb_user add height integer";
+                        getDao(User.class).executeRawNoArgs(sql1);
+                        break;
+                }
+            }
         } catch (SQLException e)
         {
             e.printStackTrace();
