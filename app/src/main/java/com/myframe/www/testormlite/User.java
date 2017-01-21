@@ -23,6 +23,8 @@ public class User
     private int age;
     @DatabaseField
     private int height;
+//    @DatabaseField
+//    private int weight;
 
     @ForeignCollectionField
     private Collection<Article> articles;

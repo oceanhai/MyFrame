@@ -13,6 +13,8 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
+import www.wuhai.common.utils.L;
+
 /**
  * Created by wuhai on 2017/01/18 16:18.
  * 描述：
@@ -27,8 +29,7 @@ public class DBHelper extends OrmLiteSqliteOpenHelper{
     /**
      * 数据库版本
      */
-    private static final int START_VERSION = 1;
-    private static final int DATABASE_VERSION = 3;
+    private static final int VERSION = 3;
     /**
      * 用来存放Dao的map
      */
@@ -41,8 +42,9 @@ public class DBHelper extends OrmLiteSqliteOpenHelper{
      * @param context
      */
     public DBHelper(Context context) {
-        super(context, DB_NAME, null, START_VERSION);
-    }    /**
+        super(context, DB_NAME, null, VERSION);
+    }
+    /**
      * 获取单例
      * @param context
      * @return
@@ -64,6 +66,7 @@ public class DBHelper extends OrmLiteSqliteOpenHelper{
      */
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase, ConnectionSource connectionSource) {
+        L.e(OrmliteActivity.TAG, "执行onCreate，VERSION="+VERSION);
         // 创建表
         try {
             /**
@@ -79,20 +82,18 @@ public class DBHelper extends OrmLiteSqliteOpenHelper{
             TableUtils.createTable(connectionSource, User.class);
             TableUtils.createTable(connectionSource, Article.class);
 
-            //版本升级
-            onUpgrade(sqLiteDatabase, connectionSource, START_VERSION, DATABASE_VERSION);
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-//    onupgrade
 
     /**
      * 这里进行更新表操作
      */
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, ConnectionSource connectionSource, int oldVersion, int newVersion) {
+        L.e(OrmliteActivity.TAG, "执行onUpgrade，VERSION="+VERSION);
         try
         {
 //            /**
