@@ -237,7 +237,7 @@
                 android:id="@+id/btn56"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="btn57"
+            <Button android:text="点9图"
                 android:id="@+id/btn57"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

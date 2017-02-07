@@ -437,6 +437,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.btn56://Ormlite
                 OrmliteActivity.startActivity(this);
                 break;
+            case R.id.btn57://点9图
+                DotNineActivity.startActivity(this);
+                break;
         }
     }
 }

@@ -84,4 +84,12 @@
         <item name="android:windowBackground">@color/window_background</item>
     </style>
     <!-- 材料设计 end-->
+
+    <style name="TextViewStyle">
+        <item name="android:layout_height">80px</item>
+        <item name="android:layout_width">150px</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/keword_selector</item>
+    </style>
 </resources>

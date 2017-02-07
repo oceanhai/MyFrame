@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.myframe.www">
+    package="com.myframe.www" >
 
     <!-- 需要网络权限 -->
     <!-- <uses-permission android:name="android.permission.INTERNET"/> -->
@@ -49,7 +49,7 @@
         android:largeHeap="false"
         android:persistent="true"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme" >
 
         <!-- 个推SDK配置开始 -->
         <!-- 配置的第三方参数属性 -->
@@ -70,7 +70,7 @@
         <!-- 配置第三方Receiver -->
         <receiver
             android:name=".getui.PushReceiver"
-            android:exported="false">
+            android:exported="false" >
             <intent-filter>
                 <action android:name="${GETUI_PAYLOADRECEIVER_ACTION}" />
             </intent-filter>
@@ -87,7 +87,7 @@
             android:exported="true"
             android:label="NotificationCenterUser" />
 
-        <receiver android:name="com.igexin.sdk.PushReceiver">
+        <receiver android:name="com.igexin.sdk.PushReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
@@ -101,7 +101,7 @@
         </receiver>
         <receiver
             android:name="com.igexin.sdk.PushManagerReceiver"
-            android:exported="false">
+            android:exported="false" >
             <intent-filter>
                 <action android:name="com.igexin.sdk.action.pushmanager" />
             </intent-filter>
@@ -126,7 +126,7 @@
             android:name="com.igexin.download.DownloadService"
             android:process=":pushservice" />
 
-        <receiver android:name="com.igexin.download.DownloadReceiver">
+        <receiver android:name="com.igexin.download.DownloadReceiver" >
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
             </intent-filter>
@@ -150,7 +150,7 @@
 
         <receiver
             android:name="com.igexin.getuiext.service.PayloadReceiver"
-            android:exported="false">
+            android:exported="false" >
             <intent-filter>
                 <action android:name="com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4" />
                 <action android:name="${GETUI_PAYLOADRECEIVER_ACTION}" />
@@ -171,7 +171,7 @@
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -360,100 +360,102 @@
         <activity
             android:name=".testdb.DBActivity"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
         <!-- theme 效果测试 -->
         <activity
             android:name=".testokhttp.OkHttpActivity"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"></activity>
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
         <activity
             android:name=".testhandler.HandlerActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".WeightActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".materialdesign.MaterialDesignActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".materialdesign.NavigationViewActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".materialdesign.CollapsingtToolbarlayoutActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Base.Theme.DesignDemo"></activity>
+            android:theme="@style/Base.Theme.DesignDemo" />
         <activity
             android:name=".jni.NdkJniActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".performance.MatActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ListviewActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".customview.CustomView1Activity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
 
         <!-- authorities这个可以和name不一致的 -->
         <!-- exported:属性值为true，则对外暴露数据 -->
         <provider
             android:name=".testcontentprovider.MyProvider"
             android:authorities="com.myframe.www.testcontentprovider.MyProvider"
-            android:exported="true"></provider>
+            android:exported="true" />
         <provider
             android:name=".testcontentprovider.MyProvider2"
             android:authorities="com.myframe.www.testcontentprovider.MyProvider2"
-            android:exported="true"></provider>
+            android:exported="true" />
 
         <activity
             android:name=".testcontentprovider.ContentResolverActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".customview.CustomView2Activity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".testasynctask.AsynctaskActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".teststartactivityforresult.SingleTopActivity"
             android:launchMode="singleTop"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".teststartactivityforresult.SingleTaskActivity"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".teststartactivityforresult.SingleInstanceActivity"
             android:exported="true"
             android:launchMode="singleInstance"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ExceptionActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".customview.Canvas1Activity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".customview.Canvas2Activity"
             android:hardwareAccelerated="false"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".testfragment.FragmentSetArgumentsActivity"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".testfragment.FragmentSetArguments1Activity"></activity>
+            android:screenOrientation="portrait" />
+        <activity android:name=".testfragment.FragmentSetArguments1Activity" />
         <activity
             android:name=".testinoutactivity.InOutActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".percentlayout.PercentLayoutActivity"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".testenventbus.EnventbusActivity"></activity>
-        <activity android:name=".testenventbus.Enventbus1Activity"></activity>
-        <activity android:name=".testenventbus.Enventbus2Activity"></activity>
-        <activity android:name=".testenventbus.Enventbus3Activity"></activity>
-        <activity android:name=".testormlite.OrmliteActivity"></activity>
+            android:screenOrientation="portrait" />
+        <activity android:name=".testenventbus.EnventbusActivity" />
+        <activity android:name=".testenventbus.Enventbus1Activity" />
+        <activity android:name=".testenventbus.Enventbus2Activity" />
+        <activity android:name=".testenventbus.Enventbus3Activity" />
+        <activity android:name=".testormlite.OrmliteActivity" />
+        <activity android:name=".DotNineActivity" >
+        </activity>
     </application>
 
 </manifest>
