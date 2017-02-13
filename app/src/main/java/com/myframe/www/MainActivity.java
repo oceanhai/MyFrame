@@ -18,6 +18,7 @@ import com.myframe.www.testcontentprovider.ContentResolverActivity;
 import com.myframe.www.testdb.DBActivity;
 import com.myframe.www.testenventbus.EnventbusActivity;
 import com.myframe.www.testfragment.FragmentSetArgumentsActivity;
+import com.myframe.www.testgreendao.GreenDaoActivity;
 import com.myframe.www.testhandler.HandlerActivity;
 import com.myframe.www.testinoutactivity.InOutActivity;
 import com.myframe.www.testokhttp.OkHttpActivity;
@@ -439,6 +440,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.btn57://点9图
                 DotNineActivity.startActivity(this);
+                break;
+            case R.id.btn58://GreenDao
+                GreenDaoActivity.startActivity(this);
                 break;
         }
     }

@@ -456,6 +456,8 @@
         <activity android:name=".testormlite.OrmliteActivity" />
         <activity android:name=".DotNineActivity" >
         </activity>
+        <activity android:name=".testgreendao.GreenDaoActivity" >
+        </activity>
     </application>
 
 </manifest>

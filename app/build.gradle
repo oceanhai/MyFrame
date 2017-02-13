@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
 
 android {
     compileSdkVersion 23
@@ -26,6 +27,12 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    greendao{
+        schemaVersion 1
+        daoPackage 'com.myframe.www.testgreendao'
+        targetGenDir 'src/main/java'
     }
 
     productFlavors{
@@ -112,7 +119,10 @@ dependencies {
     // 在Fragment，Activity，Service，线程之间传递消息.优点是开销小，代码更优雅。以及将发送者和接收者解耦
     compile 'org.greenrobot:eventbus:3.0.0'
     compile files('libs/ormlite-android-4.49-SNAPSHOT.jar')
+    //greendao
+    compile 'org.greenrobot:greendao:3.2.0'
 }
+
 
 //gradle task 练习start
 task hello {
