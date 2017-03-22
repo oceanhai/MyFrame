@@ -33,6 +33,7 @@ import com.myframe.www.widget.slidingfinish.SlidingFinishActivity;
 import com.myframe.www.widget.stickyheaderlistview.ui.StickyHeaderListView;
 import com.myframe.www.widget.swtichbutton.MovableCheckboxActivity;
 import com.myframe.www.yxt01.RetailSalerBrandPageActivity;
+import com.tencent.bugly.beta.Beta;
 import com.tencent.bugly.crashreport.CrashReport;
 
 import butterknife.Bind;
@@ -446,8 +447,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 GreenDaoActivity.startActivity(this);
                 break;
             case R.id.btn59://bugly
-                //bugly 测试
+                //bugly crash测试
                 CrashReport.testJavaCrash();
+                break;
+            case R.id.btn60://bugly
+                //bugly 升级测试
+                Beta.checkUpgrade();
                 break;
         }
     }

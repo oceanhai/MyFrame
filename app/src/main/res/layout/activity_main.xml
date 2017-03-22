@@ -249,7 +249,7 @@
                 android:id="@+id/btn59"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="btn60"
+            <Button android:text="bugly 升级"
                 android:id="@+id/btn60"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

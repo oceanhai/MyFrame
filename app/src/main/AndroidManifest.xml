@@ -38,6 +38,9 @@
     <!--<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />-->
     <!--<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />-->
     <uses-permission android:name="android.permission.READ_LOGS" />
+    <!--bugly 升级sdk-->
+    <!--保存资源到SD卡-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <permission
         android:name="${GETUI_PERMISSION}"
@@ -465,6 +468,24 @@
         </activity>
         <activity android:name=".testgreendao.GreenDaoActivity" >
         </activity>
+
+
+        <!--bugly 升级sdk start-->
+        <activity
+            android:name="com.tencent.bugly.beta.ui.BetaActivity"
+            android:theme="@android:style/Theme.Translucent" />
+        <!--兼容Android N或者以上的设备-->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.myframe.www.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+        <!--bugly 升级sdk end-->
+
     </application>
 
 </manifest>

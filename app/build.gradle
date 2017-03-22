@@ -155,8 +155,13 @@ dependencies {
     compile files('libs/ormlite-android-4.49-SNAPSHOT.jar')
     //greendao
     compile 'org.greenrobot:greendao:3.2.0'
-    //Bugly
-    compile 'com.tencent.bugly:crashreport:latest.release' //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.2.0
+
+    //Bugly sdk
+//    compile 'com.tencent.bugly:crashreport:latest.release' //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.2.0
+    //Bugly ndk Bugly SDK（2.1.5及以上版本）已经将Java Crash和Native Crash捕获功能分开
+    compile 'com.tencent.bugly:nativecrashreport:latest.release'
+    //Bugly 更新升级SDK(※ 已经包含"Bugly sdk"，所以用这个时候上述注释掉)
+    compile 'com.tencent.bugly:crashreport_upgrade:latest.release'
 }
 
 
