@@ -15,3 +15,17 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+-optimizationpasses 5          # 指定代码的压缩级别
+-dontusemixedcaseclassnames   # 是否使用大小写混合
+-dontpreverify           # 混淆时是否做预校验
+-verbose                # 混淆时是否记录日志
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*  # 混淆时所采用的算法
+#如果有引用v4包可以添加下面这行
+-keep public class * extends android.support.v4.app.Fragment
+#忽略警告
+-ignorewarning
+
+#bugly
+-dontwarn com.tencent.bugly.**
+-keep public class com.tencent.bugly.**{*;}

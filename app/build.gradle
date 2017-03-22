@@ -19,14 +19,48 @@ android {
         }
     }
     buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
+
         debug {
+            //默认签名  studio直接运行安装的版本
+            buildConfigField "String", "MODE", "\"debug\""//模式
+//            buildConfigField "boolean", "LOG_DEBUG", "true"//是否输出LOG信息
+            buildConfigField "boolean", "BUGLY_DEBUG", "true"//是否输出LOG信息
+
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+
+        develop {
+            //内测版本   测试库    测试友盟统计环境
+            buildConfigField "String", "MODE", "\"beta\""//模式
+//            buildConfigField "boolean", "LOG_DEBUG", "true"//是否输出LOG信息
+            buildConfigField "boolean", "BUGLY_DEBUG", "true"//是否输出LOG信息
+
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        preview {
+            //预览版   预览测试库    测试友盟统计环境
+            buildConfigField "String", "MODE", "\"preview\""//模式
+//            buildConfigField "boolean", "LOG_DEBUG", "true"//是否输出LOG信息
+            buildConfigField "boolean", "BUGLY_DEBUG", "true"//是否输出LOG信息
+
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            //正式发布版   正式库    正式友盟统计环境
+            buildConfigField "String", "MODE", "\"release\""//模式
+//            buildConfigField "boolean", "LOG_DEBUG", "false"//是否输出LOG信息
+            buildConfigField "boolean", "BUGLY_DEBUG", "false"//是否输出LOG信息
+
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+        }
+
     }
 
     greendao{
@@ -121,6 +155,8 @@ dependencies {
     compile files('libs/ormlite-android-4.49-SNAPSHOT.jar')
     //greendao
     compile 'org.greenrobot:greendao:3.2.0'
+    //Bugly
+    compile 'com.tencent.bugly:crashreport:latest.release' //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.2.0
 }
 
 

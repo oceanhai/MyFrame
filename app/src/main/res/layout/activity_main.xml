@@ -241,11 +241,11 @@
                 android:id="@+id/btn57"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="btn58"
+            <Button android:text="GreenDao"
                 android:id="@+id/btn58"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="btn59"
+            <Button android:text="bugly_crash发生"
                 android:id="@+id/btn59"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
