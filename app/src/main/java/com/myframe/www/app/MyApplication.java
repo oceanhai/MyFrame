@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Context;
 import android.text.TextUtils;
 
+import com.facebook.drawee.backends.pipeline.Fresco;
 import com.myframe.www.BuildConfig;
 import com.myframe.www.MainActivity;
 import com.myframe.www.testgreendao.GreenDaoManager;
@@ -77,6 +78,9 @@ public class MyApplication extends Application{
 
         //greenDao全局配置,只希望有一个数据库操作对象
         GreenDaoManager.getInstance();
+
+        //Fresco
+        Fresco.initialize(this);
     }
 
     private void buglyInit() {

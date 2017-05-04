@@ -41,6 +41,19 @@
         android:src="@mipmap/ic_launcher"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <!--style="@android:style/Widget.ProgressBar.Horizontal"-->
+    <ProgressBar
+        android:id="@+id/horizontal_progressbar"
+        android:layout_below="@+id/ll2"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_centerVertical="true"
+        android:progressDrawable="@drawable/horizontal_progressbar1"
+        android:progress="0"
+        android:max="100"  />
+
     <LinearLayout
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"

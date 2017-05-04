@@ -7,6 +7,8 @@ import net.sourceforge.pinyin4j.format.HanyuPinyinToneType;
 import net.sourceforge.pinyin4j.format.HanyuPinyinVCharType;
 import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
 
+import sun.rmi.runtime.Log;
+
 /**
  * Created by wuhai on 2017/04/18 11:49.
  * 描述：
@@ -89,10 +91,23 @@ public class PinyinUtils {
         for (int i = 0; i < nameChar.length; i++) {
             if (nameChar[i] > 128) {
                 try {
+                    //全角字符要先转换成半角字符
+                    if (nameChar[i] == 12288){//全角空格
+                        nameChar[i] = (char) 32;
+                        pinyinName += nameChar[i];
+                        continue;
+                    }
+                    if (nameChar[i]> 65280&& nameChar[i]< 65375){
+                        nameChar[i] = (char) (nameChar[i] - 65248);
+                        pinyinName += nameChar[i];
+                        continue;
+                    }
+
                     pinyinName += PinyinHelper.toHanyuPinyinStringArray(
                             nameChar[i], defaultFormat)[0].charAt(0);
-                } catch (BadHanyuPinyinOutputFormatCombination e) {
+                } catch (Exception e) {
                     e.printStackTrace();
+                    System.out.println("err:"+e.getMessage());
                 }
             } else {
                 pinyinName += nameChar[i];
