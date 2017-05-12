@@ -41,7 +41,8 @@ public class Lct_pinyin_test {
 //        String str8 = PinyinUtils.converterToFirstSpell("/");
 //        String str8 = PinyinUtils.converterToFirstSpell("＋");
 //        String str8 = PinyinUtils.converterToFirstSpell("×－/＋");
-        String str8 = PinyinUtils.converterToFirstSpell("乐村淘非转基因大豆油");
+//        String str8 = PinyinUtils.converterToFirstSpell("乐村淘非转基因大豆油");
+        String str8 = PinyinUtils.converterToFirstSpell("“人小鬼大”骷髅脆皮软糖珠");
 //        String str8 = PinyinUtils.converterToFirstSpell("￥");//65509
 //        String str8 = PinyinUtils.converterToFirstSpell("！");//
 
