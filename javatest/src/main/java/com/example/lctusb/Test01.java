@@ -22,6 +22,9 @@ public class Test01 {
         for (int i=0;i<5;i++){
             System.out.println(getFixLenthString(7));
         }
+
+        String money = "2.00";
+        System.out.println(Double.valueOf(money));
     }
 
     public static String formatData(long timestamp, DateFormat sdf) {
