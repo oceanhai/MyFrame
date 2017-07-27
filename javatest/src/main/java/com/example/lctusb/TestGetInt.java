@@ -57,20 +57,32 @@ public class TestGetInt {
         double a3 = 1.500;
         double a4 = 1.510;
         double a5 = 1.499;
+        double a6 = 1.95;
+        /**
+         * ※注意点
+         * BigDecimal的构造函数 public BigDecimal(double val) 会损失了double 参数的精度，
+         * 从而导致经典四舍五入的结果与预期不符，所以最好传入string类型的
+         */
+        String a6Str = "1.95";
         BigDecimal result1 = new BigDecimal(a1).setScale(1, BigDecimal.ROUND_HALF_UP);
         BigDecimal result2 = new BigDecimal(a2).setScale(1, BigDecimal.ROUND_HALF_UP);
         BigDecimal result3 = new BigDecimal(a3).setScale(1, BigDecimal.ROUND_HALF_UP);
         BigDecimal result4 = new BigDecimal(a4).setScale(1, BigDecimal.ROUND_HALF_UP);
         BigDecimal result5 = new BigDecimal(a5).setScale(1, BigDecimal.ROUND_HALF_UP);
+        BigDecimal result6 = new BigDecimal(a6Str).setScale(1, BigDecimal.ROUND_HALF_UP);
         double z1 = result1.doubleValue();
         double z2 = result2.doubleValue();
         double z3 = result3.doubleValue();
         double z4 = result4.doubleValue();
         double z5 = result5.doubleValue();
+        double z6 = result6.doubleValue();
         System.out.println("z1:"+z1);
         System.out.println("z2:"+z2);
         System.out.println("z3:"+z3);
         System.out.println("z4:"+z4);
         System.out.println("z5:"+z5);
+        System.out.println("z6:"+z6);
+        System.out.println("z7:"+Math.round(1.95));
+
     }
 }
