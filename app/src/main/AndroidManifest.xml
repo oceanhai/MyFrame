@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.myframe.www" >
+    package="com.myframe.www">
 
     <!-- 需要网络权限 -->
     <!-- <uses-permission android:name="android.permission.INTERNET"/> -->
@@ -32,14 +32,14 @@
     <!-- 读通讯录 -->
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
-    <!--bugly-->
-    <!--<uses-permission android:name="android.permission.READ_PHONE_STATE" />-->
-    <!--<uses-permission android:name="android.permission.INTERNET" />-->
-    <!--<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />-->
-    <!--<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />-->
+    <!-- bugly -->
+    <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE" /> -->
+    <!-- <uses-permission android:name="android.permission.INTERNET" /> -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> -->
     <uses-permission android:name="android.permission.READ_LOGS" />
-    <!--bugly 升级sdk-->
-    <!--保存资源到SD卡-->
+    <!-- bugly 升级sdk -->
+    <!-- 保存资源到SD卡 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <permission
@@ -59,7 +59,7 @@
         android:largeHeap="false"
         android:persistent="true"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
 
         <!-- 个推SDK配置开始 -->
         <!-- 配置的第三方参数属性 -->
@@ -80,7 +80,7 @@
         <!-- 配置第三方Receiver -->
         <receiver
             android:name=".getui.PushReceiver"
-            android:exported="false" >
+            android:exported="false">
             <intent-filter>
                 <action android:name="${GETUI_PAYLOADRECEIVER_ACTION}" />
             </intent-filter>
@@ -97,7 +97,7 @@
             android:exported="true"
             android:label="NotificationCenterUser" />
 
-        <receiver android:name="com.igexin.sdk.PushReceiver" >
+        <receiver android:name="com.igexin.sdk.PushReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
@@ -111,7 +111,7 @@
         </receiver>
         <receiver
             android:name="com.igexin.sdk.PushManagerReceiver"
-            android:exported="false" >
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.igexin.sdk.action.pushmanager" />
             </intent-filter>
@@ -136,7 +136,7 @@
             android:name="com.igexin.download.DownloadService"
             android:process=":pushservice" />
 
-        <receiver android:name="com.igexin.download.DownloadReceiver" >
+        <receiver android:name="com.igexin.download.DownloadReceiver">
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
             </intent-filter>
@@ -160,7 +160,7 @@
 
         <receiver
             android:name="com.igexin.getuiext.service.PayloadReceiver"
-            android:exported="false" >
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4" />
                 <action android:name="${GETUI_PAYLOADRECEIVER_ACTION}" />
@@ -181,7 +181,7 @@
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -464,17 +464,14 @@
         <activity android:name=".testenventbus.Enventbus2Activity" />
         <activity android:name=".testenventbus.Enventbus3Activity" />
         <activity android:name=".testormlite.OrmliteActivity" />
-        <activity android:name=".DotNineActivity" >
-        </activity>
-        <activity android:name=".testgreendao.GreenDaoActivity" >
-        </activity>
+        <activity android:name=".DotNineActivity"></activity>
+        <activity android:name=".testgreendao.GreenDaoActivity"></activity>
 
-
-        <!--bugly 升级sdk start-->
+        <!-- bugly 升级sdk start -->
         <activity
             android:name="com.tencent.bugly.beta.ui.BetaActivity"
             android:theme="@android:style/Theme.Translucent" />
-        <!--兼容Android N或者以上的设备-->
+        <!-- 兼容Android N或者以上的设备 -->
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.myframe.www.fileProvider"
@@ -482,10 +479,11 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/provider_paths"/>
+                android:resource="@xml/provider_paths" />
         </provider>
-        <!--bugly 升级sdk end-->
+        <!-- bugly 升级sdk end -->
 
+        <activity android:name=".dagger2.Dagger2Activity"></activity>
     </application>
 
 </manifest>

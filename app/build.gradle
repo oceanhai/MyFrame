@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'org.greenrobot.greendao'
+//apply plugin: 'com.neenbedankt.android-apt'//添加这里
 
 android {
     compileSdkVersion 23
@@ -176,8 +177,13 @@ dependencies {
 //    // 仅支持 WebP 静态图，需要添加
 //    compile 'com.facebook.fresco:webpsupport:0.12.0'
 
-}
+    //-----dagger2 start
+    compile 'com.google.dagger:dagger:2.9'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.9'
+//    apt 'com.google.dagger:dagger-compiler:2.9'//添加这里
+    //-----dagger2 end
 
+}
 
 //gradle task 练习start
 task hello {

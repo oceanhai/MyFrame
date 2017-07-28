@@ -9,6 +9,7 @@ import android.widget.Button;
 import com.igexin.sdk.PushManager;
 import com.myframe.www.base.BaseActivity;
 import com.myframe.www.customview.CustomViewActivity;
+import com.myframe.www.dagger2.Dagger2Activity;
 import com.myframe.www.jni.NdkJniActivity;
 import com.myframe.www.materialdesign.MaterialDesignActivity;
 import com.myframe.www.percentlayout.PercentLayoutActivity;
@@ -453,6 +454,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.btn60://bugly
                 //bugly 升级测试
                 Beta.checkUpgrade();
+                break;
+            case R.id.btn61://Dagger2
+                Dagger2Activity.startActivity(this);
                 break;
         }
     }
