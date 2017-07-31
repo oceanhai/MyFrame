@@ -15,7 +15,7 @@ import dagger.Component;
 import dagger.Module;
 import dagger.Provides;
 
-public class Dagger2Activity extends AppCompatActivity {
+public class Dagger2Activity extends AppCompatActivity implements MainContract.View {
 
     @Inject
     MainPresenter presenter;
@@ -35,4 +35,8 @@ public class Dagger2Activity extends AppCompatActivity {
                 build().inject(this);
     }
 
+    @Override
+    public void updateUI() {
+
+    }
 }
