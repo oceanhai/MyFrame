@@ -53,10 +53,10 @@ public class TestGetInt {
 //        System.out.println("凑整:Math.ceil(-2.9)=" + (int)Math.ceil(-m));
 
         double a1 = 1.346;
-        double a2 = 0.346;
-        double a3 = 1.500;
-        double a4 = 1.510;
-        double a5 = 1.499;
+        double a2 = 0.3462;
+        double a3 = 1.5004;
+        double a4 = 1.5105;
+        double a5 = 1.4996;
         double a6 = 1.95;
         /**
          * ※注意点
@@ -64,12 +64,12 @@ public class TestGetInt {
          * 从而导致经典四舍五入的结果与预期不符，所以最好传入string类型的
          */
         String a6Str = "1.95";
-        BigDecimal result1 = new BigDecimal(a1).setScale(1, BigDecimal.ROUND_HALF_UP);
-        BigDecimal result2 = new BigDecimal(a2).setScale(1, BigDecimal.ROUND_HALF_UP);
-        BigDecimal result3 = new BigDecimal(a3).setScale(1, BigDecimal.ROUND_HALF_UP);
-        BigDecimal result4 = new BigDecimal(a4).setScale(1, BigDecimal.ROUND_HALF_UP);
-        BigDecimal result5 = new BigDecimal(a5).setScale(1, BigDecimal.ROUND_HALF_UP);
-        BigDecimal result6 = new BigDecimal(a6Str).setScale(1, BigDecimal.ROUND_HALF_UP);
+        BigDecimal result1 = new BigDecimal(a1).setScale(3, BigDecimal.ROUND_HALF_UP);
+        BigDecimal result2 = new BigDecimal(a2).setScale(3, BigDecimal.ROUND_HALF_UP);
+        BigDecimal result3 = new BigDecimal(a3).setScale(3, BigDecimal.ROUND_HALF_UP);
+        BigDecimal result4 = new BigDecimal(a4).setScale(3, BigDecimal.ROUND_HALF_UP);
+        BigDecimal result5 = new BigDecimal(a5).setScale(3, BigDecimal.ROUND_HALF_UP);
+        BigDecimal result6 = new BigDecimal(a6Str).setScale(3, BigDecimal.ROUND_HALF_UP);
         double z1 = result1.doubleValue();
         double z2 = result2.doubleValue();
         double z3 = result3.doubleValue();

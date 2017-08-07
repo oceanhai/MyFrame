@@ -13,6 +13,18 @@ import java.util.List;
 public class ListTest {
 
     public static void main(String[] args){
+
+//        method01();
+        method02();
+
+    }
+
+    private static void method02() {
+        List<String> mDatas = new ArrayList<>();
+        String str = mDatas.get(0);
+    }
+
+    private static void method01() {
         List<List<String>> mDatas = new ArrayList<>();
 
         List<String> list = new ArrayList<>();
@@ -37,6 +49,5 @@ public class ListTest {
             }
             System.out.println();
         }
-
     }
 }
