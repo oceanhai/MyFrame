@@ -257,7 +257,22 @@
                 android:id="@+id/btn61"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-
+            <Button android:text="picasso"
+                android:id="@+id/btn62"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button android:text="btn63"
+                android:id="@+id/btn63"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button android:text="btn64"
+                android:id="@+id/btn64"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button android:text="btn65"
+                android:id="@+id/btn65"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
         </LinearLayout>
 
     </ScrollView>

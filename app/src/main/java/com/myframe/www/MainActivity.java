@@ -14,6 +14,7 @@ import com.myframe.www.jni.NdkJniActivity;
 import com.myframe.www.materialdesign.MaterialDesignActivity;
 import com.myframe.www.percentlayout.PercentLayoutActivity;
 import com.myframe.www.performance.MatActivity;
+import com.myframe.www.picasso.PicassoActivity;
 import com.myframe.www.testasynctask.AsynctaskActivity;
 import com.myframe.www.testcontentprovider.ContentResolverActivity;
 import com.myframe.www.testdb.DBActivity;
@@ -166,6 +167,14 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     Button btn60;
     @Bind(R.id.btn61)
     Button btn61;
+    @Bind(R.id.btn62)
+    Button btn62;
+    @Bind(R.id.btn63)
+    Button btn63;
+    @Bind(R.id.btn64)
+    Button btn64;
+    @Bind(R.id.btn65)
+    Button btn65;
 
     private String parameter;//TODO 这个以后应该是个json串，目前就简单用string代替
 
@@ -248,6 +257,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         btn59.setOnClickListener(this);
         btn60.setOnClickListener(this);
         btn61.setOnClickListener(this);
+        btn62.setOnClickListener(this);
+        btn63.setOnClickListener(this);
+        btn64.setOnClickListener(this);
+        btn65.setOnClickListener(this);
     }
 
     private void pareIntent() {
@@ -457,6 +470,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.btn61://Dagger2
                 Dagger2Activity.startActivity(this);
+                break;
+            case R.id.btn62://picasso
+                PicassoActivity.startActivity(this);
                 break;
         }
     }

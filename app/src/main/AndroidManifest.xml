@@ -483,7 +483,10 @@
         </provider>
         <!-- bugly 升级sdk end -->
 
-        <activity android:name=".dagger2.Dagger2Activity"></activity>
+        <activity android:name=".dagger2.Dagger2Activity"
+            android:exported="false"></activity>
+        <activity android:name=".picasso.PicassoActivity"
+            android:exported="false"></activity>
     </application>
 
 </manifest>
