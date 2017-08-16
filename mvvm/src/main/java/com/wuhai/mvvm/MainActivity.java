@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         addr = binding.addr;
 
         btn01.setOnClickListener(this);
-
+        binding.btn02.setOnClickListener(this);
     }
 
     @Override
@@ -53,6 +53,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Student student = binding.getStu();
                 student.setName(nameStr);
                 student.setAddr(addrStr);
+                break;
+            case R.id.btn02:
+                ListActivity.startActivity(this);
                 break;
         }
     }

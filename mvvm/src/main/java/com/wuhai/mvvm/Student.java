@@ -19,6 +19,9 @@ public class Student extends BaseObservable{
     private String addr;
     private String photo;
 
+    public Student() {
+    }
+
     public Student(String name, String addr) {
         this.name = name;
         this.addr = addr;
