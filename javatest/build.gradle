@@ -8,4 +8,5 @@ dependencies {
     }
     compile files('libs/commons-codec-1.7.jar')
     compile files('libs/pinyin4j-2.5.0.jar')
+    compile files('libs/json.jar')
 }
