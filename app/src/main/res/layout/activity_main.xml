@@ -261,7 +261,7 @@
                 android:id="@+id/btn62"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="btn63"
+            <Button android:text="inflate"
                 android:id="@+id/btn63"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

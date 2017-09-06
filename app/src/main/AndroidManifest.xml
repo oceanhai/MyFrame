@@ -464,8 +464,8 @@
         <activity android:name=".testenventbus.Enventbus2Activity" />
         <activity android:name=".testenventbus.Enventbus3Activity" />
         <activity android:name=".testormlite.OrmliteActivity" />
-        <activity android:name=".DotNineActivity"></activity>
-        <activity android:name=".testgreendao.GreenDaoActivity"></activity>
+        <activity android:name=".DotNineActivity" />
+        <activity android:name=".testgreendao.GreenDaoActivity" />
 
         <!-- bugly 升级sdk start -->
         <activity
@@ -483,10 +483,13 @@
         </provider>
         <!-- bugly 升级sdk end -->
 
-        <activity android:name=".dagger2.Dagger2Activity"
-            android:exported="false"></activity>
-        <activity android:name=".picasso.PicassoActivity"
-            android:exported="false"></activity>
+        <activity
+            android:name=".dagger2.Dagger2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".picasso.PicassoActivity"
+            android:exported="false" />
+        <activity android:name=".InflateActivity"></activity>
     </application>
 
 </manifest>

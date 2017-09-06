@@ -474,6 +474,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.btn62://picasso
                 PicassoActivity.startActivity(this);
                 break;
+            case R.id.btn63://inflate
+                InflateActivity.startActivity(this);
+                break;
         }
     }
 }
