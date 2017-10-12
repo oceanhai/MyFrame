@@ -8,7 +8,10 @@ package com.example.lctusb;
 public class DoubleTest {
 
     public static void main(String[] args){
-        double double1 = 5 * 5;
-        System.out.println(double1);
+//        double double1 = 5 * 5;
+//        System.out.println(double1);
+
+        System.out.println(Double.parseDouble("1"));
+        System.out.println(Double.parseDouble("2.00"));
     }
 }
