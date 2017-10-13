@@ -489,7 +489,8 @@
         <activity
             android:name=".picasso.PicassoActivity"
             android:exported="false" />
-        <activity android:name=".InflateActivity"></activity>
+        <activity android:name=".InflateActivity" />
+        <activity android:name=".InstallAndUnloadActivity"></activity>
     </application>
 
 </manifest>

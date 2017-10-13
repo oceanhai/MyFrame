@@ -265,7 +265,7 @@
                 android:id="@+id/btn63"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="btn64"
+            <Button android:text="安装与卸载"
                 android:id="@+id/btn64"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

@@ -477,6 +477,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.btn63://inflate
                 InflateActivity.startActivity(this);
                 break;
+            case R.id.btn64://安装与卸载
+                InstallAndUnloadActivity.startActivity(this);
+                break;
         }
     }
 }
