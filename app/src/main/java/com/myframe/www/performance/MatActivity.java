@@ -26,7 +26,7 @@ public class MatActivity extends BaseActivity implements View.OnClickListener {
     Button add;
 
     private List<ImageView> list = new ArrayList<>();
-    static MemoryLeak memoryLeak;
+//    static MemoryLeak memoryLeak;
 
     public static void startActivity(Context context) {
         Intent intent = new Intent(context, MatActivity.class);
@@ -44,9 +44,9 @@ public class MatActivity extends BaseActivity implements View.OnClickListener {
     }
 
     private void init() {
-        if (memoryLeak == null) {
-            memoryLeak = new MemoryLeak();
-        }
+//        if (memoryLeak == null) {
+//            memoryLeak = new MemoryLeak();
+//        }
     }
 
     private void initListener() {
@@ -61,6 +61,22 @@ public class MatActivity extends BaseActivity implements View.OnClickListener {
                     ImageView imageView = new ImageView(this);
                     list.add(imageView);
                 }
+
+                //无限循环 线程
+                new Thread() {
+                    @Override
+                    public void run() {
+                        super.run();
+                        while (true) {
+                            try {
+                                System.out.println("Thread running!!");
+                                Thread.sleep(300);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                }.start();
                 break;
         }
     }
@@ -68,7 +84,8 @@ public class MatActivity extends BaseActivity implements View.OnClickListener {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        memoryLeak = null;
+        //如果是static的置null，也解决不了内存泄漏，只是会把memoryLeak数据清下而已
+//        memoryLeak = null;
     }
 
     class MemoryLeak {
