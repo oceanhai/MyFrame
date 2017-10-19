@@ -45,6 +45,21 @@ public class StringUtils {
         return df.format(num);
     }
 
+    /**
+     * double 类型 截取小数点后位数
+     * @param format
+     * @param num
+     * @return
+     */
+    public static double getDoubleByDecimalFormat(String format, double num){
+        DecimalFormat df = null;
+        if (format == null || format.length()==0){
+            df = new DecimalFormat("######0.00");
+        }else{
+            df = new DecimalFormat(format);
+        }
+        return Double.valueOf(df.format(num));
+    }
 
     /**
      * 获取uuid
