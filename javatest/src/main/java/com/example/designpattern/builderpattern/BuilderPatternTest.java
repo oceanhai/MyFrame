@@ -3,7 +3,7 @@ package com.example.designpattern.builderpattern;
 
 /**
  * Created by wuhai on 2017/11/13 14:39.
- * 描述：
+ * 描述：建造者模式
  */
 
 public class BuilderPatternTest {
