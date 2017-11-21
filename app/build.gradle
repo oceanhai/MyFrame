@@ -156,35 +156,32 @@ dependencies {
     compile files('libs/ormlite-android-4.49-SNAPSHOT.jar')
     //greendao
     compile 'org.greenrobot:greendao:3.2.0'
-
     //Bugly sdk
-//    compile 'com.tencent.bugly:crashreport:latest.release' //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.2.0
+    //    compile 'com.tencent.bugly:crashreport:latest.release' //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.2.0
     //Bugly ndk Bugly SDK（2.1.5及以上版本）已经将Java Crash和Native Crash捕获功能分开
     compile 'com.tencent.bugly:nativecrashreport:latest.release'
     //Bugly 更新升级SDK(※ 已经包含"Bugly sdk"，所以用这个时候上述注释掉)
     compile 'com.tencent.bugly:crashreport_upgrade:latest.release'
-
     //fresco
     // 其他依赖
     compile 'com.facebook.fresco:fresco:0.12.0'
-//    // 在 API < 14 上的机器支持 WebP 时，需要添加
-//    compile 'com.facebook.fresco:animated-base-support:0.12.0'
-//    // 支持 GIF 动图，需要添加
-//    compile 'com.facebook.fresco:animated-gif:0.12.0'
-//    // 支持 WebP （静态图+动图），需要添加
-//    compile 'com.facebook.fresco:animated-webp:0.12.0'
-//    compile 'com.facebook.fresco:webpsupport:0.12.0'
-//    // 仅支持 WebP 静态图，需要添加
-//    compile 'com.facebook.fresco:webpsupport:0.12.0'
-
+    //    // 在 API < 14 上的机器支持 WebP 时，需要添加
+    //    compile 'com.facebook.fresco:animated-base-support:0.12.0'
+    //    // 支持 GIF 动图，需要添加
+    //    compile 'com.facebook.fresco:animated-gif:0.12.0'
+    //    // 支持 WebP （静态图+动图），需要添加
+    //    compile 'com.facebook.fresco:animated-webp:0.12.0'
+    //    compile 'com.facebook.fresco:webpsupport:0.12.0'
+    //    // 仅支持 WebP 静态图，需要添加
+    //    compile 'com.facebook.fresco:webpsupport:0.12.0'
     //-----dagger2 start
     compile 'com.google.dagger:dagger:2.9'
     annotationProcessor 'com.google.dagger:dagger-compiler:2.9'
-//    apt 'com.google.dagger:dagger-compiler:2.9'//添加这里
+    //    apt 'com.google.dagger:dagger-compiler:2.9'//添加这里
     //-----dagger2 end
-
     //picasso 图片加载框架
     compile 'com.squareup.picasso:picasso:2.5.2'
+    compile files('libs/pldroid-player-2.0.3.jar')
 }
 
 //gradle task 练习start

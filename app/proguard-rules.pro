@@ -29,3 +29,7 @@
 #bugly
 -dontwarn com.tencent.bugly.**
 -keep public class com.tencent.bugly.**{*;}
+
+#PldroidPlayer
+-keep class com.pili.pldroid.player.** { *; }
+-keep class com.qiniu.qplayer.mediaEngine.MediaPlayer{*;}

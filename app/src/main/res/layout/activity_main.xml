@@ -269,7 +269,7 @@
                 android:id="@+id/btn64"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="btn65"
+            <Button android:text="七牛云  播放"
                 android:id="@+id/btn65"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

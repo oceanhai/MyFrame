@@ -15,6 +15,7 @@ import com.myframe.www.materialdesign.MaterialDesignActivity;
 import com.myframe.www.percentlayout.PercentLayoutActivity;
 import com.myframe.www.performance.MatActivity;
 import com.myframe.www.picasso.PicassoActivity;
+import com.myframe.www.pldroid.PldroidPlayerActivity;
 import com.myframe.www.testasynctask.AsynctaskActivity;
 import com.myframe.www.testcontentprovider.ContentResolverActivity;
 import com.myframe.www.testdb.DBActivity;
@@ -479,6 +480,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.btn64://安装与卸载
                 InstallAndUnloadActivity.startActivity(this);
+                break;
+            case R.id.btn65://七牛云  播放
+                PldroidPlayerActivity.startActivity(this);
                 break;
         }
     }
