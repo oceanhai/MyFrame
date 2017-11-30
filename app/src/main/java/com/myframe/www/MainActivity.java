@@ -11,6 +11,7 @@ import com.myframe.www.base.BaseActivity;
 import com.myframe.www.customview.CustomViewActivity;
 import com.myframe.www.dagger2.Dagger2Activity;
 import com.myframe.www.jni.NdkJniActivity;
+import com.myframe.www.lctdahua.LctDahuaActivity;
 import com.myframe.www.materialdesign.MaterialDesignActivity;
 import com.myframe.www.percentlayout.PercentLayoutActivity;
 import com.myframe.www.performance.MatActivity;
@@ -176,6 +177,16 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     Button btn64;
     @Bind(R.id.btn65)
     Button btn65;
+    @Bind(R.id.btn66)
+    Button btn66;
+    @Bind(R.id.btn67)
+    Button btn67;
+    @Bind(R.id.btn68)
+    Button btn68;
+    @Bind(R.id.btn69)
+    Button btn69;
+    @Bind(R.id.btn70)
+    Button btn70;
 
     private String parameter;//TODO 这个以后应该是个json串，目前就简单用string代替
 
@@ -262,6 +273,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         btn63.setOnClickListener(this);
         btn64.setOnClickListener(this);
         btn65.setOnClickListener(this);
+        btn66.setOnClickListener(this);
+        btn67.setOnClickListener(this);
+        btn68.setOnClickListener(this);
+        btn69.setOnClickListener(this);
+        btn70.setOnClickListener(this);
     }
 
     private void pareIntent() {
@@ -483,6 +499,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.btn65://七牛云  播放
                 PldroidPlayerActivity.startActivity(this);
+                break;
+            case R.id.btn66://LCT 大华电子秤
+                LctDahuaActivity.startActivity(this);
                 break;
         }
     }

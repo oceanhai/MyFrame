@@ -42,14 +42,13 @@
     <!-- 保存资源到SD卡 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-    <!--PldroidPlayer-->
-    <!--<uses-permission android:name="android.permission.INTERNET" />-->
+    <!-- PldroidPlayer -->
+    <!-- <uses-permission android:name="android.permission.INTERNET" /> -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <!--<uses-permission android:name="android.permission.WAKE_LOCK" />-->
-    <!--<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>-->
+    <!-- <uses-permission android:name="android.permission.WAKE_LOCK" /> -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/> -->
 
     4.3 使用 PLVideoView 或者 PLVideoTextureView 实现媒体播放功能
-
     <permission
         android:name="${GETUI_PERMISSION}"
         android:protectionLevel="normal" />
@@ -499,7 +498,8 @@
             android:exported="false" />
         <activity android:name=".InflateActivity" />
         <activity android:name=".InstallAndUnloadActivity" />
-        <activity android:name=".pldroid.PldroidPlayerActivity"></activity>
+        <activity android:name=".pldroid.PldroidPlayerActivity" />
+        <activity android:name=".lctdahua.LctDahuaActivity"></activity>
     </application>
 
 </manifest>

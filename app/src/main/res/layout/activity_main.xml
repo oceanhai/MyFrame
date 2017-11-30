@@ -273,6 +273,26 @@
                 android:id="@+id/btn65"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
+            <Button android:text="LCT 大华电子秤"
+                android:id="@+id/btn66"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button android:text="btn67"
+                android:id="@+id/btn67"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button android:text="btn68"
+                android:id="@+id/btn68"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button android:text="btn69"
+                android:id="@+id/btn69"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button android:text="btn70"
+                android:id="@+id/btn70"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
         </LinearLayout>
 
     </ScrollView>
