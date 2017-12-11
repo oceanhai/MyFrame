@@ -1,0 +1,52 @@
+package com.example.javabase;
+
+/**
+ * Created by wuhai on 2017/12/09 14:25.
+ * 描述：
+ */
+
+public class UtilsTest {
+
+    public static void main(String[] args){
+//        method01();
+//        method02();
+        method03();
+    }
+
+    public static void method03(){
+        String str1 = "192.168.9.150";
+        String str2 = "192.168.9.256";
+        String str3 = "192%168.9.256";
+        String str4 = "092.168.9.256";
+        String str5 = "292.168.9.256";
+        String str6 = "192.168.9.150.1";
+        String str7 = "100.168.9.150";
+        String str8 = "242.168.9.150";
+        String str9 = "192.168.9.955";
+        System.out.println(IpAddressUtils.isIP(str1));
+        System.out.println(IpAddressUtils.isIP(str2));
+        System.out.println(IpAddressUtils.isIP(str3));
+        System.out.println(IpAddressUtils.isIP(str4));
+        System.out.println(IpAddressUtils.isIP(str5));
+        System.out.println(IpAddressUtils.isIP(str6));
+        System.out.println(IpAddressUtils.isIP(str7));
+        System.out.println(IpAddressUtils.isIP(str8));
+        System.out.println(IpAddressUtils.isIP(str9));
+    }
+
+    public static void method01(){
+        String str = "桃100";
+        String sbc = SbcAndDbcUtils.ToSBC(str);
+        System.out.println(sbc);
+    }
+
+    public static void method02(){
+        String str = "０";
+        String sbc1 = ChineseAreaCode.toAreaCode(str);
+        String sbc2 = ChineseAreaCode.toAreaCode2(str);
+        String sbc3 = ChineseAreaCode.getQuwei(str);
+        System.out.println(sbc1);
+        System.out.println(sbc2);
+        System.out.println(sbc3);
+    }
+}

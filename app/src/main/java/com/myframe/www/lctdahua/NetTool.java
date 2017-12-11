@@ -16,10 +16,13 @@ import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.net.Inet4Address;
 import java.net.InetAddress;
+import java.net.InetSocketAddress;
 import java.net.NetworkInterface;
 import java.net.Socket;
 import java.net.SocketException;
 import java.util.Enumeration;
+
+import static android.R.attr.port;
 
 /**
  * Created by wuhai on 2017/11/29 15:48.
@@ -40,8 +43,6 @@ public class NetTool {
     private Process proc = null;
 
     private String ping = "ping -c 1 -w 0.5 " ;//其中 -c 1为发送的次数，-w 表示发送后等待响应的时间
-
-    private int j;//存放ip最后一位地址 0-255
 
     private Context ctx;//上下文
 
@@ -86,49 +87,43 @@ public class NetTool {
 
     private BufferedWriter bw = null;
     private Socket socket = null;
+    private InetSocketAddress isa = null;
 
     //向serversocket发送消息
-    public String sendMsg(String ip,String msg) {
-        Log.e(TAG,"sendMsg ip="+ip+",msg="+msg);
-        String res = null;
+    public boolean sendMsg(String ip,String msg) {
+        boolean success = false;
 
-        String product_name = "干脆面";
-        String str = ChineseAreaCode.toAreaCode(product_name);
-
+        String product_name1 = "哇哈哈";
+        String str1 = ChineseAreaCode.toAreaCode(product_name1);
         String msg1 =
                 "!0V" + "0001" + //plu_num 秤的plu编码
                         "A22"+
                         "81080" + //scale_barcode 条码秤编码 5位
-                        "003000" + //单价 单位为:分/kg eg:30元/KG
+                        "000100" + //单价 单位为:分/kg eg:30元/KG
                         "0000000"+
                         "030"+//保质期
                         "03"+//scale_shop_num 电子秤店铺号
                         "000000000000000"+
                         "00000"+//皮重
                         "0000000000000000000000000000" +
-                        "B" +str+//商品名
+                        "B" +str1+//商品名
                         "C186642525028D186642525028E";
-        Log.e(TAG,"sendMsg ip="+ip+",msg1="+msg1);
+        String str = msg1;
+        Log.e(TAG,"sendMsg ip="+ip+",str="+str);
         try {
-            socket = new Socket(ip, SERVERPORT);
+//            socket = new Socket(ip, SERVERPORT);
+            socket = new Socket();
+            isa = new InetSocketAddress(ip, SERVERPORT);
+            socket.connect(isa,6000);
             if(socket.isConnected()){
                 Log.e(TAG,"socket 链接成功");
-//                //向服务器发送消息
-//                PrintWriter os = new PrintWriter(socket.getOutputStream());
-//                os.println(msg);
-//                os.flush();// 刷新输出流，使Server马上收到该字符串
-//
-//                //从服务器获取返回消息
-//                DataInputStream input = new DataInputStream(socket.getInputStream());
-//                res = input.readUTF();
-//                Log.e(TAG,"server 返回信息：" + res);
-//                Message.obtain(handler, 222, res).sendToTarget();//发送服务器返回消息
 
                 bw = new BufferedWriter(new OutputStreamWriter(
                         socket.getOutputStream()));
-                bw.write(msg1);// 给服务器发一条消息
+                bw.write(str);// 给服务器发一条消息
                 bw.newLine();
                 bw.flush();
+                success = true;
 
                 // 读的线程
                 new Thread(new Runnable() {
@@ -141,6 +136,7 @@ public class NetTool {
                                 // 读取服务器的数据
                                 String msg = br.readLine();
                                 Log.e(TAG,"服务器的数据返回："+msg);
+                                Log.e(TAG, "从开始到成功接收到服务器的数据耗时:" + (System.currentTimeMillis()-start_time));
                             }
                         } catch (IOException e) {
                             e.printStackTrace();
@@ -148,16 +144,24 @@ public class NetTool {
                     }
                 }).start();// 启动从服务器读数据的线程
             }else{
-                Log.e(TAG,"socket 链接失败");
+                Log.e(TAG,"ip="+ip+",socket 链接失败");
             }
 
         } catch (Exception unknownHost) {
             Log.e(TAG,"You are trying to connect to an unknown host!");
+        }finally {
+            if(socket != null){
+                try {
+                    socket.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
-        return res;
+        return success;
     }
 
-
+    private long start_time;
     /**
      * 扫描局域网内ip，找到对应服务器
      */
@@ -170,36 +174,34 @@ public class NetTool {
             return ;
         }
 
-        for ( int i = 150; i < 151; i++) {//创建256个线程分别去ping
+        start_time = System.currentTimeMillis();
 
-            j = i ;
+        new Thread(new Runnable() {
 
-            new Thread(new Runnable() {
+            public void run() {
+                for (int i = 150; i <= 150; i++) {//存放ip最后一位地址 0-255 创建256个线程分别去ping
+                    String p = NetTool.this.ping + locAddress + i;
 
-                public void run() {
-
-                    String p = NetTool.this.ping + locAddress + j ;
-
-                    String current_ip = locAddress+ j;
+                    String current_ip = locAddress + i;
 
                     try {
                         proc = run.exec(p);
 
                         int result = proc.waitFor();
                         if (result == 0) {
-                            Log.e(TAG,"连接成功" + current_ip);
+                            Log.e(TAG, "ping成功" + current_ip);
                             // 向服务器发送验证信息
-                            String msg = sendMsg(current_ip,"scan"+getLocAddress()+" ( "+android.os.Build.MODEL+" ) ");
+                            boolean success = sendMsg(current_ip, "scan" + getLocAddress() + " ( " + android.os.Build.MODEL + " ) ");
 
                             //如果验证通过...
-                            if (msg != null){
-                                if (msg.contains("OK")){
-                                    Log.e(TAG,"服务器IP：" + msg.substring(8,msg.length()));
-                                    Message.obtain(handler, 333, msg.substring(2,msg.length())).sendToTarget();//返回扫描完毕消息
-                                }
+                            if (success) {
+                                Log.e(TAG, "检索到ip并socket连接成功并发送消息耗时:" + (System.currentTimeMillis() - start_time));
+                                break;
+                            }else{
+                                Log.e(TAG, "检索到ip，但socket连接成功不成功");
                             }
                         } else {
-
+                            Log.e(TAG, "ping失败" + current_ip);
                         }
                     } catch (IOException e1) {
                         e1.printStackTrace();
@@ -209,9 +211,8 @@ public class NetTool {
                         proc.destroy();
                     }
                 }
-            }).start();
-
-        }
+            }
+        }).start();
 
     }
 
