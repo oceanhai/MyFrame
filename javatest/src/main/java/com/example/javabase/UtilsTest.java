@@ -1,5 +1,7 @@
 package com.example.javabase;
 
+import com.example.Person;
+
 /**
  * Created by wuhai on 2017/12/09 14:25.
  * 描述：
@@ -8,9 +10,22 @@ package com.example.javabase;
 public class UtilsTest {
 
     public static void main(String[] args){
-//        method01();
-//        method02();
-        method03();
+        method04();
+    }
+
+    public static void method04(){
+        Person person = new Person();
+        person.setName("wuhai");
+        System.out.println(GsonUtils.getInstance().toJson(person));
+
+        Person person1 = new Person();
+        person1.setAge(18);
+        System.out.println(GsonUtils.getInstance().toJson(person1));
+
+        Person person2 = new Person();
+        person2.setAge(18);
+        person2.setName("");
+        System.out.println(GsonUtils.getInstance().toJson(person2));
     }
 
     public static void method03(){

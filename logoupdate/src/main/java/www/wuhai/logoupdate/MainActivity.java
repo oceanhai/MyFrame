@@ -7,10 +7,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+/**
+ * 当是使用默认的主入口时，app可以正常升级。当是使用B子入口时，
+ * app就无法正常升级了，如果想升级，在升级之前要把入口切换会主入口，不然直接升级失败
+ */
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button btn01;
     private Button btn02;
+    private Button btn03;
 
     private ComponentName mDefault;
     private ComponentName mDouble11;
@@ -24,11 +29,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btn01 = (Button) findViewById(R.id.bt01);
         btn02 = (Button) findViewById(R.id.bt02);
+        btn03 = (Button) findViewById(R.id.bt03);
 
         btn01.setOnClickListener(this);
         btn02.setOnClickListener(this);
+        btn03.setOnClickListener(this);
 
-        mDefault = getComponentName();
+//        mDefault = getComponentName();
+        mDefault = new ComponentName(
+                getBaseContext(),
+                "www.wuhai.logoupdate.MainActivity");
         mDouble11 = new ComponentName(
                 getBaseContext(),
                 "www.wuhai.logoupdate.Test11");
@@ -51,6 +61,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 disableComponent(mDefault);
                 disableComponent(mDouble11);
                 enableComponent(mDouble12);
+                break;
+            case R.id.bt03:
+                enableComponent(mDefault);
+                disableComponent(mDouble11);
+                disableComponent(mDouble12);
                 break;
         }
     }
