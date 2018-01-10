@@ -10,7 +10,43 @@ import com.example.Person;
 public class UtilsTest {
 
     public static void main(String[] args){
-        method04();
+        method05();
+    }
+
+    public static void method05(){
+        String str1 = "00123";
+        String str2 = "001234";
+        String str3 = "0012345";
+        String str4 = "0012345678";
+        String str5 = "00123456789";
+        String str6 = "001234567890";
+
+        System.out.println(PatternUtils.isMemberCard(str1));
+        System.out.println(PatternUtils.isMemberCard(str2));
+        System.out.println(PatternUtils.isMemberCard(str3));
+        System.out.println(PatternUtils.isMemberCard(str4));
+        System.out.println(PatternUtils.isMemberCard(str5));
+        System.out.println(PatternUtils.isMemberCard(str6));
+
+        System.out.println("---------------------------------------------");
+
+        String s1 = "99123";
+        String s2 = "991234";
+        String s3 = "9912345";
+        String s4 = "9912345678";
+        String s5 = "99123456789";
+        String s6 = "991234567890";
+        String s7 = "99";
+        String s8 = "9";
+
+        System.out.println(PatternUtils.isMemberCard(s1));
+        System.out.println(PatternUtils.isMemberCard(s2));
+        System.out.println(PatternUtils.isMemberCard(s3));
+        System.out.println(PatternUtils.isMemberCard(s4));
+        System.out.println(PatternUtils.isMemberCard(s5));
+        System.out.println(PatternUtils.isMemberCard(s6));
+        System.out.println(PatternUtils.isMemberCard(s7));
+        System.out.println(PatternUtils.isMemberCard(s8));
     }
 
     public static void method04(){

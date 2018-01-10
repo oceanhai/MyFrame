@@ -1,15 +1,12 @@
-package com.example.lctusb;
+package com.example.lctencrypt;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.security.DigestInputStream;
-import java.security.InvalidKeyException;
+import org.bouncycastle.jce.provider.BouncyCastleProvider;
+
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.security.Security;
 
 import javax.crypto.Cipher;
-import javax.crypto.Mac;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 
@@ -29,7 +26,10 @@ public class EncryptUtils {
      * @return 密文字节数组
      */
     public static byte[] encryptSHA256(byte[] data) {
-        return hashTemplate(data, "SHA256");
+        /**
+         * TODO 不知道为啥 收银系统的那个"SHA256"就可以，这里必须是"SHA-256"
+         */
+        return hashTemplate(data, "SHA-256");
     }
 
     /**
@@ -98,6 +98,15 @@ public class EncryptUtils {
     public static byte[] desTemplate(byte[] data, byte[] key, String algorithm, String transformation, boolean isEncrypt) {
         if (data == null || data.length == 0 || key == null || key.length == 0) return null;
         try {
+            /**
+             * 介于java 不支持PKCS7Padding，只支持PKCS5Padding 但是PKCS7Padding 和 PKCS5Padding 没有什么区别
+             * 要实现在java端用PKCS7Padding填充，需要用到bouncycastle组件来实现
+             * 网站https://www.cnblogs.com/chen-lhx/p/6233954.html
+             * 下载地址：http://central.maven.org/maven2/org/bouncycastle/bcprov-jdk16/1.46/bcprov-jdk16-1.46.jar
+             */
+            // 初始化
+            Security.addProvider(new BouncyCastleProvider());
+
             SecretKeySpec keySpec = new SecretKeySpec(key, algorithm);
             Cipher cipher = Cipher.getInstance(transformation);
 //            SecureRandom random = new SecureRandom();
