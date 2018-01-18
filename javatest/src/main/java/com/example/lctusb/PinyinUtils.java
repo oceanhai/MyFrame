@@ -7,7 +7,6 @@ import net.sourceforge.pinyin4j.format.HanyuPinyinToneType;
 import net.sourceforge.pinyin4j.format.HanyuPinyinVCharType;
 import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
 
-import sun.rmi.runtime.Log;
 
 /**
  * Created by wuhai on 2017/04/18 11:49.

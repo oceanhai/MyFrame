@@ -17,7 +17,16 @@ public class DoubleTest {
 //        System.out.println(Double.parseDouble("1"));
 //        System.out.println(Double.parseDouble("2.00"));
 
-        method01();
+//        method01();
+//        method02("-4.440892098500626E-16");
+        method03();
+    }
+
+    public static void method03(){
+        double d1 = 0.26f;
+        double d2 = 0.26f;
+        double d3 = d1 - d2;
+        System.out.println(d3);
     }
 
     public static void method01(){
