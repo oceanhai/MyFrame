@@ -1,6 +1,7 @@
 package com.example.javabase;
 
 import com.example.Person;
+import com.example.lctusb.StringUtils;
 
 /**
  * Created by wuhai on 2017/12/09 14:25.
@@ -10,7 +11,11 @@ import com.example.Person;
 public class UtilsTest {
 
     public static void main(String[] args){
-        method05();
+        method06();
+    }
+
+    public static void method06(){
+        System.out.println(StringUtils.getDecimalFormat(null,0));
     }
 
     public static void method05(){

@@ -503,6 +503,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.btn66://LCT 大华电子秤
                 LctDahuaActivity.startActivity(this);
                 break;
+            case R.id.btn67://LCT 大华电子秤
+                LctDahuaActivity.startActivity(this);
+                break;
         }
     }
 }
