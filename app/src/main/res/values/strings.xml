@@ -55,4 +55,7 @@
     <!-- 测试下app 和子module下资源问题-->
     <!--<string name="app_str">我是app下的字符串</string>-->
 
+    <string name="title01">门店选择</string>
+    <string name="okResId">确定</string>
+    <string name="cancelResId">取消</string>
 </resources>

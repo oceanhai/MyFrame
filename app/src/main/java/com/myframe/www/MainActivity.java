@@ -30,6 +30,7 @@ import com.myframe.www.testormlite.OrmliteActivity;
 import com.myframe.www.teststartactivity.ThreadStartActivity;
 import com.myframe.www.teststartactivityforresult.FirstActivity;
 import com.myframe.www.testtouchevent.TouchEventActivity;
+import com.myframe.www.utils.ToastUtils;
 import com.myframe.www.widget.calendar.CalendarActivity;
 import com.myframe.www.widget.customview.CustomviewActivity;
 import com.myframe.www.widget.draggridview.DragGridViewActivity;
@@ -43,7 +44,6 @@ import com.tencent.bugly.crashreport.CrashReport;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import step.StepCountActivity;
-import www.wuhai.common.utils.ToastUtils;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
@@ -503,8 +503,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.btn66://LCT 大华电子秤
                 LctDahuaActivity.startActivity(this);
                 break;
-            case R.id.btn67://LCT 大华电子秤
-                LctDahuaActivity.startActivity(this);
+            case R.id.btn67://dialog
+                DialogActivity.startActivity(this);
                 break;
         }
     }

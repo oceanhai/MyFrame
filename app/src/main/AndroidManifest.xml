@@ -499,7 +499,8 @@
         <activity android:name=".InflateActivity" />
         <activity android:name=".InstallAndUnloadActivity" />
         <activity android:name=".pldroid.PldroidPlayerActivity" />
-        <activity android:name=".lctdahua.LctDahuaActivity"></activity>
+        <activity android:name=".lctdahua.LctDahuaActivity" />
+        <activity android:name=".DialogActivity"></activity>
     </application>
 
 </manifest>
