@@ -7,9 +7,29 @@ package com.example.innerclass;
 
 public class InnerClassTest01 {
 
+    static int niming = 1;
+
     public static void main(String[] args) {
+        InnerClassTest01.A a = new InnerClassTest01().new A();
+        a.aMethod();
+
         new B().bMethod();
         System.out.println("main y="+y);
+        
+        niming();
+    }
+
+    private static void niming() {
+        int niming =0 ;
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println(""+niming);
+                System.out.println(""+InnerClassTest01.niming);
+                System.out.println(""+this);
+            }
+        }).start();
     }
 
     int x;
@@ -22,6 +42,7 @@ public class InnerClassTest01 {
             x=3;            // x为aMethod方法的局部变量x
             this.x=4;       // x为内部类A的成员变量x  this是对A类对象的引用
             InnerClassTest01.this.x=5;  // x为外部类Test的成员变量x  Test.this是对外部类的Test类对象的引用
+            System.out.println("this:"+this);
         }
     }
 
@@ -36,4 +57,6 @@ public class InnerClassTest01 {
             System.out.println("B y="+this.y);
         }
     }
+
+    
 }
