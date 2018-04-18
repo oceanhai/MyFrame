@@ -37,6 +37,7 @@ public class TestHashCode {
         System.out.println("list1和list2一致：" + (list1.hashCode() == list2.hashCode()));
         System.out.println("list1和list3一致：" + (list1.hashCode() == list3.hashCode()));
         System.out.println("list1和list4一致：" + (list1.hashCode() == list4.hashCode()));
+        System.out.println("--------------------------");
     }
 
     /**
@@ -65,6 +66,7 @@ public class TestHashCode {
         System.out.println("list1和list4一致：" + (list1.hashCode() == list4.hashCode()));
         System.out.println("hashcode1:" + new People("suolong",19,"101").hashCode());
         System.out.println("hashcode2:" + new People("suolong", 19, "101").hashCode());
+        System.out.println("--------------------------");
     }
 
     /**
@@ -93,6 +95,7 @@ public class TestHashCode {
         System.out.println("list1和list4一致：" + (list1.hashCode() == list4.hashCode()));
         System.out.println("hashcode1:" + new People("suolong",19,"101").hashCode());
         System.out.println("hashcode2:" + new People("suolong", 19, "101").hashCode());
+        System.out.println("--------------------------");
     }
 
     static class People{
