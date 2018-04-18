@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- layout_width="wrap_content" -->
+    <!-- layout_width="wrap_content"  1:2:3-->
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content" />
     </LinearLayout>
 
-    <!-- layout_width="match_parent" -->
+    <!-- layout_width="match_parent"  1:2:2-->
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -60,7 +60,10 @@
             android:layout_height="wrap_content" />
     </LinearLayout>
 
-    <!-- layout_width="100dp" -->
+    <!--  1:2:3
+    layout_width="100dp" 1控件高度大于权重分比占高度（或宽度）时，weight属性不起作用
+    其他是wrap_content
+    -->
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -77,14 +80,42 @@
             android:text="2"
             android:textColor="@color/white"
             android:layout_weight="2"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content" />
         <TextView
             android:background="#0000ff"
             android:text="3"
             android:textColor="@color/white"
             android:layout_weight="3"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!-- layout_width="match_parent"  1:2:3-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:background="#ff0000"
+            android:text="1"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:background="#00ff00"
+            android:text="2"
+            android:textColor="@color/white"
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:background="#0000ff"
+            android:text="3"
+            android:textColor="@color/white"
+            android:layout_weight="3"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
 </LinearLayout>
