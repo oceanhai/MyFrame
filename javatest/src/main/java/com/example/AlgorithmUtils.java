@@ -1,5 +1,6 @@
 package com.example;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 /**
@@ -8,14 +9,15 @@ import java.util.HashMap;
 public final class AlgorithmUtils {
 
     /**
-     * 递归算法 一次输出每一位对应的数字
+     * 递归算法 一次输出每一位对应的数字（从最高位开始）
      * @param num
      */
     public static void printOut(int num){
+        System.out.println("入参："+num);
         if(num >= 10){
             printOut(num/10);
         }
-        System.out.println(num%10);
+        System.out.println("输出"+num%10);
     }
 
     /**
@@ -27,7 +29,7 @@ public final class AlgorithmUtils {
             return;
         }
 
-        for (int i = 0; i < data.length - 1; i++) {
+        for (int i = 0; i < data.length; i++) {
             int j = (int) (data.length * Math.random());
             swap(data, i, j);
         }
@@ -178,6 +180,12 @@ public final class AlgorithmUtils {
         }
     }
 
-
+    /**
+     * 二分搜索法 查询位置
+     * 搜索数组必须有序
+     */
+    public static int searchLocationInArray(int[] data, int key){
+        return Arrays.binarySearch(data,key);
+    }
 
 }

@@ -1,5 +1,6 @@
 package com.example;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -15,7 +16,18 @@ public class JavaTest {
     private int num = 0;
 
     public static void main(String agr[]){
-        method15();
+        method16();
+    }
+
+    public static void method16(){
+        int[] data = {6,4,5,8,9,11,1,2,15};
+        Arrays.sort(data);
+        for(int x=0;x<data.length;x++){
+            System.out.print(data[x]+",");
+        }
+        System.out.println();
+
+        System.out.println(AlgorithmUtils.searchLocationInArray(data,3));
     }
 
     /**
@@ -30,16 +42,16 @@ public class JavaTest {
     public static void method14(){
         AlgorithmUtils.nineNineMultiplication();
         System.out.println(AlgorithmUtils.factorial(4));
-        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{},null));
-        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'a','b'},new char[]{'a'}));
-        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'a','b'},new char[]{'a','b'}));
-        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'a','b'},new char[]{'a','c'}));
-        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'a','b'},new char[]{'a','c','b'}));
-        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'a','b'},new char[]{'a','b','c','d'}));
-        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'b','c'},new char[]{'a','b','c','d'}));
-        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'c','d'},new char[]{'a','b','c','d'}));
-        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'d','e'},new char[]{'a','b','c','d'}));
-        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'d','e'},new char[]{'a','b','c','e'}));
+        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{},null));//false
+        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'a','b'},new char[]{'a'}));//false
+        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'a','b'},new char[]{'a','b'}));//true
+        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'a','b'},new char[]{'a','c'}));//false
+        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'a','b'},new char[]{'a','c','b'}));//false
+        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'a','b'},new char[]{'a','b','c','d'}));//true
+        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'b','c'},new char[]{'a','b','c','d'}));//true
+        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'c','d'},new char[]{'a','b','c','d'}));//true
+        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'d','e'},new char[]{'a','b','c','d'}));//false
+        System.out.println(AlgorithmUtils.judgeArrayContain(new char[]{'d','e'},new char[]{'a','b','c','e'}));//false
     }
 
     public static void method13(){
