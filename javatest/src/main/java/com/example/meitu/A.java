@@ -18,8 +18,8 @@ public class A {
      */
     public static void method00(){
         GrandFather grandFather = new Father();
-//        Father father = (Father) new GrandFather();//编译报错，不能转换
-        Father father1 = (Father) grandFather;//编译成功,能向下转换
+        Father father = (Father) new GrandFather();//编译报错，不能转换
+//        Father father1 = (Father) grandFather;//编译成功,能向下转换
     }
 
     /**
@@ -31,7 +31,7 @@ public class A {
      * List<? extends A>表示一个集合,这个集合存放的是A具体子类中的某一种,
      * 而非只要是A的子类就可以放入.
      * 同理，List<? super A>表示一个集合,这个集合存放的是A具体父类中的某一种,
-     * 由于A是集成此父类，所以A可以上向转成此父类（并且A类的子类也是没问题的）
+     * 由于A是继承此父类，所以A可以上向转成此父类（并且A类的子类也是没问题的）
      * 上述论证可以在method011()证实
      */
     public static void method01(){

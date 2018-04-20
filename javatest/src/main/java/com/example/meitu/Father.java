@@ -5,9 +5,17 @@ package com.example.meitu;
  */
 public class Father extends GrandFather {
     private String name = "Father";
-    public String birth = "2016";
+    private String birth = "2016";
     public static String qq = "110";
     private int height = 173;
+
+    public String getBirth() {
+        return birth;
+    }
+
+    public void setBirth(String birth) {
+        this.birth = birth;
+    }
 
     @Override
     public String getName() {

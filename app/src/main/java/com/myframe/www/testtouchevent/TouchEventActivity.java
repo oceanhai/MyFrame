@@ -12,6 +12,7 @@ import com.myframe.www.base.BaseActivity;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import www.wuhai.common.utils.L;
+import www.wuhai.common.utils.ToastUtils;
 
 /**
  * View分发机制
@@ -21,6 +22,8 @@ public class TouchEventActivity extends BaseActivity {
     public static final String TAG = "TouchEventActivity";
     @Bind(R.id.myview01)
     MyView myview01;
+    @Bind(R.id.mybutton)
+    MyButton mybutton;
 
     public static void startActivity(Context context) {
         Intent intent = new Intent(context, TouchEventActivity.class);
@@ -40,6 +43,14 @@ public class TouchEventActivity extends BaseActivity {
 //                return false;
 //            }
 //        });
+
+//        myview01.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                L.v(TAG, "myviwe01点击了");
+//                ToastUtils.showShort(TouchEventActivity.this,"myviwe01点击了");
+//            }
+//        });
     }
 
     //分发
@@ -57,8 +68,14 @@ public class TouchEventActivity extends BaseActivity {
         return super.onTouchEvent(event);
     }
 
+    /**
+     * 好像布局实现点击 不能实现呢 好坑 不知道为啥
+     *
+     * @param view
+     */
     public void myviw01(View view) {
         L.v(TAG, "myviwe01点击了");
+        ToastUtils.showShort(this, "myviwe01点击了");
     }
 
     public void myviw02(View view) {

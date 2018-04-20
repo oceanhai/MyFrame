@@ -6,23 +6,22 @@ import android.view.MotionEvent;
 import android.widget.Button;
 import android.widget.TextView;
 
-import butterknife.OnTouch;
 import www.wuhai.common.utils.L;
 
-public class MyView extends TextView {
+public class MyButton extends Button {
 
-	public MyView(Context context, AttributeSet attrs) {
+	public MyButton(Context context, AttributeSet attrs) {
 		super(context, attrs);
 	}
 
-	public MyView(Context context) {
+	public MyButton(Context context) {
 		super(context);
 	}
 
 	
 	@Override
 	public boolean dispatchTouchEvent(MotionEvent event) {
-		L.v(TouchEventActivity.TAG, " MyView==dispatchTouchEvent==" + event.getAction());
+		L.v(TouchEventActivity.TAG, " MyButton==dispatchTouchEvent==" + event.getAction());
 		return super.dispatchTouchEvent(event);
 	}
 
@@ -32,10 +31,10 @@ public class MyView extends TextView {
 	//true  处理
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
-		L.v(TouchEventActivity.TAG, " MyView==onTouchEvent==" + event.getAction());
-		return true;
+		L.v(TouchEventActivity.TAG, " MyButton==onTouchEvent==" + event.getAction());
+//		return true;
 //		return false;
-//		return super.onTouchEvent(event);
+		return super.onTouchEvent(event);
 	}
 
 }

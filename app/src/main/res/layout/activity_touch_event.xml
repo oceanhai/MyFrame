@@ -11,7 +11,7 @@
 
         <com.myframe.www.testtouchevent.MyView
             android:id="@+id/myview01"
-            android:onClick="myviw01"
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:background="#F00"
@@ -22,6 +22,12 @@
             <!--android:layout_height="150dp"-->
             <!--android:background="#FFF"-->
             <!--android:text="hello world" />-->
+        <com.myframe.www.testtouchevent.MyButton
+            android:id="@+id/mybutton"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#F0F"
+            android:text="BUTTON" />
     </com.myframe.www.testtouchevent.MyLayout>
         
 

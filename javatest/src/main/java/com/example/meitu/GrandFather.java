@@ -4,10 +4,18 @@ package com.example.meitu;
  * 爷爷类
  */
 public class GrandFather {
-    private String name = "GrandFather";
+    public String name = "GrandFather";
     public String birth = "1986";
     public static String qq = "119";
     private int age = 30;
+
+    public String getBirth() {
+        return birth;
+    }
+
+    public void setBirth(String birth) {
+        this.birth = birth;
+    }
 
     public String getName() {
         return name;
