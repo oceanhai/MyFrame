@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:text="@string/app_str"
+        android:text="app_str"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
