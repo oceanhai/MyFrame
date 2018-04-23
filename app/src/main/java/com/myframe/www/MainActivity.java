@@ -8,6 +8,8 @@ import android.widget.Button;
 
 import com.igexin.sdk.PushManager;
 import com.myframe.www.base.BaseActivity;
+import com.myframe.www.contentprovider.ContentProviderClientActivity;
+import com.myframe.www.contentprovider.ContentProviderServerActivity;
 import com.myframe.www.customview.CustomViewActivity;
 import com.myframe.www.dagger2.Dagger2Activity;
 import com.myframe.www.jni.NdkJniActivity;
@@ -505,6 +507,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.btn67://dialog
                 DialogActivity.startActivity(this);
+                break;
+            case R.id.btn68://ContentProviderServer
+                ContentProviderServerActivity.startActivity(this);
+                break;
+            case R.id.btn69://ContentProviderClient
+                ContentProviderClientActivity.startActivity(this);
                 break;
         }
     }

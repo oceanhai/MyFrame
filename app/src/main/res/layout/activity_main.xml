@@ -281,7 +281,7 @@
                 android:id="@+id/btn67"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="btn68"
+            <Button android:text="ContentProviderServer"
                 android:id="@+id/btn68"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

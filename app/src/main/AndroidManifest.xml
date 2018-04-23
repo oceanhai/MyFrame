@@ -501,6 +501,19 @@
         <activity android:name=".pldroid.PldroidPlayerActivity" />
         <activity android:name=".lctdahua.LctDahuaActivity" />
         <activity android:name=".DialogActivity"></activity>
+        <activity android:name=".contentprovider.ContentProviderServerActivity"></activity>
+        <activity
+            android:name=".contentprovider.ContentProviderClientActivity"
+            android:process=":newprocess"></activity>
+        <!-- exported:属性值为true，则对外暴露数据 -->
+        <provider
+            android:name="com.myframe.www.contentprovider.MyProvider"
+            android:authorities="com.myframe.www.contentprovider.MyProvider"
+            android:exported="true" >
+        </provider>
+        <provider android:name="com.myframe.www.contentprovider.MyProvider2"
+            android:exported="true"
+            android:authorities="com.myframe.www.contentprovider.MyProvider2"></provider>
     </application>
 
 </manifest>
