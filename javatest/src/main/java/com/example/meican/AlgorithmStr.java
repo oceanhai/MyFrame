@@ -103,7 +103,7 @@ public class AlgorithmStr {
      String str4 = "ABCDE";
      * @param str1
      * @param str2
-     * @return
+     * @return  返回最短值
      */
     public static int subCount(String str1, String str2){
         char[] arr = str1.toCharArray();
