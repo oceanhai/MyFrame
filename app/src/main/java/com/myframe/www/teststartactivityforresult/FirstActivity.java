@@ -15,6 +15,7 @@ import com.myframe.www.R;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import www.wuhai.common.utils.L;
 
 public class FirstActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -102,6 +103,7 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
         if (requestCode == FIRST_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
             if (data != null) {
                 text1.setText(data.getStringExtra("request_text_for_third"));
+                L.e("onActivityResult","first:"+data.getStringExtra("request_text_for_third"));
             }
         }
     }

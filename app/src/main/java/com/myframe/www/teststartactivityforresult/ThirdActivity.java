@@ -39,7 +39,8 @@ public class ThirdActivity extends AppCompatActivity implements View.OnClickList
         switch (v.getId()) {
             case R.id.button1:
                 Intent i = new Intent();
-                i.putExtra("request_text_for_third", text+"\n"+"从ThirdActivity再次传递到Main");
+//                i.putExtra("request_text_for_third", text+"\n"+"从ThirdActivity再次传递到Main");
+                i.putExtra("request_text_for_third", "从ThirdActivity再次传递到Main");
                 setResult(Activity.RESULT_OK, i);
                 finish();
                 break;
