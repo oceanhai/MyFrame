@@ -10,18 +10,21 @@ public class AlgorithmStr {
     public static void main(String[] args){
 //        method01();
 
-//        String str1 = "ABCDEGCBBA";
-//        String str2 = "CG";
+        String str1 = "ABCDEGCBBA";
+        String str2 = "CG";
 //        System.out.println(minWindow(str1,str2));
-//
-//        String str3 = "ABCDEAGBCBBA";
-//        String str4 = "ACG";
-//        System.out.println(minWindow(str3,str4));
+        System.out.println("结果："+subCount(str1,str2));
 
-        String str3 = "ACBCDEFFFFFF";
-        String str4 = "ABCDE";
+        String str3 = "ABCDEAGBCBBA";
+        String str4 = "ACG";
 //        System.out.println(minWindow(str3,str4));
-        System.out.println(minWindow2(str3,str4));
+        System.out.println("结果："+subCount(str3,str4));
+
+//        String str3 = "ACBCDEFFFFFF";
+//        String str4 = "ABCDE";
+////        System.out.println(minWindow(str3,str4));
+////        System.out.println(minWindow2(str3,str4));
+//        System.out.println("结果："+subCount(str3,str4));
 
     }
 
@@ -104,19 +107,41 @@ public class AlgorithmStr {
      */
     public static int subCount(String str1, String str2){
         char[] arr = str1.toCharArray();
-        arr.hashCode();
         int minLength = 0;
         int pointerX = 0;
         int pointerY = 1;
         while (pointerX<arr.length && pointerY<arr.length){
           if(str2.contains(""+arr[pointerX])){
-              for(;pointerY<arr.length;pointerY++){
-                  if (!str2.contains(""+arr[pointerX])){
-                      if(arr[pointerX] == arr[pointerY]){
+              if(pointerY == 0 || pointerX>=pointerY){
+                  pointerY = pointerX+1;
+              }
 
+              for(;pointerY<arr.length;pointerY++){
+                  if (str2.contains(""+arr[pointerY])){
+                      if(arr[pointerX] == arr[pointerY]){
+                        pointerX++;
+                          break;
                       }
-                      //TODO 判断pointerX 到pointerY 之间是否有完整str2,有记录minLength
-                      //pointerY 继续后移
+                      System.out.println("pointerX="+pointerX+",pointerY="+pointerY);
+                      String s=str1.substring(pointerX, pointerY+1);
+                      if(s.length() < str2.length()){
+                          continue;
+                      }
+                      int count=0;
+                      System.out.println("s="+s);//查询的子串
+                      for(int k=0;k<str2.length();k++){
+                          if(s.contains(str2.charAt(k)+"")){
+                              count++;
+                              System.out.println("count="+count);//看是否都包含
+                          }else{
+                              break;
+                          }
+                      }
+                      if(count==str2.length()){
+                          if(minLength == 0 || minLength > s.length()){
+                              minLength = s.length();//记录最短距离
+                          }
+                      }
                   }
               }
 
