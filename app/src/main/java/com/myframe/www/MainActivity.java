@@ -189,6 +189,26 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     Button btn69;
     @Bind(R.id.btn70)
     Button btn70;
+    @Bind(R.id.btn71)
+    Button btn71;
+    @Bind(R.id.btn72)
+    Button btn72;
+    @Bind(R.id.btn73)
+    Button btn73;
+    @Bind(R.id.btn74)
+    Button btn74;
+    @Bind(R.id.btn75)
+    Button btn75;
+    @Bind(R.id.btn76)
+    Button btn76;
+    @Bind(R.id.btn77)
+    Button btn77;
+    @Bind(R.id.btn78)
+    Button btn78;
+    @Bind(R.id.btn79)
+    Button btn79;
+    @Bind(R.id.btn80)
+    Button btn80;
 
     private String parameter;//TODO 这个以后应该是个json串，目前就简单用string代替
 
@@ -280,6 +300,16 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         btn68.setOnClickListener(this);
         btn69.setOnClickListener(this);
         btn70.setOnClickListener(this);
+        btn71.setOnClickListener(this);
+        btn72.setOnClickListener(this);
+        btn73.setOnClickListener(this);
+        btn74.setOnClickListener(this);
+        btn75.setOnClickListener(this);
+        btn76.setOnClickListener(this);
+        btn77.setOnClickListener(this);
+        btn78.setOnClickListener(this);
+        btn79.setOnClickListener(this);
+        btn80.setOnClickListener(this);
     }
 
     private void pareIntent() {
@@ -512,6 +542,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 ContentProviderServerActivity.startActivity(this);
                 break;
             case R.id.btn69://ContentProviderClient
+                ContentProviderClientActivity.startActivity(this);
+                break;
+            case R.id.btn70://https
                 ContentProviderClientActivity.startActivity(this);
                 break;
         }

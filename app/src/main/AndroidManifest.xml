@@ -514,6 +514,7 @@
         <provider android:name="com.myframe.www.contentprovider.MyProvider2"
             android:exported="true"
             android:authorities="com.myframe.www.contentprovider.MyProvider2"></provider>
+        <activity android:name=".HttpsActivity"></activity>
     </application>
 
 </manifest>
