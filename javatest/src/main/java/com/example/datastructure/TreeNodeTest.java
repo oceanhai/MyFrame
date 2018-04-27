@@ -40,6 +40,8 @@ public class TreeNodeTest {
            2   3
           / \   \
          4  5   6
+           / \
+          7   8
  */
     public static void main(String[] args) {
         TreeNode r1 = new TreeNode(1);
@@ -69,16 +71,16 @@ public class TreeNodeTest {
       preorderTraversalRec(r1);
       System.out.println();
       preorderTraversal(r1);
-//      System.out.println();
-//      inorderTraversalRec(r1);
-//      System.out.println();
-//      inorderTraversal(r1);
+      System.out.println();
+      inorderTraversalRec(r1);
+      System.out.println();
+      inorderTraversal(r1);
 //      System.out.println();
 //      postorderTraversalRec(r1);
 //      System.out.println();
 //      postorderTraversal(r1);
-//      System.out.println();
-//      levelTraversal(r1);
+      System.out.println();
+      levelTraversal(r1);
 //      System.out.println();
 //      levelTraversalRec(r1);
 //      System.out.println();
@@ -408,7 +410,7 @@ public class TreeNodeTest {
             return;
         }
         LinkedList<TreeNode> queue = new LinkedList<TreeNode>();
-        queue.push(root);
+        queue.offer(root);
 
         while (!queue.isEmpty()) {
             TreeNode cur = queue.removeFirst();
