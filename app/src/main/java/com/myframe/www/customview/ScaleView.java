@@ -92,11 +92,11 @@ public class ScaleView extends View{
         topTextSize = typedArray.getDimension(com.example.largeimg.stepapp.R.styleable.CircleView_topTextSize, 60);
         bottomTextSize = typedArray.getDimension(com.example.largeimg.stepapp.R.styleable.CircleView_targetTextSize, 40);
 
-        backCircleColor = typedArray.getColor
-                (com.example.largeimg.stepapp.R.styleable.CircleView_backCircleColor, getResources().getColor(com.example.largeimg.stepapp.R.color.step_trans_light_grey));
-        TopTextColor = typedArray.getColor(com.example.largeimg.stepapp.R.styleable.CircleView_TopTextColor, getResources().getColor(com.example.largeimg.stepapp.R.color.step_trans_black));
-        stepTextColor = typedArray.getColor(com.example.largeimg.stepapp.R.styleable.CircleView_stepTextColor, getResources().getColor(com.example.largeimg.stepapp.R.color.step_trans_black));
-        targetTextColor = typedArray.getColor(com.example.largeimg.stepapp.R.styleable.CircleView_targetTextColor, getResources().getColor(com.example.largeimg.stepapp.R.color.step_trans_black));
+//        backCircleColor = typedArray.getColor
+//                (com.example.largeimg.stepapp.R.styleable.CircleView_backCircleColor, getResources().getColor(com.example.largeimg.stepapp.R.color.step_trans_light_grey));
+//        TopTextColor = typedArray.getColor(com.example.largeimg.stepapp.R.styleable.CircleView_TopTextColor, getResources().getColor(com.example.largeimg.stepapp.R.color.step_trans_black));
+//        stepTextColor = typedArray.getColor(com.example.largeimg.stepapp.R.styleable.CircleView_stepTextColor, getResources().getColor(com.example.largeimg.stepapp.R.color.step_trans_black));
+//        targetTextColor = typedArray.getColor(com.example.largeimg.stepapp.R.styleable.CircleView_targetTextColor, getResources().getColor(com.example.largeimg.stepapp.R.color.step_trans_black));
     }
 
     @Override

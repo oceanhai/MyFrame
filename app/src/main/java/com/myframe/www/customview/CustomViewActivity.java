@@ -153,6 +153,9 @@ public class CustomViewActivity extends BaseActivity implements View.OnClickList
             case R.id.btn05://Canvas之图片文字
                 Canvas2Activity.startActivity(this);
                 break;
+            case R.id.btn06://自定义倒计时
+                CountDownActivity.startActivity(this);
+                break;
         }
     }
 

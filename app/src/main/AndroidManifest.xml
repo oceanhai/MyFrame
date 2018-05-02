@@ -500,21 +500,23 @@
         <activity android:name=".InstallAndUnloadActivity" />
         <activity android:name=".pldroid.PldroidPlayerActivity" />
         <activity android:name=".lctdahua.LctDahuaActivity" />
-        <activity android:name=".DialogActivity"></activity>
-        <activity android:name=".contentprovider.ContentProviderServerActivity"></activity>
+        <activity android:name=".DialogActivity" />
+        <activity android:name=".contentprovider.ContentProviderServerActivity" />
         <activity
             android:name=".contentprovider.ContentProviderClientActivity"
-            android:process=":newprocess"></activity>
+            android:process=":newprocess" />
         <!-- exported:属性值为true，则对外暴露数据 -->
         <provider
-            android:name="com.myframe.www.contentprovider.MyProvider"
+            android:name=".contentprovider.MyProvider"
             android:authorities="com.myframe.www.contentprovider.MyProvider"
-            android:exported="true" >
-        </provider>
-        <provider android:name="com.myframe.www.contentprovider.MyProvider2"
-            android:exported="true"
-            android:authorities="com.myframe.www.contentprovider.MyProvider2"></provider>
-        <activity android:name=".HttpsActivity"></activity>
+            android:exported="true"></provider>
+        <provider
+            android:name=".contentprovider.MyProvider2"
+            android:authorities="com.myframe.www.contentprovider.MyProvider2"
+            android:exported="true" />
+
+        <activity android:name=".HttpsActivity" />
+        <activity android:name=".customview.CountDownActivity"></activity>
     </application>
 
 </manifest>

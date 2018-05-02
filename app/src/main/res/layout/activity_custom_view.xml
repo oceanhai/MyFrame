@@ -67,7 +67,7 @@
                 android:layout_height="wrap_content" />
             <Button
                 android:id="@+id/btn06"
-                android:text="btn06"
+                android:text="自定义倒计时"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <Button
