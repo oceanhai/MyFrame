@@ -1,6 +1,7 @@
 package com.example.javabase;
 
-import java.text.Format;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by wuhai on 2017/12/06 15:46.
@@ -10,7 +11,18 @@ import java.text.Format;
 public class StringTest {
 
     public static void main(String[] args){
-        method02();
+
+        String str = "Abc";
+        String newStr = str.concat("aaa");
+        System.out.println(newStr);
+
+        String[] arr = {"a","b","c"};
+        List<String> list = Arrays.asList(arr);
+        for (String str1:list){
+            System.out.println(str1);
+        }
+
+//        method02();
     }
 
     /**
