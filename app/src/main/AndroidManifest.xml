@@ -509,14 +509,15 @@
         <provider
             android:name=".contentprovider.MyProvider"
             android:authorities="com.myframe.www.contentprovider.MyProvider"
-            android:exported="true"></provider>
+            android:exported="true" />
         <provider
             android:name=".contentprovider.MyProvider2"
             android:authorities="com.myframe.www.contentprovider.MyProvider2"
             android:exported="true" />
 
         <activity android:name=".HttpsActivity" />
-        <activity android:name=".customview.CountDownActivity"></activity>
+        <activity android:name=".customview.CountDownActivity" />
+        <activity android:name=".retrofit.RxJavaActivity"></activity>
     </application>
 
 </manifest>

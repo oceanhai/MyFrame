@@ -289,7 +289,7 @@
                 android:id="@+id/btn69"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="https"
+            <Button android:text="rxjava"
                 android:id="@+id/btn70"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

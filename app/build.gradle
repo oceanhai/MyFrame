@@ -182,6 +182,10 @@ dependencies {
     //picasso 图片加载框架
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile files('libs/pldroid-player-2.0.3.jar')
+
+    //rxjava
+    compile 'io.reactivex:rxjava:1.0.14'
+    compile 'io.reactivex:rxandroid:1.0.1'
 }
 
 //gradle task 练习start
