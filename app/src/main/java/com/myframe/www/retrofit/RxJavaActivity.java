@@ -2,13 +2,21 @@ package com.myframe.www.retrofit;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.myframe.www.R;
+import com.myframe.www.testdb.Student;
+import com.myframe.www.utils.BitmpUtils;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -18,6 +26,7 @@ import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action0;
 import rx.functions.Action1;
+import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 import www.wuhai.common.utils.L;
 
@@ -38,7 +47,183 @@ public class RxJavaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_rx_java);
         ButterKnife.bind(this);
 
-        method08();
+        method13();
+    }
+
+    /**
+     * 变换的原理：lift()  TODO 不太理解
+     */
+    public void method15(){
+        Observable observable = Observable.create(new Observable.OnSubscribe<Integer>() {
+            @Override
+            public void call(Subscriber<? super Integer> subscriber) {
+
+            }
+        });
+        observable.lift(new Observable.Operator<String,Integer>() {
+            @Override
+            public Subscriber<? super Integer> call(final Subscriber<? super String> subscriber) {
+                return new Subscriber<Integer>() {
+                    @Override
+                    public void onCompleted() {
+                        subscriber.onCompleted();
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        subscriber.onError(e);
+                    }
+
+                    @Override
+                    public void onNext(Integer integer) {
+                        subscriber.onNext(""+integer);
+                    }
+                };
+            }
+        });
+    }
+
+    private void method14(){
+//        networkClient.token() // 返回 Observable<String>，在订阅时请求 token，并在响应后发送 token
+//                .flatMap(new Func1<String, Observable<Messages>>() {
+//                    @Override
+//                    public Observable<Messages> call(String token) {
+//                        // 返回 Observable<Messages>，在订阅时请求消息列表，并在响应后发送请求到的消息列表
+//                        return networkClient.messages();
+//                    }
+//                })
+//                .subscribe(new Action1<Messages>() {
+//                    @Override
+//                    public void call(Messages messages) {
+//                        // 处理显示消息列表
+//                        showMessages(messages);
+//                    }
+//                });
+    }
+
+    /**
+     * 打印 Student 数组 学生的课程表     1对多
+     */
+    private void method13(){
+        List<Course> list1 = new ArrayList<>();
+        list1.add(new Course("数学"));
+        list1.add(new Course("语文"));
+        list1.add(new Course("英语"));
+        Student student1 = new Student("张三",19,"173");
+        student1.setCourses(list1);
+        Student student2 = new Student("李四",29,"175");
+        student2.setCourses(list1);
+        Student[] students = {student1 , student2};
+        Subscriber<Course> subscriber = new Subscriber<Course>() {
+            @Override
+            public void onCompleted() {
+
+            }
+
+            @Override
+            public void onError(Throwable e) {
+
+            }
+
+            @Override
+            public void onNext(Course course) {
+                L.e(TAG,"course name:"+course.getName());
+            }
+        };
+        Observable.from(students)
+                .flatMap(new Func1<Student, Observable<Course>>() {
+                    @Override
+                    public Observable<Course> call(Student student) {
+                        return Observable.from(student.getCourses());
+                    }
+                })
+                .subscribe(subscriber);
+    }
+
+    /**
+     * 打印 Student 数组 学生的课程表
+     */
+    private void method12(){
+        List<Course> list1 = new ArrayList<>();
+        list1.add(new Course("数学"));
+        list1.add(new Course("语文"));
+        list1.add(new Course("英语"));
+        Student student1 = new Student("张三",19,"173");
+        student1.setCourses(list1);
+        Student student2 = new Student("李四",29,"175");
+        student2.setCourses(list1);
+        Student[] students = {student1 , student2};
+        Subscriber<Student> subscriber = new Subscriber<Student>() {
+            @Override
+            public void onCompleted() {
+
+            }
+
+            @Override
+            public void onError(Throwable e) {
+
+            }
+
+            @Override
+            public void onNext(Student student) {
+                List<Course> list = student.getCourses();
+                for(int x=0;x<list.size();x++){
+                    L.e(TAG,student.getName()+":"+list.get(x).getName());
+                }
+            }
+        };
+        Observable.from(students)
+               .subscribe(subscriber);
+    }
+
+    /**
+     * 打印 Student 数组 学生姓名
+     */
+    private void method11(){
+        Student[] students = {new Student("张三",19,"173"),new Student("李四",29,"175")};
+        Subscriber<String> subscriber = new Subscriber<String>() {
+            @Override
+            public void onCompleted() {
+
+            }
+
+            @Override
+            public void onError(Throwable e) {
+
+            }
+
+            @Override
+            public void onNext(String name) {
+                L.e(TAG,"name="+name);
+            }
+        };
+        Observable.from(students)
+                .map(new Func1<Student, String>() {
+                    @Override
+                    public String call(Student student) {
+                        return student.getName();
+                    }
+                })
+                .subscribe(subscriber);
+    }
+
+    /**
+     * Func1
+     */
+    private void method10(){
+        Observable.just(Environment.getExternalStorageDirectory()+ File.separator+"Pictures"+File.separator+"Screenshots"+File.separator+"p0.png")
+                .map(new Func1<String, Bitmap>() {
+                    @Override
+                    public Bitmap call(String s) {
+                        return BitmpUtils.getimage(s);
+                    }
+                })
+                .subscribe(new Action1<Bitmap>() {
+                    @Override
+                    public void call(Bitmap bitmap) {
+                        iv01.setImageBitmap(bitmap);
+                    }
+                });
     }
 
     /**
