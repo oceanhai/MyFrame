@@ -19,6 +19,7 @@ import com.myframe.www.percentlayout.PercentLayoutActivity;
 import com.myframe.www.performance.MatActivity;
 import com.myframe.www.picasso.PicassoActivity;
 import com.myframe.www.pldroid.PldroidPlayerActivity;
+import com.myframe.www.retrofit.RetrofitActivity;
 import com.myframe.www.retrofit.RxJavaActivity;
 import com.myframe.www.testasynctask.AsynctaskActivity;
 import com.myframe.www.testcontentprovider.ContentResolverActivity;
@@ -547,6 +548,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.btn70://rxjava
                 RxJavaActivity.startActivity(this);
+                break;
+            case R.id.btn71://retrofit
+                RetrofitActivity.startActivity(this);
                 break;
         }
     }
