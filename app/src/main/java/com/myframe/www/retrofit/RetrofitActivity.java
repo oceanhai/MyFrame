@@ -14,6 +14,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 import rx.Observable;
@@ -53,7 +54,20 @@ public class RetrofitActivity extends AppCompatActivity {
         method01();
     }
 
+    public interface GetRequest_Interface{
+        Call<ResponseBody> testFormUrlEncoded1()
+    }
 
+    private void method04(){
+
+    }
+
+    private void method03(){
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://fanyi.youdao.com/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+    }
 
     private void method02(){
         BlogService2 service2 = retrofit.create(BlogService2.class);
