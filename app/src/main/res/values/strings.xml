@@ -58,4 +58,8 @@
     <string name="title01">门店选择</string>
     <string name="okResId">确定</string>
     <string name="cancelResId">取消</string>
+
+    <!--pubic-->
+    <string name="serviceError">当前网络状况不佳，请稍后再试</string>
+    <string name="onNoInterNet">网络连接异常，请检查</string>
 </resources>

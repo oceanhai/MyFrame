@@ -518,7 +518,8 @@
         <activity android:name=".HttpsActivity" />
         <activity android:name=".customview.CountDownActivity" />
         <activity android:name=".retrofit.RxJavaActivity" />
-        <activity android:name=".retrofit.RetrofitActivity"></activity>
+        <activity android:name=".retrofit.RetrofitActivity" />
+        <activity android:name=".retrofit.xywy.RetrofitXywyActivity"></activity>
     </application>
 
 </manifest>

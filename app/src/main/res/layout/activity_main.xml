@@ -297,7 +297,7 @@
                 android:id="@+id/btn71"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="btn72"
+            <Button android:text="xywy retrofit"
                 android:id="@+id/btn72"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

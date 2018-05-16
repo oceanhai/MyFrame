@@ -92,4 +92,14 @@
         <item name="android:textStyle">bold</item>
         <item name="android:background">@drawable/keword_selector</item>
     </style>
+
+    <!--lct dialog-->
+    <style name="LoadingDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">true</item><!--半透明-->
+        <item name="android:windowBackground">@drawable/bg_loadingdialog</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">false</item><!--有没有背景-->
+        <item name="android:windowNoTitle">true</item>
+    </style>
 </resources>
