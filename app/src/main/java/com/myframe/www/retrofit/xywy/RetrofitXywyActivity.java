@@ -14,6 +14,7 @@ import com.myframe.www.utils.ToastUtils;
 public class RetrofitXywyActivity extends BaseActivity implements View.OnClickListener, ILoginContract.View {
 
     private Button btn01;
+    private Button btn02;
 
     private LoginPresenter mPresenter;
 
@@ -36,6 +37,7 @@ public class RetrofitXywyActivity extends BaseActivity implements View.OnClickLi
     protected void initView() {
 
         btn01 = (Button) findViewById(R.id.btn01);
+        btn02 = (Button) findViewById(R.id.btn02);
 
         setListener();
     }
@@ -47,6 +49,7 @@ public class RetrofitXywyActivity extends BaseActivity implements View.OnClickLi
 
     private void setListener() {
         btn01.setOnClickListener(this);
+        btn02.setOnClickListener(this);
     }
 
     @Override
@@ -54,6 +57,9 @@ public class RetrofitXywyActivity extends BaseActivity implements View.OnClickLi
         switch (v.getId()){
             case R.id.btn01://login
                 mPresenter.login("13661090741","123456");
+                break;
+            case R.id.btn02://getCode
+                mPresenter.getCode("13661090741","dynamic_password");
                 break;
         }
     }
@@ -66,5 +72,15 @@ public class RetrofitXywyActivity extends BaseActivity implements View.OnClickLi
     @Override
     public void loginFail() {
         ToastUtils.showShort(this,"登录失败");
+    }
+
+    @Override
+    public void getCodeSuccess() {
+        ToastUtils.showShort(this,"获取验证码成功");
+    }
+
+    @Override
+    public void getCodeFail() {
+        ToastUtils.showShort(this,"获取验证码失败");
     }
 }

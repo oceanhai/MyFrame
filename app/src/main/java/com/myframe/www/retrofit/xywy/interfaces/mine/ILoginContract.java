@@ -11,10 +11,16 @@ public interface ILoginContract {
     interface View {
         void loginSuccess();
         void loginFail();
+
+        void getCodeSuccess();
+        void getCodeFail();
     }
 
     interface Presenter extends IBasePresenterInterFace{
+
         void login(String name, String password);
+
+        void getCode(String phone,String flag);
     }
 
 }

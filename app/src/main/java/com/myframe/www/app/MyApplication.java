@@ -7,6 +7,8 @@ import android.text.TextUtils;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.myframe.www.BuildConfig;
 import com.myframe.www.MainActivity;
+import com.myframe.www.retrofit.xywy.utils.DeviceUtil;
+import com.myframe.www.retrofit.xywy.utils.SPUtils;
 import com.myframe.www.testgreendao.GreenDaoManager;
 import com.myframe.www.utils.MyUtils;
 import com.tencent.bugly.Bugly;
@@ -21,8 +23,6 @@ import java.io.IOException;
 
 import step.StepManager;
 import www.wuhai.common.utils.L;
-
-import static www.wuhai.common.utils.L.isDebug;
 
 /**
  * Created by wuhai on 2016/3/2.
@@ -81,6 +81,12 @@ public class MyApplication extends Application{
 
         //Fresco
         Fresco.initialize(this);
+
+        //sp
+        //设置用户代理
+        if(!SPUtils.contains("userAgent")){
+            SPUtils.put("userAgent", DeviceUtil.getUserAgentHeader(this));
+        }
     }
 
     private void buglyInit() {

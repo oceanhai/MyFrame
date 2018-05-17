@@ -2,6 +2,7 @@ package com.myframe.www.retrofit.xywy.network;
 
 
 import com.myframe.www.request.Constants;
+import com.myframe.www.retrofit.xywy.utils.SPUtils;
 
 import java.util.HashMap;
 
@@ -18,7 +19,7 @@ public class ApiParams extends HashMap<String, String> {
         put(Constants.source_key, Constants.source_value);
         put(Constants.os_key, Constants.os_value);
         put(Constants.pro_key, Constants.pro_value);
-//        put(Constants.token_key, UserInfoCenter.getInstance().getToken());
+        put(Constants.token_key, (String) SPUtils.get("token",""));
         return this;
     }
 
@@ -39,7 +40,7 @@ public class ApiParams extends HashMap<String, String> {
         put(Constants.source_key, Constants.source_value);
         put(Constants.os_key, Constants.os_value);
         put(Constants.pro_key, Constants.pro_value);
-//        put(Constants.token_key, UserInfoCenter.getInstance().getToken());
+        put(Constants.token_key, (String) SPUtils.get("token",""));
         return this;
     }
 
