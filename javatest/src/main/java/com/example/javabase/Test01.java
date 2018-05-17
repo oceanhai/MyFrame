@@ -1,7 +1,5 @@
 package com.example.javabase;
 
-import com.example.designpattern.adapter.Source;
-
 import java.io.File;
 import java.util.List;
 
@@ -16,9 +14,14 @@ public class Test01 {
     private static String path = "D:\\LctPosCrash";
 
     public static void main(String[] args){
-        method01("xx\\xx\\err.txt");
-        method02();
-        method03();
+//        method01("xx\\xx\\err.txt");
+//        method02();
+        method04();
+    }
+
+    private static void method04(){
+        File file = new File("E:\\wuhai.txt");
+        System.out.println(file.getName());
     }
 
     private static void method03() {

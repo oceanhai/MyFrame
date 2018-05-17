@@ -9,6 +9,7 @@ import com.myframe.www.retrofit.xywy.utils.SPUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
 import java.io.IOException;
 
 import okhttp3.ResponseBody;
@@ -84,6 +85,37 @@ public class LoginPresenter extends BasePresent implements ILoginContract.Presen
                 L.e(TAG,"onFailure:"+t.getMessage());
                 if(mView != null){
                     mView.getCodeFail();
+                }
+            }
+        });
+    }
+
+    @Override
+    public void uploadImg(File file) {
+        serviceProvider.uploadImg(file, new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                try {
+                    L.e(TAG,"onResponse:"+response.body().string());
+                    JSONObject jsonObject = new JSONObject(response.body().string());
+                    int code = jsonObject.getInt("code");
+                    if(code == 10000){
+                        if(mView != null){
+                            mView.uploadImgSuccess();
+                        }
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                L.e(TAG,"onFailure:"+t.getMessage());
+                if(mView != null){
+                    mView.uploadImgFail();
                 }
             }
         });

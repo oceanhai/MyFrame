@@ -2,6 +2,8 @@ package com.myframe.www.retrofit.xywy;
 
 import com.myframe.www.retrofit.xywy.model.LoginEntity;
 
+import java.io.File;
+
 import okhttp3.ResponseBody;
 import retrofit2.Callback;
 
@@ -27,4 +29,6 @@ public interface IServiceProvider {
      */
     void getCode(String phone, String flag, Callback<ResponseBody> callback);
 
+
+    void uploadImg(File file, Callback<ResponseBody> callback);
 }

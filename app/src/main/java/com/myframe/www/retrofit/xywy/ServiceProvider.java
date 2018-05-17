@@ -7,12 +7,16 @@ import com.myframe.www.retrofit.xywy.network.APIBaseService;
 import com.myframe.www.retrofit.xywy.network.ApiParams;
 import com.xywy.component.datarequest.tool.MD5;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import okhttp3.MediaType;
+import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -102,5 +106,31 @@ public class ServiceProvider extends APIBaseService implements IServiceProvider 
 
         Call<ResponseBody> call =  createService(XywyAPI.class).getCode(getApiParams,postApiParams);
         call.enqueue(callback);
+    }
+
+    @Override
+    public void uploadImg(File file, Callback<ResponseBody> callback) {
+        ApiParams getApiParams = new ApiParams()
+                .withNoToken(Constants.version_value1)
+                .with(Constants.api_key, "1248");
+
+        ApiParams postApiParams = new ApiParams().with("thumb", "2");
+
+        getApiParams.with(Constants.SIGN,getSig(getApiParams, postApiParams,
+                        RequestKey.basekey));
+
+        //创建 RequestBody，用于封装构建RequestBody
+        RequestBody requestFile = RequestBody.create(MediaType.parse("multipart/form-data"),file);
+
+        /**
+         * 图文上传
+         * thumb 2
+         * mypic 文件 （※多个文件继续追加即可，只不过这要跟后台业务相对应）
+         */
+        Map<String, RequestBody> map = new HashMap<>();
+        map.put("thumb",RequestBody.create(MediaType.parse("text/plain"),"2"));
+        map.put("mypic\"; filename=\""+file.getName()+"\"",requestFile);
+
+        createService(XywyAPI.class).uploadImg(getApiParams,map).enqueue(callback);
     }
 }
