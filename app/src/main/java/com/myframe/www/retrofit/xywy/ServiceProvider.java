@@ -5,6 +5,7 @@ import com.myframe.www.request.RequestKey;
 import com.myframe.www.retrofit.xywy.model.LoginEntity;
 import com.myframe.www.retrofit.xywy.network.APIBaseService;
 import com.myframe.www.retrofit.xywy.network.ApiParams;
+import com.myframe.www.retrofit.xywy.network.XywyAPI;
 import com.xywy.component.datarequest.tool.MD5;
 
 import java.io.File;

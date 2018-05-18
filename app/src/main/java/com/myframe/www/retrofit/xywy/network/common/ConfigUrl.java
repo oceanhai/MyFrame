@@ -1,4 +1,4 @@
-package com.myframe.www.retrofit.xywy;
+package com.myframe.www.retrofit.xywy.network.common;
 
 import com.myframe.www.BuildConfig;
 

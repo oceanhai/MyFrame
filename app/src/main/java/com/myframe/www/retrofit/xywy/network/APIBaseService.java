@@ -1,6 +1,6 @@
 package com.myframe.www.retrofit.xywy.network;
 
-import com.myframe.www.retrofit.xywy.ConfigUrl;
+import com.myframe.www.retrofit.xywy.network.common.ConfigUrl;
 
 /**
  * 作者 wuhai
