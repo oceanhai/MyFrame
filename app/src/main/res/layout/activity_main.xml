@@ -301,7 +301,7 @@
                 android:id="@+id/btn72"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="btn73"
+            <Button android:text="qdd"
                 android:id="@+id/btn73"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

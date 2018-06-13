@@ -62,4 +62,7 @@
     <!--pubic-->
     <string name="serviceError">当前网络状况不佳，请稍后再试</string>
     <string name="onNoInterNet">网络连接异常，请检查</string>
+
+    //qdd
+    <string name="order_installment_money">¥%s</string>
 </resources>

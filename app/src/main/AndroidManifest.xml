@@ -519,7 +519,8 @@
         <activity android:name=".customview.CountDownActivity" />
         <activity android:name=".retrofit.RxJavaActivity" />
         <activity android:name=".retrofit.RetrofitActivity" />
-        <activity android:name=".retrofit.xywy.RetrofitXywyActivity"></activity>
+        <activity android:name=".retrofit.xywy.RetrofitXywyActivity" />
+        <activity android:name=".qdd.QddActivity"></activity>
     </application>
 
 </manifest>
