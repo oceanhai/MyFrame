@@ -48,7 +48,9 @@
     <!-- <uses-permission android:name="android.permission.WAKE_LOCK" /> -->
     <!-- <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/> -->
 
-    4.3 使用 PLVideoView 或者 PLVideoTextureView 实现媒体播放功能
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!--4.3 使用 PLVideoView 或者 PLVideoTextureView 实现媒体播放功能-->
     <permission
         android:name="${GETUI_PERMISSION}"
         android:protectionLevel="normal" />
@@ -520,7 +522,10 @@
         <activity android:name=".retrofit.RxJavaActivity" />
         <activity android:name=".retrofit.RetrofitActivity" />
         <activity android:name=".retrofit.xywy.RetrofitXywyActivity" />
-        <activity android:name=".qdd.QddActivity"></activity>
+        <activity android:name=".qdd.QddActivity" />
+        <activity
+            android:name=".RequestPermissionActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
