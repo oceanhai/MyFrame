@@ -1,4 +1,4 @@
-package com.example.javabse.day14.server;
+package com.example.javaee.day14.server;
 
 import java.io.IOException;
 import java.io.InputStream;

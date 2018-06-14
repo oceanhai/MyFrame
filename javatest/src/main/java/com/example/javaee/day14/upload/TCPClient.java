@@ -1,4 +1,4 @@
-package com.example.javabse.day14.upload;
+package com.example.javaee.day14.upload;
 
 import java.io.FileInputStream;
 import java.io.IOException;

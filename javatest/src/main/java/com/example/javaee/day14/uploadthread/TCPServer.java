@@ -1,4 +1,4 @@
-package com.example.javabse.day14.uploadthread;
+package com.example.javaee.day14.uploadthread;
 
 import java.io.IOException;
 import java.net.ServerSocket;
