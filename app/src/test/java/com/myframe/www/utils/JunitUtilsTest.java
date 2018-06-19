@@ -17,9 +17,13 @@ public class JunitUtilsTest {
 
     @Test
     public void divide() throws Exception {
-//        double num = junitUtils.divide(10,2);
-        double num = junitUtils.divide(10,0);
+        double num = junitUtils.divide(10,2);
+//        double num = junitUtils.divide(10,0);
         System.out.println("结果："+num);
     }
 
+    @Test
+    public void divide1() throws Exception {
+        System.out.println("成功");
+    }
 }

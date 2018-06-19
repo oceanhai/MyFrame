@@ -12,4 +12,7 @@ dependencies {
     compile 'commons-codec:commons-codec:1.10'
     compile files('libs/javabase64-1.3.1.jar')
     compile files('libs/bcprov-jdk16-1.46.jar')
+    compile files('libs/commons-beanutils-1.8.3.jar')
+    compile files('libs/junit.jar')
+    compile files('libs/hamcrest-core-1.3.jar')
 }
