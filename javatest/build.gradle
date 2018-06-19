@@ -15,4 +15,5 @@ dependencies {
     compile files('libs/commons-beanutils-1.8.3.jar')
     compile files('libs/junit.jar')
     compile files('libs/hamcrest-core-1.3.jar')
+    compile files('libs/dom4j-1.6.1.jar')
 }

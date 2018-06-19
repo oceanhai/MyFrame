@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  	配置文件:
+  	  被创建的JavaBean类的名字
+  	  类的成员变量名,成员变量值
+  	  
+  	  根元素,标签
+  	  
+  	 2个JavaBean User,Person
+  	  配置一个bean标签,加入属性 className
+  	  配置JavaBean中的变量名和变量值  标签  property
+  	  加入属性=值
+ -->
+ <beans>
+    <bean className="com.example.javaee.day18.domain.User">
+    	<property name="username" value="rose"></property>
+    	<property name="password" value="123"></property>
+    </bean>
+    
+    <bean className="com.example.javaee.day18.domain.Person">
+       <property name="name" value="lisi"></property>
+       <property name="age" value="22"></property>
+    </bean>
+ </beans>
