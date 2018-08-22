@@ -569,8 +569,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.btn73://qdd
                 QddActivity.startActivity(this);
                 break;
-            case R.id.btn74://qdd
+            case R.id.btn74://权限
                 RequestPermissionActivity.startActivity(this);
+                break;
+            case R.id.btn75://screen
+                ScreenActivity.startActivity(this);
                 break;
         }
     }

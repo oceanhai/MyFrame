@@ -11,7 +11,13 @@ public class TestV3012 {
     public static void main(String[] args){
         
         
-        method04(1000,0.09,1);
+//        method04(1000,0.09,1);
+
+        System.out.println("result1："+StringUtil.formatMoney("0",2));
+        System.out.println("result1："+StringUtil.formatMoney("80",2));
+        System.out.println("result2："+StringUtil.formatMoney("80.5",2));
+        System.out.println("result3："+StringUtil.formatMoney("80.50",2));
+        System.out.println("result4："+StringUtil.formatMoney("8820548.85",2));
     }
 
     /**

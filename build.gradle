@@ -49,6 +49,11 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+        maven {
+            //qdd 公司的 maven
+            url 'http://mvn.qiandaodao.cn/repository/android/'
+//            url 'http://192.168.1.177:8081/nexus/content/repositories/android/'
+        }
     }
 }
 

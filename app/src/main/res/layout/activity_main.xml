@@ -305,11 +305,11 @@
                 android:id="@+id/btn73"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="btn74"
+            <Button android:text="权限"
                 android:id="@+id/btn74"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="btn75"
+            <Button android:text="screen"
                 android:id="@+id/btn75"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

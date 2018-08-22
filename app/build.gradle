@@ -192,6 +192,18 @@ dependencies {
     compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
 
+    //测试一下钱到到新的maven
+    compile 'com.qiandaodao.android:security:0.2.0'
+//    compile 'com.qiandaodao.android:share:0.5.0'
+    compile ('com.qiandaodao.android:push:0.4.3'){
+        exclude group: 'com.android.support', module: 'appcompat-v7'
+        exclude group: 'com.qiandaodao.android', module: 'taobao-utdid'
+    }
+    compile ('com.qiandaodao.android:youdun:1.0.0@aar'){
+        transitive = true
+    }
+    compile 'com.qiandaodao.android:taobao-utdid:1.1.5'
+
 }
 
 //gradle task 练习start
