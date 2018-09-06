@@ -4,7 +4,15 @@ import android.app.Application;
 import android.content.Context;
 import android.text.TextUtils;
 
+import com.bqs.risk.df.android.BqsDF;
+import com.bqs.risk.df.android.BqsParams;
+import com.bqs.risk.df.android.OnBqsContactsListener;
+import com.bqs.risk.df.android.OnBqsDFListener;
+import com.facebook.common.logging.FLog;
 import com.facebook.drawee.backends.pipeline.Fresco;
+import com.facebook.imagepipeline.core.ImagePipelineConfig;
+import com.facebook.imagepipeline.listener.RequestListener;
+import com.facebook.imagepipeline.listener.RequestLoggingListener;
 import com.myframe.www.BuildConfig;
 import com.myframe.www.MainActivity;
 import com.myframe.www.retrofit.xywy.utils.DeviceUtil;
@@ -20,6 +28,8 @@ import com.xywy.component.datarequest.network.RequestManager;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.HashSet;
+import java.util.Set;
 
 import step.StepManager;
 import www.wuhai.common.utils.L;
@@ -80,12 +90,60 @@ public class MyApplication extends Application{
         GreenDaoManager.getInstance();
 
         //Fresco
-        Fresco.initialize(this);
+//        Fresco.initialize(this);
+        Set<RequestListener> requestListeners = new HashSet<>();
+        requestListeners.add(new RequestLoggingListener());
+        ImagePipelineConfig config = ImagePipelineConfig.newBuilder(this)
+                // other setters
+                .setRequestListeners(requestListeners)
+                .build();
+        Fresco.initialize(this, config);
+        FLog.setMinimumLoggingLevel(FLog.VERBOSE);
 
         //sp
         //设置用户代理
         if(!SPUtils.contains("userAgent")){
             SPUtils.put("userAgent", DeviceUtil.getUserAgentHeader(this));
+        }
+    }
+
+    public void initBqsDF(Context applicationContext) {
+        try {
+            BqsDF.setOnBqsContactsListener(new OnBqsContactsListener() {
+                @Override
+                public void onSuccess(String tokenKey) {
+                }
+
+                @Override
+                public void onGatherResult(boolean hasContacts, boolean hasCallRecord, boolean hasSmsRecord) {
+                }
+
+                @Override
+                public void onFailure(String resultCode, String resultDesc) {
+                }
+            });
+            BqsDF.setOnBqsDFListener(new OnBqsDFListener() {
+                @Override
+                public void onSuccess(String tokenKey) {
+                    //设备指纹调用成功
+                }
+
+                @Override
+                public void onFailure(String resultCode, String resultDesc) {
+                    //设备指纹调用失败
+                }
+            });
+            BqsParams params = new BqsParams();
+            params.setPartnerId("qiandaodao");
+            params.setDevMode(false);
+            params.setGatherInstalledApp(true);
+            params.setGatherSensorInfo(true);
+            params.setGatherCallRecord(true);
+            params.setGatherContact(true);
+            params.setGatherSMSRecord(true);
+            BqsDF.initialize(applicationContext, params);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 

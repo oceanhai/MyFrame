@@ -55,6 +55,12 @@
         android:name="${GETUI_PERMISSION}"
         android:protectionLevel="normal" />
 
+    <!-- 白骑士权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+
     <!-- 个推SDK权限配置结束 -->
     <!--
          android:largeHeap="true" 请求系统给该应用分配更多可申请的内存
@@ -526,7 +532,12 @@
         <activity
             android:name=".RequestPermissionActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".ScreenActivity"></activity>
+        <activity
+            android:name=".ScreenActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".TestActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

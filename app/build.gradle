@@ -137,7 +137,7 @@ dependencies {
     //    compile 'com.android.support:palette-v7:23.0.+'
     //基础module
     compile project(':common')
-//    compile project(':sub_module/common')
+    //    compile project(':sub_module/common')
     //okhttp 跟下面module用的不是同一套
     compile 'com.squareup.okhttp:okhttp:2.4.0'
     compile 'com.squareup.okio:okio:1.5.0'
@@ -182,28 +182,25 @@ dependencies {
     //picasso 图片加载框架
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile files('libs/pldroid-player-2.0.3.jar')
-
     //rxjava
     compile 'io.reactivex:rxjava:1.0.14'
     compile 'io.reactivex:rxandroid:1.0.1'
-
     //retrofit
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
     compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
-
     //测试一下钱到到新的maven
     compile 'com.qiandaodao.android:security:0.2.0'
-//    compile 'com.qiandaodao.android:share:0.5.0'
-    compile ('com.qiandaodao.android:push:0.4.3'){
-        exclude group: 'com.android.support', module: 'appcompat-v7'
-        exclude group: 'com.qiandaodao.android', module: 'taobao-utdid'
-    }
-    compile ('com.qiandaodao.android:youdun:1.0.0@aar'){
-        transitive = true
-    }
-    compile 'com.qiandaodao.android:taobao-utdid:1.1.5'
-
+    //    compile 'com.qiandaodao.android:share:0.5.0'
+    //    compile ('com.qiandaodao.android:push:0.4.3'){
+    //        exclude group: 'com.android.support', module: 'appcompat-v7'
+    //        exclude group: 'com.qiandaodao.android', module: 'taobao-utdid'
+    //    }
+    //    compile ('com.qiandaodao.android:youdun:1.0.0@aar'){
+    //        transitive = true
+    //    }
+    //    compile 'com.qiandaodao.android:taobao-utdid:1.1.5'
+    compile files('libs/baiqishi-risk-sdk-2.1.2.jar')
 }
 
 //gradle task 练习start

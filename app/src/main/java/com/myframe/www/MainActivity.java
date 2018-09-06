@@ -233,6 +233,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         initListener();
         goToActivity();
         getDensity();
+
+        //白骑士  钱到到用  自带了一些权限检测
+//        ((MyApplication)MyApplication.getContext()).initBqsDF(this);
     }
 
 
@@ -574,6 +577,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.btn75://screen
                 ScreenActivity.startActivity(this);
+                break;
+            case R.id.btn76://test
+                TestActivity.startActivity(this);
                 break;
         }
     }
