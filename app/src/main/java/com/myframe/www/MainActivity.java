@@ -224,6 +224,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
+        //第一行注释
+
         /**
          * 初始化 个推
          */
