@@ -226,6 +226,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         //第一行注释
 
+        //第二行注释
+
         /**
          * 初始化 个推
          */
