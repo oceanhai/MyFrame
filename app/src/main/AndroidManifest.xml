@@ -538,6 +538,9 @@
         <activity
             android:name=".TestActivity"
             android:screenOrientation="portrait"/>
+        <activity
+            android:name=".customview.CustomView3Activity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

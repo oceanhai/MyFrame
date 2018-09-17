@@ -156,6 +156,9 @@ public class CustomViewActivity extends BaseActivity implements View.OnClickList
             case R.id.btn06://自定义倒计时
                 CountDownActivity.startActivity(this);
                 break;
+            case R.id.btn07://HeaderTextGridView
+                CustomView3Activity.startActivity(this);
+                break;
         }
     }
 
