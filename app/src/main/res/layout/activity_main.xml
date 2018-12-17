@@ -317,7 +317,7 @@
                 android:id="@+id/btn76"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="btn77"
+            <Button android:text="AppList"
                 android:id="@+id/btn77"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

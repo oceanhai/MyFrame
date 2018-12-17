@@ -582,6 +582,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.btn76://test
                 TestActivity.startActivity(this);
                 break;
+            case R.id.btn77://AppList
+                AppListActivity.startActivity(this);
+                break;
         }
     }
 }
