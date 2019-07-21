@@ -4,6 +4,8 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
+import www.wuhai.common.utils.L;
+
 public class PersonDAO {
 	private SQLiteDatabase db;
 
@@ -13,6 +15,7 @@ public class PersonDAO {
 	}
 
 	public void insert(ContentValues values) {
-		db.insert("person", null, values);
+		long id = db.insert("person", null, values);
+		L.e("PersonDAO", "id="+id);
 	}
 }

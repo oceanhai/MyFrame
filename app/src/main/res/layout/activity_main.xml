@@ -321,7 +321,7 @@
                 android:id="@+id/btn77"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button android:text="btn78"
+            <Button android:text="qujingjia"
                 android:id="@+id/btn78"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

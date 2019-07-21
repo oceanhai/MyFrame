@@ -8,11 +8,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 
 import com.myframe.www.R;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
 import www.wuhai.common.utils.L;
 
@@ -34,7 +32,8 @@ public class ContentProviderClientActivity extends AppCompatActivity {
     }
 
     public void click1(View v) {
-        String uriStr = "content://com.myframe.www.contentprovider.MyProvider";
+//        String uriStr = "content://com.myframe.www.contentprovider.MyProvider";
+        String uriStr = "content://com.qihoo360.byod.info";
         //将String类型uri转换为Uri类型的Uri
         Uri uri=Uri.parse(uriStr);
         // 获得内容解析者

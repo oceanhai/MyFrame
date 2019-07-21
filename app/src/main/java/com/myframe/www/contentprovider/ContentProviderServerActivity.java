@@ -2,7 +2,6 @@ package com.myframe.www.contentprovider;
 
 import android.content.ContentValues;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -10,12 +9,9 @@ import android.view.View;
 import android.widget.Button;
 
 import com.myframe.www.R;
-import com.myframe.www.utils.DialogManager;
-import com.myframe.www.utils.ToastUtils;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import www.wuhai.common.utils.L;
 
 public class ContentProviderServerActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -34,6 +30,8 @@ public class ContentProviderServerActivity extends AppCompatActivity implements 
         ButterKnife.bind(this);
 
         dao = new PersonDAO(this);
+
+        btn01.setOnClickListener(this);
     }
 
     private PersonDAO dao;

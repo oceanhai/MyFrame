@@ -11,6 +11,7 @@ import android.widget.TextView;
 public class CountDownTimeUtil extends CountDownTimer {
     public static final String DYNAMIC_LOGIN = "dynamic_login";//动态密码登录用
     public static final String JUMP = "Jump";//跳转
+    public static final String TIME = "Time";//时分秒
     //被点击的计时按钮
     private TextView mTextView;
     private String mFlag;
@@ -35,6 +36,9 @@ public class CountDownTimeUtil extends CountDownTimer {
         }else if(JUMP.equals(mFlag)){
             mTextView.setTextColor(Color.rgb(187, 187, 187));
             mTextView.setText("跳转（"+millisUntilFinished / 1000 + "）");
+        }else if(TIME.equals(mFlag)){
+            mTextView.setTextColor(Color.rgb(187, 187, 187));
+            mTextView.setText(secToTime((int) (millisUntilFinished/1000)));
         }else{
             mTextView.setTextColor(Color.rgb(187, 187, 187));
             mTextView.setText(millisUntilFinished / 1000 + "秒");
@@ -53,6 +57,9 @@ public class CountDownTimeUtil extends CountDownTimer {
         }else if(JUMP.equals(mFlag)){
             mTextView.setTextColor(Color.rgb(50, 180, 194));
             mTextView.setText("跳转");
+        }else if(TIME.equals(mFlag)){
+            mTextView.setTextColor(Color.rgb(50, 180, 194));
+            mTextView.setText("活动结束");
         }else{
             mTextView.setTextColor(Color.rgb(50, 180, 194));
             mTextView.setText("重新倒计时");
@@ -70,10 +77,47 @@ public class CountDownTimeUtil extends CountDownTimer {
         }else if(JUMP.equals(mFlag)){
             mTextView.setTextColor(Color.rgb(50, 180, 194));
             mTextView.setText("跳转");
+        }else if(TIME.equals(mFlag)){
+            mTextView.setTextColor(Color.rgb(50, 180, 194));
+            mTextView.setText("活动结束");
         }else{
             mTextView.setTextColor(Color.rgb(50, 180, 194));
             mTextView.setText("重新倒计时");
         }
+    }
+
+
+    public static String secToTime(int time) {
+        String timeStr = null;
+        int hour = 0;
+        int minute = 0;
+        int second = 0;
+        if (time <= 0)
+            return "00:00";
+        else {
+            minute = time / 60;
+            if (minute < 60) {
+                second = time % 60;
+                timeStr = unitFormat(minute) + ":" + unitFormat(second);
+            } else {
+                hour = minute / 60;
+                if (hour > 99)
+                    return "99:59:59";
+                minute = minute % 60;
+                second = time - hour * 3600 - minute * 60;
+                timeStr = unitFormat(hour) + ":" + unitFormat(minute) + ":" + unitFormat(second);
+            }
+        }
+        return timeStr;
+    }
+
+    public static String unitFormat(int i) {
+        String retStr = null;
+        if (i >= 0 && i < 10)
+            retStr = "0" + Integer.toString(i);
+        else
+            retStr = "" + i;
+        return retStr;
     }
 
 

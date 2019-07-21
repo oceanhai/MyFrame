@@ -7,11 +7,10 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.myframe.www.utils.PackageUtil;
-
 import java.util.Collections;
 import java.util.List;
 
+import www.wuhai.common.utils.GsonUtils;
 import www.wuhai.common.utils.L;
 
 public class AppListActivity extends AppCompatActivity {
@@ -34,9 +33,20 @@ public class AppListActivity extends AppCompatActivity {
 
 //        filterApp(FILTER_ALL_APP);
 //        filterApp(FILTER_SYSTEM_APP);
-        filterApp(FILTER_THIRD_APP);
+//        filterApp(FILTER_THIRD_APP);
 //        filterApp(FILTER_SDCARD_APP);
-        PackageUtil.getInstalledPackages(this,2);
+//        PackageUtil.getInstalledPackages(this,2);
+        
+        method01();
+    }
+
+    private String str = "[\"com.youba.barcode\",\"com.oppo.camera.voicebeauty\",\"io.appium.unlock\",\"com.oppo.camera.professional\",\"demo.simple.secure.yintong.com.securepayclient\",\"com.qiandaodao.push.demo\",\"com.nearme.instant.platform\",\"com.duguang.baseanimation\",\"com.monotype.android.font.HYXZYUANJOPPO0401\",\"jackpal.androidterm\",\"com.eg.android.AlipayGphone\",\"com.oppo.camera.doubleexposure\",\"com.qiandaodao.base\",\"com.bly.dkplat\",\"com.tencent.android.qqdownloader\",\"com.umeng.client\",\"com.qiandaodao.share.demo\",\"com.myframe.www.test\",\"com.tencent.mobileqq\",\"www.wuhai.shipei\",\"com.aspsine.swipetoloadlayout\",\"com.abcd\",\"com.tencent.tmgp.pubgmhd\",\"com.xywy.askxywy\",\"com.oppo.camera.filter\",\"com.example.administrator.marqueetextviewapp\",\"com.qiandaodao.jieqiandao\",\"com.kingroot.kinguser\",\"com.oppo.pcassistant\",\"com.qiandaodao.qudaikuan\",\"com.xywy.component\",\"com.thinksky.itools\",\"com.qiandaodao.qianpengyou\",\"com.myframe.www\",\"com.halo.wifikey.wifilocating\",\"com.test.banner\",\"cn.sharesdk.demo\",\"com.qiandaodao.jieqianbaodian\",\"com.tencent.mtt\",\"com.oppo.camera.raw\",\"io.appium.settings\",\"com.andromeda.androbench2\",\"com.oppo.camera.microspurmode\",\"com.daodao.qiandaodao\",\"com.speedsoftware.rootexplorer\",\"com.oppo.camera.audio\"]";
+
+    private void method01() {
+        List<String> list = GsonUtils.getInstance().parsJson2StringList(str);
+        for(int x=0;x<list.size();x++){
+            L.e("wuhai",list.get(x));
+        }
     }
 
     private void filterApp(int type) {
